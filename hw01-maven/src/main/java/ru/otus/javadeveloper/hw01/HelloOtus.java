@@ -1,4 +1,4 @@
-package ru.otus.javadeveloper.hw01maven;
+package ru.otus.javadeveloper.hw01;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
