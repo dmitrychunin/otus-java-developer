@@ -1,6 +1,8 @@
 package ru.otus.javadeveloper.hw02;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class DIYArrayList<T> implements List<T> {
@@ -24,7 +26,8 @@ public class DIYArrayList<T> implements List<T> {
     }
 
     DIYArrayList(Integer initialCapacity) {
-        currentCapacity = size = initialCapacity; //why size must be equals to initialCapacity?
+        currentCapacity = initialCapacity;
+        size = 0;
         container = new Object[initialCapacity];
     }
 
@@ -37,7 +40,11 @@ public class DIYArrayList<T> implements List<T> {
 
     @Override
     public String toString() {
-        return Arrays.toString(container);
+        return Stream.of(container)
+                .limit(size)
+                .map(Optional::ofNullable)
+                .map(optionalElement -> optionalElement.orElse("null").toString())
+                .collect(Collectors.joining(", "));
     }
 
     @Override
