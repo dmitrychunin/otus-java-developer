@@ -1,17 +1,18 @@
 package ru.otus.javadeveloper.hw02;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> list0 = new ArrayList<>(10);
+        List<Integer> list0 = new DIYArrayList<>(0);
         IntStream.range(0, 5).forEachOrdered(list0::add);
-
+        System.out.println(list0);
         List<Integer> list1 = new DIYArrayList<>(10);
         IntStream.range(0, 5).forEachOrdered(list1::add);
-
-        System.out.println(list0);
         System.out.println(list1);
 
         List<Integer> list = new DIYArrayList<>(1, 2, 3, 4, 5);

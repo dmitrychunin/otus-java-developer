@@ -4,20 +4,17 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.lang.String.format;
+
 
 public class DIYArrayList<T> implements List<T> {
-    private static final int INITIAL_CAPACITY = 16;
+    private static final int DEFAULT_INITIAL_CAPACITY = 16;
     private static final int SIZE_MULTIPLIER = 2;
 
-    private Integer currentCapacity;
-    private Integer size;
+    private int currentCapacity;
+    private int size;
     private Object[] container;
     private ListIterator<T> listIterator = listIterator();
-
-    DIYArrayList() {
-        currentCapacity = INITIAL_CAPACITY;
-        container = new Object[INITIAL_CAPACITY];
-    }
 
     DIYArrayList(Object... objects) {
         currentCapacity = size = objects.length;
@@ -25,10 +22,12 @@ public class DIYArrayList<T> implements List<T> {
         listIterator = listIterator(size - 1);
     }
 
-    DIYArrayList(Integer initialCapacity) {
-        currentCapacity = initialCapacity;
-        size = 0;
-        container = new Object[initialCapacity];
+    DIYArrayList(int initialCapacity) {
+        if (initialCapacity < 0) {
+            throw new IllegalArgumentException(format("Illegal Capacity: %s", initialCapacity));
+        }
+        currentCapacity = initialCapacity == 0 ? DEFAULT_INITIAL_CAPACITY : initialCapacity;
+        container = new Object[currentCapacity];
     }
 
     @Override
@@ -71,7 +70,7 @@ public class DIYArrayList<T> implements List<T> {
         private boolean isCanBeModified;
         private int lastReturnedElementIndex;
 
-        public DIYListIterator(int lastReturnedElementIndex) {
+        private DIYListIterator(int lastReturnedElementIndex) {
             this.lastReturnedElementIndex = lastReturnedElementIndex - 1;
         }
 
