@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import ru.otus.javadeveloper.hw03.annotation.*;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class CustomJunit5AnnotationRunner {
             if (method.isAnnotationPresent(BeforeEach.class)) {
                 beforeEach.add(method);
             }
-            if (method.isAnnotationPresent(Test.class)) {
+            if (method.isAnnotationPresent(Test.class) && !Modifier.isPrivate(method.getModifiers())) {
                 tests.add(method);
             }
             if (method.isAnnotationPresent(AfterEach.class)) {
@@ -58,10 +59,14 @@ public class CustomJunit5AnnotationRunner {
 
     private void safeExecMemberMethods(Object instanceOfTestClass, Method... methods) {
         for (int i = 0; i < methods.length; i++) {
+            boolean originAccess = methods[i].canAccess(instanceOfTestClass);
             try {
+                methods[i].setAccessible(true);
                 methods[i].invoke(instanceOfTestClass);
             } catch (Exception e) {
                 log.error("Ошибка исполнения метода {} :", methods[i].getName(), e.getCause());
+            } finally {
+                methods[i].setAccessible(originAccess);
             }
         }
     }

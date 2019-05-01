@@ -12,6 +12,11 @@ class CustomAnnotationsTest {
         System.out.println("BeforeAll");
     }
 
+    @BeforeAll
+    private static void beforeAll1() {
+        System.out.println("BeforeAll1");
+    }
+
     @AfterAll
     static void afterAll() {
         System.out.println("AfterAll");
@@ -20,6 +25,11 @@ class CustomAnnotationsTest {
     @BeforeEach
     void beforeEach3() {
         System.out.println("BeforeEach3");
+    }
+
+    @BeforeEach
+    private void beforeEach4() {
+        System.out.println("BeforeEach4");
     }
 
     @BeforeEach
@@ -40,6 +50,11 @@ class CustomAnnotationsTest {
     @Test
     void testTwo() {
         System.out.println("testTwo");
+    }
+
+    @Test
+    private void testThree() {
+        System.out.println("testThree");
     }
 
     @AfterEach

@@ -24,10 +24,10 @@
         <compiler-plugin.version>3.7.0</compiler-plugin.version>
         <assembly-plugin.version>2.6</assembly-plugin.version>
         <log4j.version>1.2.17</log4j.version>
+        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <asm.version>7.1</asm.version>
         <commons-lang3.version>3.9</commons-lang3.version>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -105,10 +105,9 @@
                         </execution>
                     </executions>
                 </plugin>
-                <!-- JUnit 5 requires Surefire version 2.22.1 or higher -->
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.1</version>
+                    <version>${maven-surefire-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
