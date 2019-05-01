@@ -11,11 +11,19 @@
     <modules>
         <module>hw01-maven</module>
         <module>hw02-diy-array-list</module>
+        <module>hw03-junit</module>
         <module>hw04-aop</module>
     </modules>
 
     <properties>
         <jdk.version>11</jdk.version>
+        <slf4j.version>1.7.26</slf4j.version>
+        <guava.version>27.1-jre</guava.version>
+        <junit5.version>5.4.2</junit5.version>
+        <lombok.version>1.18.6</lombok.version>
+        <compiler-plugin.version>3.7.0</compiler-plugin.version>
+        <assembly-plugin.version>2.6</assembly-plugin.version>
+        <log4j.version>1.2.17</log4j.version>
         <asm.version>7.1</asm.version>
         <commons-lang3.version>3.9</commons-lang3.version>
     </properties>
@@ -26,7 +34,32 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>27.1-jre</version>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit5.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.ow2.asm</groupId>
@@ -47,7 +80,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.7.0</version>
+                    <version>${compiler-plugin.version}</version>
                     <configuration>
                         <source>${jdk.version}</source>
                         <target>${jdk.version}</target>
@@ -56,7 +89,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.6</version>
+                    <version>${assembly-plugin.version}</version>
                     <configuration>
                         <descriptorRefs>
                             <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -71,6 +104,11 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <!-- JUnit 5 requires Surefire version 2.22.1 or higher -->
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
                 </plugin>
             </plugins>
         </pluginManagement>
