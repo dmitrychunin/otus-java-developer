@@ -1,15 +1,15 @@
-package ru.otus.javadeveloper.hw03;
+package ru.otus.javadeveloper.hw03.test;
 
-import org.junit.jupiter.api.*;
+import ru.otus.javadeveloper.hw03.annotation.*;
 
-class Junit5AnnotationsTest {
-    public Junit5AnnotationsTest() {
+public class BeforeAllExceptionDiscardAllButAfterAll {
+    public BeforeAllExceptionDiscardAllButAfterAll() {
         System.out.println("Call of the constructor");
     }
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println("BeforeAll");
+        throw new RuntimeException("BeforeAll");
     }
 
     @AfterAll
