@@ -2,14 +2,14 @@ package ru.otus.javadeveloper.hw03;
 
 import org.junit.jupiter.api.*;
 
-class Junit5AnnotationsTest {
-    public Junit5AnnotationsTest() {
+public class PrivateTestsAreIgnoredPrivateAllAndEachAreNot {
+    public PrivateTestsAreIgnoredPrivateAllAndEachAreNot() {
         System.out.println("Call of the constructor");
     }
 
     @BeforeAll
-    static void beforeAll() {
-        System.out.println("BeforeAll");
+    private static void beforeAll1() {
+        System.out.println("BeforeAll1");
     }
 
     @AfterAll
@@ -20,6 +20,11 @@ class Junit5AnnotationsTest {
     @BeforeEach
     void beforeEach3() {
         System.out.println("BeforeEach3");
+    }
+
+    @BeforeEach
+    private void beforeEach4() {
+        System.out.println("BeforeEach4");
     }
 
     @BeforeEach
@@ -38,8 +43,8 @@ class Junit5AnnotationsTest {
     }
 
     @Test
-    void testTwo() {
-        System.out.println("testTwo");
+    private void testThree() {
+        System.out.println("testThree");
     }
 
     @AfterEach

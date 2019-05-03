@@ -1,20 +1,15 @@
-package ru.otus.javadeveloper.hw03;
+package ru.otus.javadeveloper.hw03.test;
 
 import ru.otus.javadeveloper.hw03.annotation.*;
 
-class CustomAnnotationsTest {
-    CustomAnnotationsTest() {
+public class Junit5AnnotationsTest {
+    public Junit5AnnotationsTest() {
         System.out.println("Call of the constructor");
     }
 
     @BeforeAll
     static void beforeAll() {
         System.out.println("BeforeAll");
-    }
-
-    @BeforeAll
-    private static void beforeAll1() {
-        System.out.println("BeforeAll1");
     }
 
     @AfterAll
@@ -25,11 +20,6 @@ class CustomAnnotationsTest {
     @BeforeEach
     void beforeEach3() {
         System.out.println("BeforeEach3");
-    }
-
-    @BeforeEach
-    private void beforeEach4() {
-        System.out.println("BeforeEach4");
     }
 
     @BeforeEach
@@ -50,11 +40,6 @@ class CustomAnnotationsTest {
     @Test
     void testTwo() {
         System.out.println("testTwo");
-    }
-
-    @Test
-    private void testThree() {
-        System.out.println("testThree");
     }
 
     @AfterEach
