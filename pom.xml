@@ -11,11 +11,15 @@
     <modules>
         <module>hw01-maven</module>
         <module>hw02-diy-array-list</module>
+        <module>hw04-aop</module>
     </modules>
 
     <properties>
         <jdk.version>11</jdk.version>
+        <asm.version>7.1</asm.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
     </properties>
+
 
     <dependencyManagement>
         <dependencies>
@@ -23,6 +27,16 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>27.1-jre</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>${asm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
