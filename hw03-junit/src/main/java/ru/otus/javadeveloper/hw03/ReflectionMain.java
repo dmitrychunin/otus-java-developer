@@ -1,5 +1,6 @@
 package ru.otus.javadeveloper.hw03;
 
+import ru.otus.javadeveloper.hw03.core.CustomJunit5AnnotationRunner;
 import ru.otus.javadeveloper.hw03.test.*;
 
 public class ReflectionMain {

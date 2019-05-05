@@ -1,4 +1,4 @@
-package ru.otus.javadeveloper.hw03;
+package ru.otus.javadeveloper.hw03.core;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +9,9 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.otus.javadeveloper.hw03.ReflectionHelper.*;
+import static ru.otus.javadeveloper.hw03.core.ReflectionHelper.checkMethodIsNotStatic;
+import static ru.otus.javadeveloper.hw03.core.ReflectionHelper.checkMethodIsStatic;
+import static ru.otus.javadeveloper.hw03.core.ReflectionHelperFacade.*;
 
 @Slf4j
 public class CustomJunit5AnnotationRunner {
