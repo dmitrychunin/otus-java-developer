@@ -10,8 +10,11 @@ public class Main {
         myClass.secureAccess2("Security Param2");
         myClass.secureAccess3(123);
         myClass.secureAccess4(345);
-        myClass.secureAccess5(123, true, "string param");
         myClass.someOtherMethod("not some Security");
+        myClass.secureAccess5(123, true, "string param");
+        myClass.secureAccess5(123, "string", true);
+        myClass.secureAccess5(123, false);
+        myClass.secureAccess5(123, false, 345);
         myClass.someOtherMethod("not some Security");
         myClass.secureAccess5(123, true, "string param");
         myClass.secureAccess5(123, "string", true);
