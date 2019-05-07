@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static ru.otus.javadeveloper.hw04.Utils.createResultByteCodeFile;
-import static ru.otus.javadeveloper.hw04.core.ProxyGenerator.generateLogProxiedClass;
+import static ru.otus.javadeveloper.hw04.core.ProxyGenerator.setLogProxiedClass;
 
 public class LogAnnotationAgent {
     public static void premain(String agentArgs, Instrumentation inst) {
@@ -25,9 +25,9 @@ public class LogAnnotationAgent {
                 }
 
                 Class<?> aClass = new ByteArrayToClassConverter().convert(className, classFileBuffer, protectionDomain);
-                List<String> loggedMethods = findClassLoggedMethodNames(aClass);
+                List<Method> loggedMethods = findClassLoggedMethods(aClass);
                 if (!loggedMethods.isEmpty()) {
-                    byte[] proxiedClass = generateLogProxiedClass(classFileBuffer, loggedMethods, className);
+                    byte[] proxiedClass = setLogProxiedClass(classFileBuffer, loggedMethods, className);
                     createResultByteCodeFile(className, proxiedClass);
                     return proxiedClass;
                 }
@@ -40,12 +40,12 @@ public class LogAnnotationAgent {
         return loader == null;
     }
 
-    private static List<String> findClassLoggedMethodNames(Class<?> clazz) {
-        List<String> loggedMethods = new ArrayList<>();
+    private static List<Method> findClassLoggedMethods(Class<?> clazz) {
+        List<Method> loggedMethods = new ArrayList<>();
         Method[] declaredMethods = clazz.getDeclaredMethods();
         for (Method method : declaredMethods) {
             if (method.isAnnotationPresent(Log.class)) {
-                loggedMethods.add(method.getName());
+                loggedMethods.add(method);
             }
         }
         return loggedMethods;

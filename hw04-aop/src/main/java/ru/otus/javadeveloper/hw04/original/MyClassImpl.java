@@ -38,6 +38,24 @@ public class MyClassImpl {
         return integer;
     }
 
+    @Log
+    public Integer secureAccess5(Integer integer, String string, boolean flag) {
+        System.out.println("secureAccess, param:" + integer + flag + string);
+        return integer;
+    }
+
+    @Log
+    public Integer secureAccess5(Integer integer, boolean flag) {
+        System.out.println("secureAccess, param:" + integer + flag);
+        return integer;
+    }
+
+    @Log
+    public Integer secureAccess5(Integer integer, boolean flag, int integer2) {
+        System.out.println("secureAccess, param:" + integer + flag + integer2);
+        return integer;
+    }
+
     @Override
     public String toString() {
         return "MyClassImpl";

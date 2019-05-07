@@ -28,6 +28,12 @@ class MethodVisitorHelper {
         ret = Type.getReturnType(descriptor);
     }
 
+    void logBeforeOriginalMethod(String className, String proxiedMethodSuffix) {
+        concatAndPrintAllArgs();
+        callOriginalMethod(className, proxiedMethodSuffix);
+        forwardOriginalResult();
+    }
+
     void concatAndPrintAllArgs() {
         Handle handle = new Handle(
                 H_INVOKESTATIC,
