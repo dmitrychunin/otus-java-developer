@@ -9,9 +9,9 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.otus.javadeveloper.hw03.core.ReflectionHelper.checkMethodIsNotStatic;
-import static ru.otus.javadeveloper.hw03.core.ReflectionHelper.checkMethodIsStatic;
-import static ru.otus.javadeveloper.hw03.core.ReflectionHelperFacade.*;
+import static ru.otus.javadeveloper.hw03.core.ExceptionHandlingMode.IGNORE;
+import static ru.otus.javadeveloper.hw03.core.ExceptionHandlingMode.INTERRUPT;
+import static ru.otus.javadeveloper.hw03.core.MethodExecutionBuilder.execute;
 
 @Slf4j
 public class CustomJunit5AnnotationRunner {
@@ -28,22 +28,22 @@ public class CustomJunit5AnnotationRunner {
         Method[] methods = clazz.getDeclaredMethods();
         for (Method method : methods) {
             if (method.isAnnotationPresent(BeforeAll.class)) {
-                checkMethodIsStatic(method);
+                checkIsStatic(method);
                 beforeAll.add(method);
             }
             if (method.isAnnotationPresent(BeforeEach.class)) {
-                checkMethodIsNotStatic(method);
+                checkIsNotStatic(method);
                 beforeEach.add(method);
             }
             if (method.isAnnotationPresent(Test.class) && !Modifier.isPrivate(method.getModifiers())) {
                 tests.add(method);
             }
             if (method.isAnnotationPresent(AfterEach.class)) {
-                checkMethodIsNotStatic(method);
+                checkIsNotStatic(method);
                 afterEach.add(method);
             }
             if (method.isAnnotationPresent(AfterAll.class)) {
-                checkMethodIsStatic(method);
+                checkIsStatic(method);
                 afterAll.add(method);
             }
         }
@@ -61,21 +61,50 @@ public class CustomJunit5AnnotationRunner {
     }
 
     void executeTests() throws Exception {
-        boolean isAtLeastOneBeforeAllThrowException = execBeforeAllMethodsAndDiscardNotYetStartedIfExceptionThrown(beforeAll);
+        boolean isAtLeastOneBeforeAllThrowException = execute(beforeAll)
+                .withExceptionHandlingMode(INTERRUPT)
+                .go();
         if (!isAtLeastOneBeforeAllThrowException) {
             for (Method test : tests) {
                 executeEachAndTest(test);
             }
         }
-        execStaticMethodsAndIgnoreExceptions(afterAll);
+        execute(afterAll)
+                .withExceptionHandlingMode(IGNORE)
+                .go();
     }
 
     private void executeEachAndTest(Method test) throws Exception {
         Object instanceOfTestClass = clazz.getDeclaredConstructor().newInstance();
-        boolean isAtLeastOneBeforeEachThrowException = execBeforeEachMethodsAndDiscardNotYetStartedIfExceptionThrown(instanceOfTestClass, beforeEach);
+        boolean isAtLeastOneBeforeEachThrowException = execute(beforeEach)
+                .onInstance(instanceOfTestClass)
+                .withExceptionHandlingMode(INTERRUPT)
+                .go();
         if (!isAtLeastOneBeforeEachThrowException) {
-            execTestAndIgnoreExceptions(instanceOfTestClass, test);
+            boolean isTestThrowException = execute(test).onInstance(instanceOfTestClass).go();
+            if (!isTestThrowException) {
+                log.info("Успешно выполнился тест {}", test.getName());
+            }
         }
-        execAfterEachMethodsAndIgnoreExceptions(instanceOfTestClass, afterEach);
+        execute(afterEach)
+                .onInstance(instanceOfTestClass)
+                .withExceptionHandlingMode(IGNORE)
+                .go();
+    }
+
+    private void checkIsNotStatic(Method method) {
+        if (Modifier.isStatic(method.getModifiers())) {
+            CustomJunit5PlatformException customJunit5PlatformException = new CustomJunit5PlatformException();
+            log.error("Метод {} не должен быть static", method.getName(), customJunit5PlatformException);
+            throw customJunit5PlatformException;
+        }
+    }
+
+    private void checkIsStatic(Method method) {
+        if (!Modifier.isStatic(method.getModifiers())) {
+            CustomJunit5PlatformException customJunit5PlatformException = new CustomJunit5PlatformException();
+            log.error("Метод {} обязан быть static", method.getName(), customJunit5PlatformException);
+            throw customJunit5PlatformException;
+        }
     }
 }
