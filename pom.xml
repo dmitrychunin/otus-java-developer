@@ -12,6 +12,7 @@
         <module>hw01-maven</module>
         <module>hw02-diy-array-list</module>
         <module>hw03-junit</module>
+        <module>hw04-aop</module>
     </modules>
 
     <properties>
@@ -24,6 +25,10 @@
         <assembly-plugin.version>2.6</assembly-plugin.version>
         <log4j.version>1.2.17</log4j.version>
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+        <asm.version>7.1</asm.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
+        <asm.version>7.1</asm.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
     </properties>
 
     <dependencyManagement>
@@ -57,6 +62,16 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
                 <version>${junit5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>${asm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
