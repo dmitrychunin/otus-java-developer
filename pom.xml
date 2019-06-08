@@ -13,6 +13,7 @@
         <module>hw02-diy-array-list</module>
         <module>hw03-junit</module>
         <module>hw04-aop</module>
+        <module>hw06-atm</module>
     </modules>
 
     <properties>
@@ -29,6 +30,7 @@
         <commons-lang3.version>3.9</commons-lang3.version>
         <asm.version>7.1</asm.version>
         <commons-lang3.version>3.9</commons-lang3.version>
+        <mockito.version>2.28.2</mockito.version>
     </properties>
 
     <dependencyManagement>
