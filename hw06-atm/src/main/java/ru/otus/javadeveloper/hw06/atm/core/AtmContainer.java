@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 interface AtmContainer {
-    List<BankNote> peekSum(@NonNull Integer sum);
+    List<BankNote> peekSum(int sum);
 
     void addAll(@NonNull List<BankNote> bankNotes);
 

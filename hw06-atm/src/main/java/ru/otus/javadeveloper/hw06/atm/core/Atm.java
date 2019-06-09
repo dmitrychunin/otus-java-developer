@@ -18,11 +18,11 @@ public class Atm {
         bankNoteContainer.addAll(bankNotes);
     }
 
-    public List<BankNote> writeOff(@NonNull Integer sum) {
+    public List<BankNote> writeOff(int sum) {
         return bankNoteContainer.peekSum(sum);
     }
 
-    public Long getBalance() {
+    public long getBalance() {
         return bankNoteContainer.displayInnerBankNotesCount().entrySet().stream().map(entry -> entry.getKey().getNominal() * entry.getValue()).reduce(0L, Long::sum);
     }
 }

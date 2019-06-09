@@ -7,7 +7,7 @@ import ru.otus.javadeveloper.hw06.exceptions.AtmHasNotEnoughBanknotesException;
 import java.util.*;
 
 class BankNoteContainer implements AtmContainer {
-    private Map<Integer, Cell> cellMap = new TreeMap<>();
+    private Map<BankNote, Cell> cellMap = new TreeMap<>();
 
     public BankNoteContainer(List<BankNote> bankNotes) {
         createEmptyCells();
@@ -19,25 +19,24 @@ class BankNoteContainer implements AtmContainer {
     }
 
     private void createEmptyCells() {
-        for (Integer possibleNominal : BankNote.getPossibleNominals()) {
-            Cell cell = new Cell(new BankNote(possibleNominal));
-            cellMap.put(possibleNominal, cell);
+        for (BankNote bankNote : BankNote.values()) {
+            Cell cell = new Cell(bankNote);
+            cellMap.put(bankNote, cell);
         }
     }
 
     @Override
-    public List<BankNote> peekSum(@NonNull Integer sum) {
+    public List<BankNote> peekSum(int sum) {
         List<BankNote> resultBankNotesList = new ArrayList<>();
-        Integer current = 0;
-        for (Map.Entry<Integer, Cell> cellEntry : cellMap.entrySet()) {
-            while (cellEntry.getValue().getCount() > 0 && cellEntry.getKey() <= sum - current) {
-                BankNote bankNote = new BankNote(cellEntry.getKey());
-                resultBankNotesList.add(bankNote);
+        int current = 0;
+        for (Map.Entry<BankNote, Cell> cellEntry : cellMap.entrySet()) {
+            while (cellEntry.getValue().getCount() > 0 && cellEntry.getKey().getNominal() <= sum - current) {
+                resultBankNotesList.add(cellEntry.getKey());
                 cellEntry.getValue().decrementCount();
-                current += cellEntry.getKey();
+                current += cellEntry.getKey().getNominal();
             }
         }
-        if (!current.equals(sum)) {
+        if (current != sum) {
             addAll(resultBankNotesList);
             throw new AtmHasNotEnoughBanknotesException("Atm has not enough banknotes");
         }
@@ -47,7 +46,7 @@ class BankNoteContainer implements AtmContainer {
     @Override
     public void addAll(@NonNull List<BankNote> bankNotes) {
         for (BankNote bankNote : bankNotes) {
-            cellMap.get(bankNote.getNominal()).incrementCount();
+            cellMap.get(bankNote).incrementCount();
         }
     }
 

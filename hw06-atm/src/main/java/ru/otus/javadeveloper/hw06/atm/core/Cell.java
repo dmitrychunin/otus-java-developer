@@ -6,14 +6,14 @@ import ru.otus.javadeveloper.hw06.atm.BankNote;
 @Data
 class Cell {
     private final BankNote bankNote;
-    private Long count;
+    private long count;
 
     Cell(BankNote bankNote) {
         this.bankNote = bankNote;
         count = 0L;
     }
 
-    Cell(BankNote bankNote, Long count) {
+    Cell(BankNote bankNote, long count) {
         this.bankNote = bankNote;
         this.count = count;
     }
