@@ -1,28 +1,28 @@
-package ru.otus.javadeveloper.hw06.atm.core;
+package ru.otus.javadeveloper.hw06.atm.core.container;
 
 import lombok.Data;
 import ru.otus.javadeveloper.hw06.atm.BankNote;
 
 @Data
-class Cell {
+public class Cell {
     private final BankNote bankNote;
     private long count;
 
-    Cell(BankNote bankNote) {
+    public Cell(BankNote bankNote) {
         this.bankNote = bankNote;
         count = 0L;
     }
 
-    Cell(BankNote bankNote, long count) {
+    public Cell(BankNote bankNote, long count) {
         this.bankNote = bankNote;
         this.count = count;
     }
 
-    void incrementCount() {
+    public void incrementCount() {
         count++;
     }
 
-    void decrementCount() {
+    public void decrementCount() {
         count--;
     }
 }

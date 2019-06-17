@@ -14,7 +14,6 @@
         <module>hw03-junit</module>
         <module>hw04-aop</module>
         <module>hw06-atm</module>
-        <module>hw07-atm-with-patterns</module>
     </modules>
 
     <properties>
