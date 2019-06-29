@@ -11,7 +11,6 @@ import ru.otus.javadeveloper.hw06.exceptions.AtmHasNotEnoughBanknotesException;
 import java.util.List;
 
 
-//todo в ПР написать инструкцию, чтобы ревьюер быстрее понял что зачем нужно и подумать над распределением в пакетах
 public class NotRecoverAtm implements FullFunctionalAtm {
     private final BankNoteContainer bankNoteContainer = new BankNoteContainer();
     private final Caretaker caretaker = new Caretaker();
