@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class JsonValueConverter {
     
-    public JsonValue toJsonValue(Object originObject) throws IllegalAccessException {
+    private JsonValue toJsonValue(Object originObject) throws IllegalAccessException {
         if (Objects.isNull(originObject)) {
             return JsonValue.NULL;
         }
@@ -39,37 +39,75 @@ public class JsonValueConverter {
         return objectBuilder.build();
     }
 
-    public JsonValue toJsonValue(byte b) {
+    public String toJsonString(Object originObject) throws IllegalAccessException {
+        return toJsonValue(originObject).toString();
+    }
+
+    public String toJsonString(byte b) {
+        return toJsonValue(b).toString();
+    }
+    public String toJsonString(short i) {
+        return toJsonValue(i).toString();
+    }
+
+    public String toJsonString(int i) {
+        return toJsonValue(i).toString();
+    }
+
+    public String toJsonString(long l) {
+        return toJsonValue(l).toString();
+    }
+
+    public String toJsonString(float f) {
+        return toJsonValue(f).toString();
+    }
+
+    public String toJsonString(double d) {
+        return toJsonValue(d).toString();
+    }
+
+    public String toJsonString(String s) {
+        if (Objects.isNull(s)) {
+            return JsonValue.NULL.toString();
+        }
+        return Json.createValue(s).toString();
+    }
+
+    public String toJsonString(char c) {
+        return Json.createValue(String.valueOf(c)).toString();
+    }
+
+    private JsonValue toJsonValue(byte b) {
         return Json.createValue(b);
     }
-    public JsonValue toJsonValue(short i) {
+    private JsonValue toJsonValue(short i) {
         return Json.createValue(i);
     }
 
-    public JsonValue toJsonValue(int i) {
+    private JsonValue toJsonValue(int i) {
         return Json.createValue(i);
     }
 
-    public JsonValue toJsonValue(long l) {
+    private JsonValue toJsonValue(long l) {
         return Json.createValue(l);
     }
 
-    public JsonValue toJsonValue(float f) {
+    private JsonValue toJsonValue(float f) {
         return Json.createValue(f);
     }
 
-    public JsonValue toJsonValue(double d) {
+    private JsonValue toJsonValue(double d) {
         return Json.createValue(d);
     }
 
-    public JsonValue toJsonValue(String s) {
+    private JsonValue toJsonValue(String s) {
         if (Objects.isNull(s)) {
             return JsonValue.NULL;
         }
         return Json.createValue(s);
     }
 
-    public JsonValue toJsonValue(char c) {
+    private JsonValue toJsonValue(char c) {
         return Json.createValue(String.valueOf(c));
     }
 
@@ -94,25 +132,25 @@ public class JsonValueConverter {
             return toJsonValue(anInt);
         } else if (Short.class.equals(object.getClass())) {
             short anShort = (Short) object;
-            return Json.createValue(anShort);
+            return toJsonValue(anShort);
         } else if (Byte.class.equals(object.getClass())) {
             short anByte = (Byte) object;
-            return Json.createValue(anByte);
+            return toJsonValue(anByte);
         } else if (Long.class.equals(object.getClass())) {
             long anLong = (Long) object;
-            return Json.createValue(anLong);
+            return toJsonValue(anLong);
         } else if (Float.class.equals(object.getClass())) {
             float anFloat = (Float) object;
-            return Json.createValue(anFloat);
+            return toJsonValue(anFloat);
         } else if (Double.class.equals(object.getClass())) {
             double anDouble = (Double) object;
-            return Json.createValue(anDouble);
+            return toJsonValue(anDouble);
         } else if (String.class.equals(object.getClass())) {
             String str = (String) object;
-            return Json.createValue(str);
+            return toJsonValue(str);
         } else if (Character.class.equals(object.getClass())) {
             Character character = (Character) object;
-            return Json.createValue(character.toString());
+            return toJsonValue(character.toString());
         } else if (Collection.class.isAssignableFrom(object.getClass())) {
             Collection collection = (Collection) object;
             return buildJsonArray(collection.toArray());
