@@ -15,6 +15,7 @@
         <module>hw04-aop</module>
         <module>hw06-atm</module>
         <module>hw08-serialization</module>
+        <module>hw09-jdbc</module>
     </modules>
 
     <properties>
