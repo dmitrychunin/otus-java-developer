@@ -3,7 +3,6 @@ package ru.otus.javadeveloper.hw09.executor;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.otus.javadeveloper.hw09.model.Account;
-import ru.otus.javadeveloper.hw09.model.User;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -13,7 +12,7 @@ import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DbExecutorImplAccountTest {
+public class DbCustomExecutorImplAccountTest {
     private static final String URL = "jdbc:h2:mem:";
     private static Connection connection;
     private static DbExecutor<Account> accountDbExecutor;
@@ -23,7 +22,7 @@ public class DbExecutorImplAccountTest {
     @BeforeAll
     public static void init() throws SQLException {
         connection = getConnection();
-        accountDbExecutor = new DbExecutorImpl<>(connection);
+        accountDbExecutor = new DbCustomExecutorImpl<>(connection);
         createAccountTable(connection);
     }
 

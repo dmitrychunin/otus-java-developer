@@ -1,24 +1,24 @@
 package ru.otus.javadeveloper.hw09.executor;
 
-import ru.otus.javadeveloper.hw09.builder.QueryBuilder;
-import ru.otus.javadeveloper.hw09.builder.QueryBuilderImpl;
-import ru.otus.javadeveloper.hw09.scanner.ClassScannerResult;
-import ru.otus.javadeveloper.hw09.scanner.EntityScanner;
-import ru.otus.javadeveloper.hw09.scanner.EntityScannerImpl;
-import ru.otus.javadeveloper.hw09.scanner.ObjectScannerResult;
-import ru.otus.javadeveloper.hw09.utils.ReflectionUtils;
+import ru.otus.javadeveloper.hw09.executor.builder.QueryBuilder;
+import ru.otus.javadeveloper.hw09.executor.builder.QueryBuilderImpl;
+import ru.otus.javadeveloper.hw09.executor.scanner.ClassScannerResult;
+import ru.otus.javadeveloper.hw09.executor.scanner.EntityScanner;
+import ru.otus.javadeveloper.hw09.executor.scanner.EntityScannerImpl;
+import ru.otus.javadeveloper.hw09.executor.scanner.ObjectScannerResult;
+import ru.otus.javadeveloper.hw09.executor.utils.ReflectionUtils;
 
 import java.sql.*;
 import java.util.Objects;
 
-public class DbExecutorImpl<T> implements DbExecutor<T> {
+public class DbCustomExecutorImpl<T> implements DbExecutor<T> {
 
     private final Connection connection;
     private final EntityScanner entityScanner = new EntityScannerImpl();
     private final QueryBuilder queryBuilder = new QueryBuilderImpl();
     private final ReflectionUtils<T> reflectionUtils = new ReflectionUtils<>();
 
-    public DbExecutorImpl(Connection connection) {
+    public DbCustomExecutorImpl(Connection connection) {
         this.connection = connection;
     }
 

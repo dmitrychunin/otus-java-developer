@@ -1,4 +1,4 @@
-package ru.otus.javadeveloper.hw09.scanner;
+package ru.otus.javadeveloper.hw09.executor.scanner;
 
 import lombok.Value;
 

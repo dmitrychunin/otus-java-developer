@@ -1,4 +1,4 @@
-package ru.otus.javadeveloper.hw09.utils;
+package ru.otus.javadeveloper.hw09.executor.utils;
 
 import com.google.common.primitives.Primitives;
 

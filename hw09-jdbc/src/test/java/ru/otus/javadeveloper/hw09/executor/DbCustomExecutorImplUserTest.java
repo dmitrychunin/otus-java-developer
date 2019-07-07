@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DbExecutorImplUserTest {
+public class DbCustomExecutorImplUserTest {
     private static final String URL = "jdbc:h2:mem:";
     private final static User originalUser = new User("John", 20);
     private static final long DOES_NOT_EXISTED_USER_ID = 123L;
@@ -21,7 +21,7 @@ public class DbExecutorImplUserTest {
     @BeforeAll
     public static void init() throws SQLException {
         connection = getConnection();
-        userDbExecutor = new DbExecutorImpl<>(connection);
+        userDbExecutor = new DbCustomExecutorImpl<>(connection);
         createUserTable(connection);
     }
 

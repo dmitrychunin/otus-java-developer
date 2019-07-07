@@ -1,7 +1,7 @@
-package ru.otus.javadeveloper.hw09.builder;
+package ru.otus.javadeveloper.hw09.executor.builder;
 
-import ru.otus.javadeveloper.hw09.scanner.ClassScannerResult;
-import ru.otus.javadeveloper.hw09.scanner.ObjectScannerResult;
+import ru.otus.javadeveloper.hw09.executor.scanner.ClassScannerResult;
+import ru.otus.javadeveloper.hw09.executor.scanner.ObjectScannerResult;
 
 public interface QueryBuilder {
     String buildInsert(ObjectScannerResult objectScannerResult);
