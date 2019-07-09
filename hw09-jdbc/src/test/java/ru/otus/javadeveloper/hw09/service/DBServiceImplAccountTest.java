@@ -20,7 +20,7 @@ public class DBServiceImplAccountTest {
 
     @BeforeAll
     public static void setUp() throws SQLException {
-        dbService = new DBServiceImpl(dataSource, Account.class);
+        dbService = new DBServiceImpl<>(dataSource, Account.class);
         createAccountTable(dataSource);
     }
 

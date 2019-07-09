@@ -2,10 +2,9 @@ package ru.otus.javadeveloper.hw09.executor;
 
 import ru.otus.javadeveloper.hw09.executor.builder.QueryBuilder;
 import ru.otus.javadeveloper.hw09.executor.builder.QueryBuilderImpl;
-import ru.otus.javadeveloper.hw09.executor.scanner.ClassScannerResult;
 import ru.otus.javadeveloper.hw09.executor.scanner.EntityScanner;
 import ru.otus.javadeveloper.hw09.executor.scanner.EntityScannerImpl;
-import ru.otus.javadeveloper.hw09.executor.scanner.ObjectScannerResult;
+import ru.otus.javadeveloper.hw09.executor.scanner.ScannerResult;
 import ru.otus.javadeveloper.hw09.executor.utils.ReflectionUtils;
 
 import java.sql.*;
@@ -25,8 +24,8 @@ public class DbCustomExecutorImpl<T> implements DbExecutor<T> {
     @Override
     public T create(T objectData) throws SQLException {
         Savepoint savePoint = this.connection.setSavepoint("savePointName");
-        ObjectScannerResult objectScannerResult = entityScanner.scanObject(objectData);
-        final String insert = queryBuilder.buildInsert(objectScannerResult);
+        ScannerResult scannerResult = entityScanner.scanObject(objectData);
+        final String insert = queryBuilder.buildInsert(scannerResult);
         try (PreparedStatement pst = connection.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS)) {
             pst.executeUpdate();
             try (ResultSet rs = pst.getGeneratedKeys()) {
@@ -44,15 +43,15 @@ public class DbCustomExecutorImpl<T> implements DbExecutor<T> {
     @Override
     public T update(T objectData) throws SQLException {
         Class<T> aClass = (Class<T>) objectData.getClass();
-        ObjectScannerResult objectScannerResult1 = entityScanner.scanObject(objectData);
-        Long id = objectScannerResult1.getIdValue();
+        ScannerResult scannerResult1 = entityScanner.scanObject(objectData);
+        Long id = (Long) scannerResult1.getFirstIdFieldContainer().getValue();
         T load = load(id, aClass);
         if (Objects.isNull(load)) {
             throw new RuntimeException("Entity is not found");
         }
         Savepoint savePoint = this.connection.setSavepoint("savePointName");
-        ObjectScannerResult objectScannerResult = entityScanner.scanObject(objectData);
-        final String update = queryBuilder.buildUpdateById(objectScannerResult);
+        ScannerResult scannerResult = entityScanner.scanObject(objectData);
+        final String update = queryBuilder.buildUpdateById(scannerResult);
         try (PreparedStatement pst = this.connection.prepareStatement(update)) {
             pst.setLong(1, id);
             pst.executeUpdate();
@@ -67,8 +66,8 @@ public class DbCustomExecutorImpl<T> implements DbExecutor<T> {
 
     @Override
     public T createOrUpdate(T objectData) throws SQLException {
-        ObjectScannerResult objectScannerResult1 = entityScanner.scanObject(objectData);
-        Long id = objectScannerResult1.getIdValue();
+        ScannerResult scannerResult1 = entityScanner.scanObject(objectData);
+        Long id = (Long) scannerResult1.getFirstIdFieldContainer().getValue();
         T load = load(id, (Class<T>) objectData.getClass());
         if (Objects.isNull(load)) {
             return create(objectData);
@@ -79,8 +78,8 @@ public class DbCustomExecutorImpl<T> implements DbExecutor<T> {
 
     @Override
     public T load(long id, Class<T> clazz) throws SQLException {
-        ClassScannerResult classScannerResult = entityScanner.scanClass(clazz);
-        final String select = queryBuilder.buildSelectById(classScannerResult);
+        ScannerResult scannerResult = entityScanner.scanClass(clazz);
+        final String select = queryBuilder.buildSelectById(scannerResult);
         try (PreparedStatement pst = this.connection.prepareStatement(select)) {
             pst.setLong(1, id);
             try (ResultSet rs = pst.executeQuery()) {

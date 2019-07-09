@@ -10,12 +10,10 @@ import java.util.Optional;
 
 public class DBServiceImpl<T> implements DBService<T> {
     private final DataSource dataSource;
-    private final DbExecutor<T> executor;
     private final Class<T> clazz;
 
     public DBServiceImpl(DataSource dataSource, Class<T> clazz) throws SQLException {
         this.dataSource = dataSource;
-        executor = new DbCustomExecutorImpl<>(this.dataSource.getConnection());
         this.clazz = clazz;
     }
 
@@ -27,7 +25,7 @@ public class DBServiceImpl<T> implements DBService<T> {
             connection.commit();
             System.out.println("created entity:" + savedEntity);
             return savedEntity;
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             ex.printStackTrace();
             throw new RuntimeException(ex);
         }
@@ -40,7 +38,7 @@ public class DBServiceImpl<T> implements DBService<T> {
             Optional<T> entity = Optional.ofNullable(executor.load(id, clazz));
             System.out.println("entity:" + entity);
             return entity;
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             ex.printStackTrace();
             throw new RuntimeException(ex);
         }
@@ -54,7 +52,7 @@ public class DBServiceImpl<T> implements DBService<T> {
             connection.commit();
             System.out.println("updated entity:" + update);
             return update;
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             ex.printStackTrace();
             throw new RuntimeException(ex);
         }

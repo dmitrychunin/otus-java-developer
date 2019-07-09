@@ -19,7 +19,7 @@ public class DBServiceImplUserTest {
 
     @BeforeAll
     public static void setUp() throws SQLException {
-        dbService = new DBServiceImpl(dataSource, User.class);
+        dbService = new DBServiceImpl<>(dataSource, User.class);
         createUserTable(dataSource);
     }
 
