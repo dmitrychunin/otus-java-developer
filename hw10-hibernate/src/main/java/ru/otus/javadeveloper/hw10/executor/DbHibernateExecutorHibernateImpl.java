@@ -11,11 +11,11 @@ import ru.otus.javadeveloper.hw10.model.AddressDataSet;
 import ru.otus.javadeveloper.hw10.model.PhoneDataSet;
 import ru.otus.javadeveloper.hw10.model.User;
 
-public class DbHibernateExecutorImpl<T> implements DbExecutor<T> {
+public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<T> {
     private final SessionFactory sessionFactory;
 
 
-    public DbHibernateExecutorImpl() {
+    public DbHibernateExecutorHibernateImpl() {
         var configuration = new Configuration()
                 .configure("hibernate.cfg.xml");
 

@@ -2,6 +2,7 @@ package ru.otus.javadeveloper.hw10.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.otus.javadeveloper.hw10.executor.DbHibernateExecutorHibernateImpl;
 import ru.otus.javadeveloper.hw10.model.AddressDataSet;
 import ru.otus.javadeveloper.hw10.model.User;
 import ru.otus.javadeveloper.hw10.utils.DefaultBuilder;
@@ -15,7 +16,7 @@ public class DBHibernateServiceImplTest {
     @BeforeEach
     public void setUp() {
         defaultUser = DefaultBuilder.createDefaultTestUser();
-        dbService = new DbHibernateServiceImpl<>(User.class);
+        dbService = new DbHibernateServiceImpl<>(User.class, new DbHibernateExecutorHibernateImpl<>());
     }
 
     @Test
