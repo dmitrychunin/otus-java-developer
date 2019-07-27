@@ -17,6 +17,7 @@
         <module>hw08-serialization</module>
         <module>hw09-jdbc</module>
         <module>hw10-hibernate</module>
+        <module>hw12-web-server</module>
     </modules>
 
     <properties>
@@ -38,6 +39,7 @@
         <h2.version>1.4.197</h2.version>
         <javax.json.version>1.1.4</javax.json.version>
         <hibernate.core.version>5.4.1.Final</hibernate.core.version>
+        <jetty.version>9.4.19.v20190610</jetty.version>
     </properties>
 
     <dependencyManagement>
@@ -106,6 +108,21 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>${hibernate.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-security</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-webapp</artifactId>
+                <version>${jetty.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
