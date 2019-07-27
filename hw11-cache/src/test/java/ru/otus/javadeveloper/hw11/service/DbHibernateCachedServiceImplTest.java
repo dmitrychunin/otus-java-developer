@@ -12,8 +12,7 @@ import ru.otus.javadeveloper.hw11.model.User;
 import ru.otus.javadeveloper.hw11.utils.DefaultBuilder;
 
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class DbHibernateCachedServiceImplTest {
@@ -27,6 +26,10 @@ public class DbHibernateCachedServiceImplTest {
         User defaultTestUser = DefaultBuilder.createDefaultTestUser();
         Long savedUserId = dbService.save(defaultTestUser).getId();
         dbService.get(savedUserId);
+        dbService.save(defaultTestUser.toBuilder().phoneDataSets(null).build());
+        dbService.save(defaultTestUser.toBuilder().phoneDataSets(null).build());
+        dbService.save(defaultTestUser.toBuilder().phoneDataSets(null).build());
+        dbService.get(savedUserId);
 
         verify(dbExecutorHibernate, times(1)).load(eq(savedUserId), eq(User.class));
     }
@@ -36,8 +39,7 @@ public class DbHibernateCachedServiceImplTest {
         User defaultTestUser = DefaultBuilder.createDefaultTestUser();
         Long savedUserId = dbService.save(defaultTestUser).getId();
         dbService.get(savedUserId);
-        dbService.get(savedUserId);
 
-        verify(dbExecutorHibernate, times(1)).load(eq(savedUserId), eq(User.class));
+        verify(dbExecutorHibernate, never()).load(eq(savedUserId), eq(User.class));
     }
 }

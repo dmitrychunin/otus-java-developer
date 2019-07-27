@@ -2,12 +2,10 @@ package ru.otus.javadeveloper.hw11.cache;
 
 import lombok.val;
 
-import java.lang.ref.SoftReference;
-import java.lang.ref.WeakReference;
-import java.util.Comparator;
+import java.lang.ref.Reference;
+import java.lang.ref.ReferenceQueue;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class LRUCache<K, V> implements Cache<K, V> {
 
@@ -15,8 +13,9 @@ public class LRUCache<K, V> implements Cache<K, V> {
     private final long maxSize;
     private final long lifeTimeMs;
     private final long idleTimeMs;
-    private Map<LRUKey<K>, WeakReference<LRUValue<K, V>>> valueHashMap = new HashMap<>();
-    private TreeMap<SoftReference<Long>, SoftReference<K>> keyTreeMap = new TreeMap<>(Comparator.comparingLong(SoftReference::get));
+    private Map<K, CustomSoftReference<K, V>> valueHashMap = new HashMap<>();
+    private ReferenceQueue<V> queue = new ReferenceQueue<>();
+    private MultiValueTreeMap<Long, K> keyTreeMap = new MultiValueTreeMap<>();
     private long size = 0;
 
     public LRUCache() {
@@ -39,33 +38,33 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public V get(Object key) {
-        val softKey = new SoftReference<>((K) key);
-        WeakReference<LRUValue<K, V>> weakLruValue = valueHashMap.get(new LRUKey<>(softKey));
-        if (weakLruValue == null) {
+        clearAllCacheOnOutOfMemoryAlert();
+        CustomSoftReference<K, V> softLruValue = valueHashMap.get(key);
+        if (softLruValue == null) {
             return null;
         }
 
-        if (isTimeExceed(weakLruValue)) {
-            val lastAccessTime = weakLruValue.get().getLastAccessTime();
-            remove(new SoftReference<>(lastAccessTime), new SoftReference<>(weakLruValue.get().getKey()));
+        if (isTimeExceed(softLruValue)) {
+            val lastAccessTime = softLruValue.getLastAccessTime();
+            remove(lastAccessTime, softLruValue.getKey());
             return null;
         }
-        return updateExisted(weakLruValue, weakLruValue.get().getValue()).getValue();
+        return updateExisted(softLruValue, softLruValue.get());
     }
 
-    public boolean isTimeExceed(WeakReference<LRUValue<K, V>> weakLruValue) {
+    private boolean isTimeExceed(CustomSoftReference<K, V> softLruValue) {
         val now = System.currentTimeMillis();
-        val creationTime = weakLruValue.get().getCreationTime();
-        val lastAccessTime = weakLruValue.get().getLastAccessTime();
+        val creationTime = softLruValue.getCreationTime();
+        val lastAccessTime = softLruValue.getLastAccessTime();
         return (creationTime + lifeTimeMs) <= now || (lastAccessTime + idleTimeMs) <= now;
     }
 
     @Override
     public void put(K key, V value) {
-        val softKey = new SoftReference<>(key);
-        WeakReference<LRUValue<K, V>> weakLruValue = valueHashMap.get(new LRUKey<>(softKey));
+        clearAllCacheOnOutOfMemoryAlert();
+        CustomSoftReference<K, V> weakLruValue = valueHashMap.get(key);
         if (weakLruValue == null) {
-            putNew(softKey, value);
+            putNew(key, value);
         } else {
             updateExisted(weakLruValue, value);
         }
@@ -73,55 +72,62 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public void removeAll() {
-        keyTreeMap = new TreeMap<>();
-        valueHashMap = new HashMap<>();
+        keyTreeMap.clear();
+        valueHashMap.clear();
     }
 
     @Override
     public void remove(Object key) {
-        WeakReference<LRUValue<K, V>> element = valueHashMap.get(new LRUKey<>(new SoftReference<>((K) key)));
+        clearAllCacheOnOutOfMemoryAlert();
+        CustomSoftReference<K, V> element = valueHashMap.get((K) key);
         if (element == null) {
             throw new RuntimeException();
         }
-        remove(new SoftReference<>(element.get().getLastAccessTime()), new SoftReference<>((K) key));
+        remove(element.getLastAccessTime(), (K) key);
     }
 
-    private void remove(SoftReference<Long> lastAccessTime, SoftReference<K> key) {
+    private void remove(Long lastAccessTime, K key) {
         size--;
         keyTreeMap.remove(lastAccessTime, key);
-        valueHashMap.remove(new LRUKey<>(key));
+        valueHashMap.remove(key);
     }
 
-    private void putNew(SoftReference<K> key, V value) {
+    private void putNew(K key, V value) {
         if (size == maxSize) {
             removeLeastRecentlyUsed();
         }
         size++;
         val now = System.currentTimeMillis();
-        val softNow = new SoftReference<>(now);
-        keyTreeMap.put(softNow, key);
-        WeakReference<LRUValue<K, V>> weakResult = new WeakReference<>(new LRUValue<>(key.get(), value, now, now));
-        valueHashMap.put(new LRUKey<>(key), weakResult);
+        keyTreeMap.put(now, key);
+        CustomSoftReference<K, V> softResult = new CustomSoftReference<>(key, value, now, now, queue);
+        valueHashMap.put(key, softResult);
     }
 
-    private LRUValue<K, V> updateExisted(WeakReference<LRUValue<K, V>> lruValue, V value) {
-        keyTreeMap.remove(new SoftReference<>(lruValue.get().getLastAccessTime()));
-        val key = lruValue.get().getKey();
-        val softKey = new SoftReference<>(key);
-        val now = new SoftReference<>(System.currentTimeMillis());
-        keyTreeMap.put(now, softKey);
-        WeakReference<LRUValue<K, V>> weakResult = new WeakReference<>(new LRUValue<K, V>(key, value, lruValue.get().getCreationTime(), now.get()));
-        valueHashMap.put(new LRUKey<>(softKey), weakResult);
+    private void clearAllCacheOnOutOfMemoryAlert() {
+        Reference<? extends V> poll;
+        while ((poll = queue.poll()) != null) {
+            CustomSoftReference<K, V> softRefOnGarbageCollectedObject = (CustomSoftReference<K, V>) poll;
+            remove(softRefOnGarbageCollectedObject.getLastAccessTime(), softRefOnGarbageCollectedObject.getKey());
+        }
+    }
+
+    private V updateExisted(CustomSoftReference<K, V> lruValue, V newValue) {
+        keyTreeMap.remove(lruValue.getLastAccessTime(), lruValue.getKey());
+        val key = lruValue.getKey();
+        val now = System.currentTimeMillis();
+        keyTreeMap.put(now, key);
+        CustomSoftReference<K, V> weakResult = new CustomSoftReference<>(key, newValue, lruValue.getCreationTime(), now, queue);
+        valueHashMap.put(key, weakResult);
         return weakResult.get();
     }
 
     private void removeLeastRecentlyUsed() {
-        Map.Entry<SoftReference<Long>, SoftReference<K>> leastRecentlyUsed = keyTreeMap.firstEntry();
+        MultiValueTreeMap.Pair<Long, K> leastRecentlyUsed = keyTreeMap.firstEntry();
         val lastAccessTime = leastRecentlyUsed.getKey();
         val key = leastRecentlyUsed.getValue();
 
         size--;
         keyTreeMap.remove(lastAccessTime, key);
-        valueHashMap.remove(new LRUKey<>(key));
+        valueHashMap.remove(key);
     }
 }

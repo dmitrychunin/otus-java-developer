@@ -3,14 +3,16 @@ package ru.otus.javadeveloper.hw11.cache;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.otus.javadeveloper.hw11.model.User;
+import ru.otus.javadeveloper.hw11.utils.DefaultBuilder;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static ru.otus.javadeveloper.hw11.utils.DefaultBuilder.createDefaultTestUser;
 
 public class LRUCacheTest {
     //1) Thread.sleep добавлены для того, чтобы всегда был явно определен последний запрошенный,
     //если разница меньше миллисекнуды -> из кеша удалится первый попавшийся с min(lastAccessTime)
-    //2) запускать тесты с параметром -Xmx20m
+    //2) запускать тесты с параметром -Xmx5m
 
     private final User defaultTestUser = createDefaultTestUser();
     private Cache<Long, User> limitedEternalCache;
@@ -94,11 +96,11 @@ public class LRUCacheTest {
     }
 
     @Test
-    public void shouldThrowNPEWhenOutOfMemoryAlert() {
-        assertThrows(NullPointerException.class, () -> {
-            for (long i = 0; i < Long.MAX_VALUE; i++) {
-                unlimitedCache.put(i, defaultTestUser);
-            }
-        });
+    public void shouldNotThrowOutOfMemory() {
+        for (long i = 0; i < 50_000; i++) {
+            User defaultTestUser = DefaultBuilder.createDefaultTestUser();
+            unlimitedCache.put(i, defaultTestUser);
+            defaultTestUser = null;
+        }
     }
 }

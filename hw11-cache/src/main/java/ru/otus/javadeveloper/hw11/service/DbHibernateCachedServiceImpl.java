@@ -3,6 +3,8 @@ package ru.otus.javadeveloper.hw11.service;
 import ru.otus.javadeveloper.hw11.cache.Cache;
 import ru.otus.javadeveloper.hw11.executor.DbExecutorHibernate;
 
+import javax.persistence.Id;
+import java.lang.reflect.Field;
 import java.util.Optional;
 
 public class DbHibernateCachedServiceImpl<T> implements DBService<T> {
@@ -16,10 +18,34 @@ public class DbHibernateCachedServiceImpl<T> implements DBService<T> {
         this.cache = cache;
     }
 
-
     @Override
     public T save(T entity) {
-        return dbExecutorHibernate.create(entity);
+        T t = dbExecutorHibernate.create(entity);
+        cache.put(getFirstIdAnnotatedField(entity), t);
+        return t;
+    }
+
+    private Long getFirstIdAnnotatedField(T entity) {
+        Class<?> aClass = entity.getClass();
+        Field[] declaredFields = aClass.getDeclaredFields();
+        for (Field declaredField : declaredFields) {
+            if (declaredField.isAnnotationPresent(Id.class)) {
+                return getLongFromField(entity, declaredField);
+            }
+        }
+        throw new RuntimeException();
+    }
+
+    private Long getLongFromField(T entity, Field declaredField) {
+        declaredField.setAccessible(true);
+        Long aLong = null;
+        try {
+            aLong = (Long) declaredField.get(entity);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        declaredField.setAccessible(false);
+        return aLong;
     }
 
     @Override
@@ -35,6 +61,8 @@ public class DbHibernateCachedServiceImpl<T> implements DBService<T> {
 
     @Override
     public T update(T entity) {
-        return dbExecutorHibernate.update(entity);
+        T update = dbExecutorHibernate.update(entity);
+        cache.put(getFirstIdAnnotatedField(update), update);
+        return update;
     }
 }
