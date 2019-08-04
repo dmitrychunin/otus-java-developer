@@ -25,18 +25,19 @@ public class DbHibernateCachedServiceImpl<T> implements DBService<T> {
         return t;
     }
 
+//    todo move to utils?
     private Long getFirstIdAnnotatedField(T entity) {
         Class<?> aClass = entity.getClass();
         Field[] declaredFields = aClass.getDeclaredFields();
         for (Field declaredField : declaredFields) {
             if (declaredField.isAnnotationPresent(Id.class)) {
-                return getLongFromField(entity, declaredField);
+                return getLongFieldValue(entity, declaredField);
             }
         }
         throw new RuntimeException();
     }
 
-    private Long getLongFromField(T entity, Field declaredField) {
+    private Long getLongFieldValue(T entity, Field declaredField) {
         declaredField.setAccessible(true);
         Long aLong = null;
         try {

@@ -17,7 +17,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class DbHibernateCachedServiceImplTest {
 
-    private final Cache<Long, User> userCache = Mockito.spy(new LRUCache<>(3, 0, 0));
+    private final Cache<Long, User> userCache = Mockito.spy(new LRUCache<Long, User>(3));
     private final DbExecutorHibernate<User> dbExecutorHibernate = Mockito.spy(new DbHibernateExecutorHibernateImpl<>());
     private final DBService<User> dbService = new DbHibernateCachedServiceImpl<>(User.class, dbExecutorHibernate, userCache);
 

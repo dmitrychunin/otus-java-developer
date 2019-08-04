@@ -12,7 +12,7 @@ import static ru.otus.javadeveloper.hw11.utils.DefaultBuilder.createDefaultTestU
 public class LRUCacheTest {
     //1) Thread.sleep добавлены для того, чтобы всегда был явно определен последний запрошенный,
     //если разница меньше миллисекнуды -> из кеша удалится первый попавшийся с min(lastAccessTime)
-    //2) запускать тесты с параметром -Xmx5m
+    //2) запускать тесты с параметром -Xmx10m
 
     private final User defaultTestUser = createDefaultTestUser();
     private Cache<Long, User> limitedEternalCache;
@@ -22,7 +22,7 @@ public class LRUCacheTest {
     @BeforeEach
     public void init() {
         limitedEternalCache = new LRUCache<>(2);
-        autoCleanedCache = new LRUCache<>(1, 500, 150);
+        autoCleanedCache = new LRUCache<>(1, 150);
         unlimitedCache = new LRUCache<>();
     }
 
@@ -73,22 +73,6 @@ public class LRUCacheTest {
     }
 
     @Test
-    public void shouldNotExceedMaxLifeTimeEvenIfItFrequentlyAccessed() throws InterruptedException {
-
-        autoCleanedCache.put(1L, defaultTestUser);
-        Thread.sleep(100);
-        assertEquals(defaultTestUser, autoCleanedCache.get(1L));
-        Thread.sleep(100);
-        assertEquals(defaultTestUser, autoCleanedCache.get(1L));
-        Thread.sleep(100);
-        assertEquals(defaultTestUser, autoCleanedCache.get(1L));
-        Thread.sleep(100);
-        assertEquals(defaultTestUser, autoCleanedCache.get(1L));
-        Thread.sleep(100);
-        assertNull(autoCleanedCache.get(1L));
-    }
-
-    @Test
     public void shouldRemoveSmallAccessed() throws InterruptedException {
         autoCleanedCache.put(1L, defaultTestUser);
         Thread.sleep(200);
@@ -97,7 +81,7 @@ public class LRUCacheTest {
 
     @Test
     public void shouldNotThrowOutOfMemory() {
-        for (long i = 0; i < 50_000; i++) {
+        for (long i = 0; i < 300_000; i++) {
             User defaultTestUser = DefaultBuilder.createDefaultTestUser();
             unlimitedCache.put(i, defaultTestUser);
             defaultTestUser = null;
