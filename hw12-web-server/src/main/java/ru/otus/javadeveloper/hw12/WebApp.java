@@ -11,6 +11,7 @@ import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.security.Constraint;
+import ru.otus.javadeveloper.hw12.dao.model.User;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -33,7 +34,7 @@ public class WebApp {
 
     public Server createServer(int port) throws MalformedURLException {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.addServlet(new ServletHolder(new UserServlet()), "/user");
+        context.addServlet(new ServletHolder(new EntityServlet<>(User.class)), "/user");
 
         Server server = new Server(port);
         server.setHandler(new HandlerList(context));

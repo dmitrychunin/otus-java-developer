@@ -1,8 +1,8 @@
 package ru.otus.javadeveloper.hw12;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import ru.otus.javadeveloper.hw12.dao.executor.DbHibernateExecutorHibernateImpl;
-import ru.otus.javadeveloper.hw12.dao.model.User;
 import ru.otus.javadeveloper.hw12.service.DBService;
 import ru.otus.javadeveloper.hw12.service.DbHibernateServiceImpl;
 
@@ -14,14 +14,20 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class UserServlet extends HttpServlet {
-    private final DBService<User> dbService = new DbHibernateServiceImpl<>(User.class, new DbHibernateExecutorHibernateImpl<>());
+public class EntityServlet<T> extends HttpServlet {
+    private final Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+    private final DBService<T> dbService;
+    private final Class<T> clazz;
+
+    public EntityServlet(Class<T> clazz) {
+        this.clazz = clazz;
+        dbService = new DbHibernateServiceImpl<>(clazz, new DbHibernateExecutorHibernateImpl<>());
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Gson gson = new Gson();
-        List<User> all = dbService.getAll();
-        all.stream().flatMap(user -> user.getPhoneDataSets().stream()).forEach(phoneDataSet -> phoneDataSet.setUser(null));
+        List<T> all = dbService.getAll();
+//        all.stream().flatMap(user -> user.getPhoneDataSets().stream()).forEach(phoneDataSet -> phoneDataSet.setUser(null));
         String resultAsString = gson.toJson(all);
 
         response.setContentType("application/json");
@@ -34,11 +40,10 @@ public class UserServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String collect = request.getReader().lines().collect(Collectors.joining());
-        Gson gson = new Gson();
-        User user = gson.fromJson(collect, User.class);
-        user.getPhoneDataSets().stream().forEach(phoneDataSet -> phoneDataSet.setUser(user));
-        User saved = dbService.save(user);
-        saved.getPhoneDataSets().stream().forEach(phoneDataSet -> phoneDataSet.setUser(null));
+        T user = gson.fromJson(collect, clazz);
+//        user.getPhoneDataSets().stream().forEach(phoneDataSet -> phoneDataSet.setUser(user));
+        T saved = dbService.save(user);
+//        saved.getPhoneDataSets().stream().forEach(phoneDataSet -> phoneDataSet.setUser(null));
 
         String resultAsString = gson.toJson(saved);
 
