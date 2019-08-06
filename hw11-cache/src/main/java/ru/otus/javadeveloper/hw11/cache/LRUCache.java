@@ -12,7 +12,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
     public static final long DEFAULT_MAX_VALUE = Long.MAX_VALUE / 2;
     private final long maxSize;
     private final long idleTimeMs;
-    private Set<CustomSoftReference<K, V>> linkedHashSet = new LinkedHashSet<>();
+    private Set<CustomSoftReference<K, V>> softValueSet = new LinkedHashSet<>();
     private ReferenceQueue<V> queue = new ReferenceQueue<>();
     private long size = 0;
 
@@ -68,7 +68,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public void removeAll() {
-        linkedHashSet.clear();
+        softValueSet.clear();
     }
 
     private boolean isIdleTooLong(CustomSoftReference<K, V> softLruValue) {
@@ -78,7 +78,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
     }
 
     private void removeIfIdleTooLong() {
-        Iterator<CustomSoftReference<K, V>> iterator = linkedHashSet.iterator();
+        Iterator<CustomSoftReference<K, V>> iterator = softValueSet.iterator();
         CustomSoftReference<K, V> next;
         while (iterator.hasNext() && (next = iterator.next()) != null && isIdleTooLong(next)) {
             iterator.remove();
@@ -86,7 +86,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
     }
 
     private void removeLeastRecentlyUsed() {
-        Iterator<CustomSoftReference<K, V>> iterator = linkedHashSet.iterator();
+        Iterator<CustomSoftReference<K, V>> iterator = softValueSet.iterator();
         iterator.next();
         iterator.remove();
         size--;
@@ -96,12 +96,12 @@ public class LRUCache<K, V> implements Cache<K, V> {
         val now = System.currentTimeMillis();
         lruValue.setLastAccessTime(now);
         size++;
-        linkedHashSet.add(lruValue);
+        softValueSet.add(lruValue);
     }
 
     private CustomSoftReference<K, V> removeIfExistsWithKey(K key) {
 //        todo use spliterator or parallel stream to improve performance?
-        Iterator<CustomSoftReference<K, V>> iterator = linkedHashSet.iterator();
+        Iterator<CustomSoftReference<K, V>> iterator = softValueSet.iterator();
         while (iterator.hasNext()) {
             CustomSoftReference<K, V> next = iterator.next();
             if (next.getKey().equals(key)) {
@@ -118,7 +118,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
         while (queue.poll() != null) {
         }
 
-        Iterator<CustomSoftReference<K, V>> iterator = linkedHashSet.iterator();
+        Iterator<CustomSoftReference<K, V>> iterator = softValueSet.iterator();
         CustomSoftReference<K, V> next;
         while (iterator.hasNext() && (next = iterator.next()) != null) {
             if (next.get() == null) {
