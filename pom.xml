@@ -18,6 +18,7 @@
         <module>hw09-jdbc</module>
         <module>hw10-hibernate</module>
         <module>hw11-cache</module>
+        <module>hw14-multithreading</module>
     </modules>
 
     <properties>
