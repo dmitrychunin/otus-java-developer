@@ -1,5 +1,7 @@
 package ru.otus.javadeveloper.hw14;
 
+import static java.lang.String.format;
+
 public class SynchronizedPrint implements Runnable {
 
     private final Object monitor = new Object();
@@ -22,14 +24,14 @@ public class SynchronizedPrint implements Runnable {
         for (int j = 1; j < 10; j++) {
             synchronized (monitor) {
                 monitor.notify();
-                System.out.print(i++ + " ");
+                System.out.print(format("%s(%s) ", i++, Thread.currentThread().getName()));
                 monitor.wait();
             }
         }
         for (int k = 1; k < 10; k++) {
             synchronized (monitor) {
                 monitor.notify();
-                System.out.print(i-- + " ");
+                System.out.print(format("%s(%s) ", i--, Thread.currentThread().getName()));
                 monitor.wait();
             }
         }
