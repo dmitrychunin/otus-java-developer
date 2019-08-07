@@ -3,12 +3,16 @@ package ru.otus.javadeveloper.hw12.service;
 import java.util.List;
 import java.util.Optional;
 
-public interface DBService<T> {
-    T save(T entity);
+public interface DBService {
+    Object save(Object entity);
 
-    Optional<T> get(long id);
+//    Optional<Object> get(long id);
 
-    T update(T entity);
+    Optional<?> get(long id, Class<?> clazz);
 
-    List<T> getAll();
+    Object update(Object entity);
+
+//    List<?> getAll();
+
+    List<?> getAll(Class<?> clazz);
 }

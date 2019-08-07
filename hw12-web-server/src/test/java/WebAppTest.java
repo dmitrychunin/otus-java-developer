@@ -28,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class WebAppTest {
     private final static int PORT = 8081;
-    private static final DBService<User> dbService = new DbHibernateServiceImpl<>(User.class, new DbHibernateExecutorHibernateImpl<>());
+    private static final DBService dbService = new DbHibernateServiceImpl(new DbHibernateExecutorHibernateImpl());
     private final static User defaultTestUser = DefaultBuilder.createDefaultTestUser();
     private static final String LOGIN = "ivan";
     private static final String PASSWORD = "pass";
@@ -85,7 +85,7 @@ class WebAppTest {
         String responseBody = getServerResponse(connection);
         User actual = gson.fromJson(responseBody, User.class);
         assertEquals(DefaultBuilder.createDefaultTestUser(), actual);
-        assertEquals(WebAppTest.defaultTestUser, dbService.get(actual.getId()).get());
+        assertEquals(WebAppTest.defaultTestUser, dbService.get(actual.getId(), User.class).get());
     }
 
     private String getServerResponse(HttpURLConnection connection) throws IOException {

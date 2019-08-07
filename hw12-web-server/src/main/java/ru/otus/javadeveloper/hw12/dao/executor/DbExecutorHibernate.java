@@ -2,15 +2,15 @@ package ru.otus.javadeveloper.hw12.dao.executor;
 
 import java.util.List;
 
-public interface DbExecutorHibernate<T> {
-    T create(T objectData);
+public interface DbExecutorHibernate {
+    Object create(Object objectData);
 
-    T update(T objectData);
+    Object update(Object objectData);
 
-    T createOrUpdate(T objectData);
+    Object createOrUpdate(Object objectData);
 
-    T load(long id, Class<T> clazz);
+    Object load(long id, Class<?> clazz);
 
 
-    List<T> loadAll(Class<T> clazz);
+    List<?> loadAll(Class<?> clazz);
 }

@@ -5,32 +5,30 @@ import ru.otus.javadeveloper.hw12.dao.executor.DbExecutorHibernate;
 import java.util.List;
 import java.util.Optional;
 
-public class DbHibernateServiceImpl<T> implements DBService<T> {
-    private final Class<T> clazz;
-    DbExecutorHibernate<T> dbExecutorHibernate;
+public class DbHibernateServiceImpl implements DBService {
+    private final DbExecutorHibernate dbExecutorHibernate;
 
-    public DbHibernateServiceImpl(Class<T> clazz, DbExecutorHibernate<T> dbExecutorHibernate) {
-        this.clazz = clazz;
+    public DbHibernateServiceImpl(DbExecutorHibernate dbExecutorHibernate) {
         this.dbExecutorHibernate = dbExecutorHibernate;
     }
 
     @Override
-    public T save(T entity) {
+    public Object save(Object entity) {
         return dbExecutorHibernate.create(entity);
     }
 
     @Override
-    public Optional<T> get(long id) {
+    public Optional<?> get(long id, Class<?> clazz) {
         return Optional.of(dbExecutorHibernate.load(id, clazz));
     }
 
     @Override
-    public T update(T entity) {
+    public Object update(Object entity) {
         return dbExecutorHibernate.update(entity);
     }
 
     @Override
-    public List<T> getAll() {
+    public List<?> getAll(Class<?> clazz) {
         return dbExecutorHibernate.loadAll(clazz);
     }
 }

@@ -13,7 +13,7 @@ import ru.otus.javadeveloper.hw12.dao.model.User;
 
 import java.util.List;
 
-public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<T> {
+public class DbHibernateExecutorHibernateImpl implements DbExecutorHibernate {
     private final SessionFactory sessionFactory;
 
 
@@ -35,7 +35,7 @@ public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<
     }
 
     @Override
-    public T create(T objectData) {
+    public Object create(Object objectData) {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             session.save(objectData);
@@ -45,7 +45,7 @@ public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<
     }
 
     @Override
-    public T update(T objectData) {
+    public Object update(Object objectData) {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             session.merge(objectData);
@@ -55,7 +55,7 @@ public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<
     }
 
     @Override
-    public T createOrUpdate(T objectData) {
+    public Object createOrUpdate(Object objectData) {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             session.saveOrUpdate(objectData);
@@ -65,8 +65,8 @@ public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<
     }
 
     @Override
-    public T load(long id, Class<T> clazz) {
-        T result;
+    public Object load(long id, Class<?> clazz) {
+        Object result;
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             result = session.get(clazz, id);
@@ -75,7 +75,7 @@ public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<
     }
 
     @Override
-    public List<T> loadAll(Class<T> clazz) {
+    public List<?> loadAll(Class<?> clazz) {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             return session.createQuery("SELECT entity FROM " + clazz.getSimpleName() + " entity", clazz).getResultList();
