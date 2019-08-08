@@ -15,11 +15,9 @@ public class DefaultBuilder {
         addressDataSet.setStreet("Boulevard of broken dreams");
         defaultUser.setAddressDataSet(addressDataSet);
         var phoneDataSet1 = new PhoneDataSet();
-        phoneDataSet1.setUser(defaultUser);
         phoneDataSet1.setNumber("88005553535");
         var phoneDataSet2 = new PhoneDataSet();
         phoneDataSet2.setNumber("89457777777");
-        phoneDataSet2.setUser(defaultUser);
         defaultUser.setPhoneDataSets(Set.of(phoneDataSet1, phoneDataSet2));
         return defaultUser;
     }

@@ -25,30 +25,23 @@ public class EntityServlet<T> extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         List<T> all = (List<T>) dbService.getAll(clazz);
-//        all.stream().flatMap(user -> user.getPhoneDataSets().stream()).forEach(phoneDataSet -> phoneDataSet.setUser(null));
-        String resultAsString = gson.toJson(all);
-
-        response.setContentType("application/json");
-        response.setStatus(HttpServletResponse.SC_OK);
-        PrintWriter printWriter = response.getWriter();
-        printWriter.print(resultAsString);
-        printWriter.flush();
+        writeJsonResultToResponse(response, gson.toJson(all));
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String collect = request.getReader().lines().collect(Collectors.joining());
         T user = gson.fromJson(collect, clazz);
-//        user.getPhoneDataSets().stream().forEach(phoneDataSet -> phoneDataSet.setUser(user));
         T saved = (T) dbService.save(user);
-//        saved.getPhoneDataSets().stream().forEach(phoneDataSet -> phoneDataSet.setUser(null));
+        writeJsonResultToResponse(response, gson.toJson(saved));
+    }
 
-        String resultAsString = gson.toJson(saved);
-
+    private void writeJsonResultToResponse(HttpServletResponse response, String result) throws IOException {
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);
         PrintWriter printWriter = response.getWriter();
-        printWriter.print(resultAsString);
+        printWriter.print(result);
         printWriter.flush();
+
     }
 }

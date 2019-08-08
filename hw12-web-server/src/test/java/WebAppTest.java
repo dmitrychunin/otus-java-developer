@@ -69,7 +69,7 @@ class WebAppTest {
     public void authentificatedAdminShouldCreateNewUser() throws IOException {
         User defaultTestUser = DefaultBuilder.createDefaultTestUser();
 
-        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        Gson gson = new Gson();
         String data = gson.toJson(defaultTestUser, User.class);
         HttpURLConnection connection = (HttpURLConnection) makeUrl("/user").openConnection();
         connection.setRequestMethod("POST");

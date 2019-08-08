@@ -12,6 +12,7 @@ import ru.otus.javadeveloper.hw12.dao.model.PhoneDataSet;
 import ru.otus.javadeveloper.hw12.dao.model.User;
 
 import java.util.List;
+import java.util.function.BiConsumer;
 
 public class DbHibernateExecutorHibernateImpl implements DbExecutorHibernate {
     private final SessionFactory sessionFactory;
@@ -36,32 +37,17 @@ public class DbHibernateExecutorHibernateImpl implements DbExecutorHibernate {
 
     @Override
     public Object create(Object objectData) {
-        try (Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            session.save(objectData);
-            session.getTransaction().commit();
-        }
-        return objectData;
+        return makeActionWithinHibernateSessionTransaction(objectData, (Session::save));
     }
 
     @Override
     public Object update(Object objectData) {
-        try (Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            session.merge(objectData);
-            session.getTransaction().commit();
-        }
-        return objectData;
+        return makeActionWithinHibernateSessionTransaction(objectData, (Session::merge));
     }
 
     @Override
     public Object createOrUpdate(Object objectData) {
-        try (Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            session.saveOrUpdate(objectData);
-            session.getTransaction().commit();
-        }
-        return objectData;
+        return makeActionWithinHibernateSessionTransaction(objectData, (Session::saveOrUpdate));
     }
 
     @Override
@@ -80,5 +66,14 @@ public class DbHibernateExecutorHibernateImpl implements DbExecutorHibernate {
             session.beginTransaction();
             return session.createQuery("SELECT entity FROM " + clazz.getSimpleName() + " entity", clazz).getResultList();
         }
+    }
+
+    private Object makeActionWithinHibernateSessionTransaction(Object objectData, BiConsumer<Session, Object> action) {
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            action.accept(session, objectData);
+            session.getTransaction().commit();
+        }
+        return objectData;
     }
 }

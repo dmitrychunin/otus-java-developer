@@ -1,6 +1,5 @@
 package ru.otus.javadeveloper.hw12.dao.model;
 
-import com.google.gson.annotations.Expose;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -16,8 +15,6 @@ public class AddressDataSet {
     @Id
     @GeneratedValue
     @Column(name = "ADDRESS_ID")
-    @Expose
     private Long id;
-    @Expose
     private String street;
 }

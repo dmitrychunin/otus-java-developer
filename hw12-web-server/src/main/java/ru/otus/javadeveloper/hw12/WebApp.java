@@ -27,7 +27,7 @@ public class WebApp {
 
     private final static int PORT = 8080;
     private final DBService dbService = new DbHibernateServiceImpl(new DbHibernateExecutorHibernateImpl());
-    private final Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+    private final Gson gson = new Gson();
 
     public static void main(String[] args) throws Exception {
         new WebApp().start();
