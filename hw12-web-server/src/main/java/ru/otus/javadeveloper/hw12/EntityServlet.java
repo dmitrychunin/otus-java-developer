@@ -12,12 +12,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class EntityServlet<T> extends HttpServlet {
-    private final Gson gson;
+    private final Gson gson = new Gson();
     private final DBService dbService;
     private final Class<T> clazz;
 
-    public EntityServlet(Gson gson, Class<T> clazz, DBService dbService) {
-        this.gson = gson;
+    public EntityServlet(Class<T> clazz, DBService dbService) {
         this.clazz = clazz;
         this.dbService = dbService;
     }

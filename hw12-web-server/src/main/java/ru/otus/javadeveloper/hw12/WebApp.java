@@ -27,7 +27,6 @@ public class WebApp {
 
     private final static int PORT = 8080;
     private final DBService dbService = new DbHibernateServiceImpl(new DbHibernateExecutorHibernateImpl());
-    private final Gson gson = new Gson();
 
     public static void main(String[] args) throws Exception {
         new WebApp().start();
@@ -41,7 +40,7 @@ public class WebApp {
 
     public Server createServer(int port) throws MalformedURLException {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.addServlet(new ServletHolder(new EntityServlet<>(gson, User.class, dbService)), "/user");
+        context.addServlet(new ServletHolder(new EntityServlet<>(User.class, dbService)), "/user");
 
         Server server = new Server(port);
         server.setHandler(new HandlerList(context));
