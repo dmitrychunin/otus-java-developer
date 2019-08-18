@@ -1,0 +1,556 @@
+"C:\Program Files\Java\jdk-11.0.2\bin\java.exe" -Xms512m -Xmx512m -XX:+UseSerialGC -Xlog:gc=debug:file=./gc-%p-%t.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./ "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\lib\idea_rt.jar=59541:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\dmitry\IdeaProjects\otus-java-developer\hw05-gc\target\classes;C:\Users\dmitry\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar ru.otus.javadeveloper.hw05.GcMain
+GC name:Copy
+GC name:MarkSweepCompact
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+start:2044 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:17
+12
+13
+14
+15
+start:3743 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:41
+16
+17
+18
+19
+start:5469 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:60
+20
+21
+22
+start:7185 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:84
+23
+24
+25
+start:8904 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(25 ms), totalDuration:109
+26
+27
+28
+start:10629 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(35 ms), totalDuration:144
+29
+30
+start:12367 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(32 ms), totalDuration:176
+31
+32
+start:14102 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(32 ms), totalDuration:208
+33
+34
+start:15846 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:208
+start:15846 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:245
+35
+36
+start:17600 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:261
+37
+38
+start:19348 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:280
+39
+40
+start:21108 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:299
+41
+42
+start:22875 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:299
+start:22875 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(34 ms), totalDuration:333
+43
+start:24643 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:350
+44
+45
+start:26391 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:366
+46
+start:28144 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:385
+47
+48
+start:29908 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:385
+start:29908 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(42 ms), totalDuration:427
+49
+start:31668 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:444
+50
+51
+start:33414 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:461
+52
+start:35153 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:482
+53
+start:36923 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:482
+start:36923 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(50 ms), totalDuration:532
+54
+55
+start:38714 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(18 ms), totalDuration:550
+56
+start:40462 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:571
+57
+start:42220 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:571
+start:42220 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(50 ms), totalDuration:621
+58
+start:44002 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:638
+59
+60
+start:45771 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:654
+61
+start:47515 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:654
+start:47515 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:700
+62
+start:49287 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:717
+63
+start:51040 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:736
+64
+start:52800 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(39 ms), totalDuration:775
+65
+start:54580 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:775
+start:54580 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(56 ms), totalDuration:831
+66
+start:56363 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:848
+67
+start:58104 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:867
+68
+start:59865 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:867
+start:59865 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(60 ms), totalDuration:927
+69
+start:61687 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:944
+70
+start:63464 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:963
+71
+start:65246 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:963
+start:65246 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(61 ms), totalDuration:1024
+72
+start:67062 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1041
+73
+start:68825 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:1061
+74
+start:70592 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1061
+start:70592 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(62 ms), totalDuration:1123
+75
+start:72420 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:1142
+76
+start:74178 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:1161
+77
+start:75944 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1161
+start:75944 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(60 ms), totalDuration:1221
+78
+start:77762 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1238
+79
+start:79536 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:1257
+80
+start:81308 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1257
+start:81308 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(57 ms), totalDuration:1314
+start:83100 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1331
+81
+start:84874 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:1352
+82
+start:86662 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1352
+start:86662 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(65 ms), totalDuration:1417
+83
+start:88493 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1434
+84
+start:90277 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1434
+start:90277 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(62 ms), totalDuration:1496
+85
+start:92114 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1513
+86
+start:93907 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1513
+start:93907 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(56 ms), totalDuration:1569
+start:95691 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1586
+87
+start:97493 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:1607
+88
+start:99302 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1607
+start:99302 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(65 ms), totalDuration:1672
+89
+start:101140 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1689
+90
+start:102920 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1689
+start:102920 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(58 ms), totalDuration:1747
+start:104682 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1764
+91
+start:106455 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:1785
+92
+start:108245 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1785
+start:108245 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(66 ms), totalDuration:1851
+93
+start:110094 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:1868
+start:111835 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1868
+start:111835 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(77 ms), totalDuration:1945
+94
+start:113679 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:1945
+start:113679 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(72 ms), totalDuration:2017
+95
+start:115513 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:2034
+96
+start:117297 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2034
+start:117297 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(62 ms), totalDuration:2096
+start:119064 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:2113
+97
+start:120845 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2113
+start:120845 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(72 ms), totalDuration:2185
+98
+start:122693 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:2202
+start:124452 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2202
+start:124452 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(83 ms), totalDuration:2285
+99
+start:126330 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2285
+start:126330 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(77 ms), totalDuration:2362
+100
+start:128202 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:2379
+101
+start:130009 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2379
+start:130009 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(65 ms), totalDuration:2444
+start:131796 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2460
+102
+start:133577 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2460
+start:133577 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(72 ms), totalDuration:2532
+103
+start:135420 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2532
+start:135420 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(67 ms), totalDuration:2599
+start:137217 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:2616
+104
+start:139021 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2616
+start:139021 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(77 ms), totalDuration:2693
+105
+start:140863 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:2710
+start:142578 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2710
+start:142578 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(83 ms), totalDuration:2793
+106
+start:144429 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2793
+start:144429 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(78 ms), totalDuration:2871
+107
+start:146289 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2871
+start:146289 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(69 ms), totalDuration:2940
+start:148077 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2956
+108
+start:149886 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:2956
+start:149886 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(81 ms), totalDuration:3037
+109
+start:151758 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3037
+start:151758 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(68 ms), totalDuration:3105
+start:153546 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:3122
+110
+start:155334 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3122
+start:155334 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(79 ms), totalDuration:3201
+111
+start:157218 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3201
+start:157218 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(70 ms), totalDuration:3271
+start:158989 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:3288
+112
+start:160793 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3288
+start:160794 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(77 ms), totalDuration:3365
+start:162581 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:3382
+113
+start:164404 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3382
+start:164404 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(81 ms), totalDuration:3463
+114
+start:166286 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3463
+start:166286 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(73 ms), totalDuration:3536
+start:168078 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3536
+start:168078 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:3581
+115
+start:169934 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3581
+start:169934 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(82 ms), totalDuration:3663
+116
+start:171814 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3663
+start:171814 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(72 ms), totalDuration:3735
+start:173591 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:3751
+117
+start:175403 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3751
+start:175403 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(78 ms), totalDuration:3829
+start:177204 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3829
+start:177204 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:3877
+118
+start:179047 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3877
+start:179047 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(87 ms), totalDuration:3964
+119
+start:180953 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:3964
+start:180953 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(74 ms), totalDuration:4038
+start:182731 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:4055
+120
+start:184565 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4055
+start:184565 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(79 ms), totalDuration:4134
+start:186353 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4134
+start:186353 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(42 ms), totalDuration:4176
+121
+start:188198 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4176
+start:188198 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(85 ms), totalDuration:4261
+start:190017 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4261
+start:190017 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:4304
+122
+start:192066 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(88 ms), totalDuration:4392
+123
+start:193974 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4392
+start:193974 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(83 ms), totalDuration:4475
+start:195781 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4475
+start:195781 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(86 ms), totalDuration:4561
+124
+start:197696 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4561
+start:197696 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(80 ms), totalDuration:4641
+start:199509 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4641
+start:199509 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:4684
+125
+start:201326 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:4773
+126
+start:203252 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4773
+start:203252 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(76 ms), totalDuration:4849
+start:205052 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:4866
+127
+start:206900 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4866
+start:206900 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(76 ms), totalDuration:4942
+start:208677 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:4942
+start:208677 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:4985
+128
+start:210764 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(84 ms), totalDuration:5069
+start:212584 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:5069
+start:212584 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:5162
+129
+start:214613 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(87 ms), totalDuration:5249
+start:216400 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:5249
+start:216400 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:5293
+130
+start:217919 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(88 ms), totalDuration:5381
+start:219712 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:5381
+start:219712 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(96 ms), totalDuration:5477
+131
+start:221512 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(87 ms), totalDuration:5564
+start:223344 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:5564
+start:223344 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:5609
+132
+start:224802 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(88 ms), totalDuration:5697
+start:226598 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:5697
+start:226598 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(100 ms), totalDuration:5797
+133
+start:228385 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:5886
+start:230192 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:5886
+start:230192 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:5932
+134
+start:231645 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:6023
+start:233441 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:6023
+start:233441 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(101 ms), totalDuration:6124
+135
+start:235244 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(90 ms), totalDuration:6214
+start:237061 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:6214
+start:237061 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:6260
+136
+start:238586 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:6349
+start:240410 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:6349
+start:240410 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(100 ms), totalDuration:6449
+137
+start:242270 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(90 ms), totalDuration:6539
+start:244086 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:6539
+start:244086 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:6585
+138
+start:245656 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:6674
+start:247460 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:6674
+start:247460 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(98 ms), totalDuration:6772
+139
+start:249364 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:6861
+start:251155 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:6861
+start:251155 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:6907
+140
+start:252770 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:6996
+start:254602 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:6996
+start:254602 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(98 ms), totalDuration:7094
+141
+start:256593 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(88 ms), totalDuration:7182
+start:258413 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:7182
+start:258413 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:7227
+142
+start:260055 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:7316
+start:261881 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:7316
+start:261881 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(98 ms), totalDuration:7414
+143
+start:263897 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(102 ms), totalDuration:7516
+start:265712 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:7516
+start:265712 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:7561
+144
+start:267409 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(88 ms), totalDuration:7649
+start:269207 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:7649
+start:269207 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:7744
+145
+start:271269 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(87 ms), totalDuration:7831
+start:273084 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:7831
+start:273084 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:7876
+start:274699 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:7922
+146
+start:275680 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:8016
+start:277508 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:8016
+start:277508 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:8062
+147
+start:279209 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(88 ms), totalDuration:8150
+start:281048 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:8150
+start:281048 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:8195
+start:282557 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(115 ms), totalDuration:8310
+148
+start:283760 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:8402
+start:285570 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:8402
+start:285570 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(53 ms), totalDuration:8455
+149
+start:286933 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(90 ms), totalDuration:8545
+start:288757 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:8545
+start:288757 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(98 ms), totalDuration:8643
+start:290590 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:8691
+150
+start:291643 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:8783
+start:293451 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:8783
+start:293451 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:8829
+151
+start:294801 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:8918
+start:296599 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:8918
+start:296599 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:8961
+start:298372 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(50 ms), totalDuration:9011
+152
+start:299442 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:9103
+start:301262 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:9103
+start:301262 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(108 ms), totalDuration:9211
+153
+start:302911 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(89 ms), totalDuration:9300
+start:304732 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:9300
+start:304732 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:9344
+start:306244 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:9390
+154
+start:307188 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:9482
+start:309018 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:9482
+start:309018 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:9527
+start:310662 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:9573
+155
+start:311668 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:9666
+start:313496 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:9666
+start:313496 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(106 ms), totalDuration:9772
+start:314997 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:9817
+156
+start:315916 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:9909
+start:317704 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:9909
+start:317704 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:9955
+start:318898 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(118 ms), totalDuration:10073
+157
+start:319982 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:10165
+start:321800 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:10165
+start:321800 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:10211
+start:323040 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:10255
+158
+start:323864 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(96 ms), totalDuration:10351
+start:325696 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:10351
+start:325696 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:10395
+start:327301 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:10442
+159
+start:328305 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:10533
+start:330126 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:10533
+start:330126 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(111 ms), totalDuration:10644
+start:331654 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:10690
+160
+start:332602 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:10781
+start:334422 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:10781
+start:334422 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:10827
+start:335665 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(116 ms), totalDuration:10943
+161
+start:336779 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:11034
+start:338597 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:11034
+start:338597 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:11080
+start:339913 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:11125
+start:340588 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(121 ms), totalDuration:11246
+162
+start:341424 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:11339
+start:343246 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:11339
+start:343246 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:11386
+start:344437 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:11429
+start:345051 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(122 ms), totalDuration:11551
+163
+start:345853 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:11644
+start:347655 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:11644
+start:347655 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:11691
+start:348842 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:11734
+start:349464 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(122 ms), totalDuration:11856
+164
+start:350269 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:11948
+start:352088 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:11948
+start:352088 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:11994
+start:353262 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:12037
+start:353870 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(121 ms), totalDuration:12158
+165
+start:354686 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(90 ms), totalDuration:12248
+start:356477 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:12248
+start:356477 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:12295
+start:357668 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:12338
+start:358292 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(121 ms), totalDuration:12459
+166
+start:358923 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:12499
+start:359409 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:12592
+start:361412 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(49 ms), totalDuration:12641
+start:362401 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(120 ms), totalDuration:12761
+start:363208 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:12801
+167
+start:363790 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:12893
+start:365584 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:12893
+start:365584 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:12940
+start:366729 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(118 ms), totalDuration:13058
+start:367623 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(41 ms), totalDuration:13099
+start:368048 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:13137
+168
+start:368482 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:13232
+start:370483 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(113 ms), totalDuration:13345
+start:371759 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:13389
+start:372387 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:13429
+start:372721 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:13467
+169
+start:373107 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(99 ms), totalDuration:13566
+start:374919 Name:Copy, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:13566
+start:374919 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:13614
+start:376216 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:13659
+start:376886 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(39 ms), totalDuration:13698
+start:377241 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:13738
+170
+start:377645 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:13831
+start:379653 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(49 ms), totalDuration:13880
+start:380669 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(42 ms), totalDuration:13922
+start:381194 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(123 ms), totalDuration:14045
+start:381772 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:14083
+start:382037 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:14121
+171
+start:382400 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:14214
+start:384386 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(112 ms), totalDuration:14326
+start:385657 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:14370
+start:386290 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:14410
+start:386625 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:14447
+start:386806 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(36 ms), totalDuration:14483
+start:386915 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:14520
+172
+start:387203 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:14615
+start:389145 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(50 ms), totalDuration:14665
+start:390136 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(120 ms), totalDuration:14785
+start:390930 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(41 ms), totalDuration:14826
+start:391306 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:14864
+start:391515 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:14902
+start:391639 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(36 ms), totalDuration:14938
+start:391719 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:14975
+start:391779 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:15013
+start:391830 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:15051
+start:391874 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(39 ms), totalDuration:15090
+start:391917 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:15130
+start:391959 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(42 ms), totalDuration:15172
+start:392002 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(42 ms), totalDuration:15214
+start:392045 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(42 ms), totalDuration:15256
+java.lang.OutOfMemoryError: Java heap space
+start:392087 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(42 ms), totalDuration:15298Dumping heap to ./\java_pid10840.hprof ...
+
+Heap dump file created [523462329 bytes in 1.555 secs]
+Exception in thread "main" start:392129 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:15341
+java.lang.OutOfMemoryError: Java heap space
+start:392172 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:15384
+start:392216 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:15427
+start:392357 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(102 ms), totalDuration:15529
+start:392460 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:15572
+	at java.base/java.util.Arrays.copyOfRange(Arrays.java:4030)
+	at java.base/java.lang.StringLatin1.newString(StringLatin1.java:715)
+	at java.base/java.lang.StringBuilder.toString(StringBuilder.java:448)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:433)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:297)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:277)
+	at org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(RandomStringUtils.java:154)
+	at ru.otus.javadeveloper.hw05.NightService.calc(NightService.java:16)
+	at ru.otus.javadeveloper.hw05.GcMain.main(GcMain.java:16)
+start:394016 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:15609
+start:394054 Name:MarkSweepCompact, action:end of major GC, gcCause:Allocation Failure(16 ms), totalDuration:15625
+
+Process finished with exit code 1

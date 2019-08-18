@@ -1,0 +1,547 @@
+"C:\Program Files\Java\jdk-11.0.2\bin\java.exe" -Xms512m -Xmx512m -XX:+UseParallelGC -Xlog:gc=debug:file=./gc-%p-%t.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./ "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\lib\idea_rt.jar=59529:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\dmitry\IdeaProjects\otus-java-developer\hw05-gc\target\classes;C:\Users\dmitry\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar ru.otus.javadeveloper.hw05.GcMain
+GC name:PS MarkSweep
+GC name:PS Scavenge
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+start:1756 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:7
+11
+12
+13
+14
+15
+start:3274 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(9 ms), totalDuration:16
+16
+17
+18
+19
+start:4823 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:24
+20
+21
+22
+start:6364 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(10 ms), totalDuration:34
+23
+24
+start:7919 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:49
+25
+26
+27
+start:10316 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:63
+28
+start:11021 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(9 ms), totalDuration:72
+29
+start:11725 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:83
+30
+start:12431 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:95
+31
+start:13140 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:107
+32
+start:13848 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(13 ms), totalDuration:120
+33
+start:14557 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(10 ms), totalDuration:130
+34
+start:15261 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(10 ms), totalDuration:140
+start:15957 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:152
+35
+start:16667 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:164
+36
+start:17376 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:176
+37
+start:18084 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:187
+start:18095 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(28 ms), totalDuration:215
+38
+start:18820 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:221
+start:19516 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:232
+39
+start:20224 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:243
+40
+start:20934 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:254
+41
+start:21645 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(10 ms), totalDuration:264
+start:22345 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:276
+42
+start:23055 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:287
+start:23066 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(26 ms), totalDuration:313
+43
+start:23795 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:320
+start:24489 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:331
+44
+start:25254 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:343
+45
+start:26021 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:354
+46
+start:26873 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(10 ms), totalDuration:364
+start:27710 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:378
+47
+start:28596 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:392
+start:28611 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(35 ms), totalDuration:427
+48
+start:29523 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:435
+49
+start:30402 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:447
+start:31271 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:461
+50
+start:32158 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:475
+51
+start:33060 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(13 ms), totalDuration:488
+52
+start:33957 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:500
+start:34850 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:516
+start:34866 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(31 ms), totalDuration:547
+53
+start:35803 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:555
+54
+start:36716 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(13 ms), totalDuration:568
+start:37619 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:582
+55
+start:38538 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:597
+56
+start:39465 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:611
+start:40377 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:626
+start:40392 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(40 ms), totalDuration:666
+57
+start:41360 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:674
+58
+start:42296 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:688
+start:43215 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:703
+59
+start:44157 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:717
+60
+start:45101 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:732
+start:45116 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(31 ms), totalDuration:763
+start:46076 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:771
+61
+start:47027 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:786
+62
+start:47987 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:801
+start:48922 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:816
+63
+start:49881 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:831
+64
+start:50851 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:845
+start:50865 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(35 ms), totalDuration:880
+start:51835 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:887
+65
+start:52798 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:902
+start:53745 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:917
+66
+start:54716 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:932
+67
+start:55689 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(14 ms), totalDuration:946
+start:56632 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:961
+start:56647 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(48 ms), totalDuration:1009
+68
+start:57675 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1017
+start:58626 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1033
+69
+start:59613 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1048
+70
+start:60601 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1063
+start:61559 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1078
+start:61574 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(40 ms), totalDuration:1118
+71
+start:62595 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1126
+start:63554 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1142
+72
+start:64552 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1157
+start:65524 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1172
+start:65540 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(44 ms), totalDuration:1216
+73
+start:66567 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1224
+start:67517 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1240
+74
+start:68520 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1255
+75
+start:69523 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1270
+start:69538 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(35 ms), totalDuration:1305
+start:70532 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1313
+76
+start:71528 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1329
+start:72499 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1344
+77
+start:73506 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1359
+start:74475 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1375
+start:74491 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(45 ms), totalDuration:1420
+78
+start:75544 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1428
+start:76517 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1444
+79
+start:77531 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1460
+start:78516 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1475
+start:78532 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(48 ms), totalDuration:1523
+80
+start:79592 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(9 ms), totalDuration:1532
+start:80565 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1548
+81
+start:81588 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1564
+start:81604 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(42 ms), totalDuration:1606
+start:82608 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1614
+82
+start:83608 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1630
+start:84591 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1646
+83
+start:85619 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1662
+start:85635 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(49 ms), totalDuration:1711
+start:86656 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1719
+84
+start:87674 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1735
+start:88658 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1751
+85
+start:89683 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1767
+start:89699 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(50 ms), totalDuration:1817
+start:90719 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1825
+86
+start:91738 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1841
+start:92721 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1857
+87
+start:93750 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1873
+start:93766 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(50 ms), totalDuration:1923
+start:94785 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:1931
+88
+start:95812 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1947
+start:96801 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:1963
+89
+start:97832 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1978
+start:97847 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(50 ms), totalDuration:2028
+start:98868 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:2036
+90
+start:99894 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:2051
+start:100887 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2067
+91
+start:101933 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2083
+start:101950 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(48 ms), totalDuration:2131
+start:102971 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:2139
+start:103948 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2155
+92
+start:104986 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2171
+start:105979 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2187
+start:105995 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(64 ms), totalDuration:2251
+93
+start:107094 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:2259
+start:108082 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2275
+start:108098 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(61 ms), totalDuration:2336
+94
+start:109187 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(8 ms), totalDuration:2344
+start:110163 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2360
+start:110179 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(51 ms), totalDuration:2411
+start:110928 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:2418
+95
+start:111681 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2430
+start:112386 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:2441
+start:112397 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(58 ms), totalDuration:2499
+start:113150 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:2505
+96
+start:113901 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2517
+start:114603 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2529
+start:115306 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2541
+start:115318 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(64 ms), totalDuration:2605
+97
+start:116136 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:2611
+start:116830 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:2622
+start:117532 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:2633
+start:117543 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(55 ms), totalDuration:2688
+start:118299 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:2694
+98
+start:119054 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2706
+start:119756 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2718
+start:120459 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2734
+start:120476 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(58 ms), totalDuration:2792
+99
+start:121299 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:2798
+start:121992 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2810
+start:122004 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(51 ms), totalDuration:2861
+start:122753 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:2867
+100
+start:123510 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:2878
+start:124210 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:2890
+start:124222 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(50 ms), totalDuration:2940
+start:124981 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:2946
+start:125721 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:2957
+101
+start:126529 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:2972
+start:127236 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:2988
+start:127252 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(55 ms), totalDuration:3043
+start:128007 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3049
+102
+start:128766 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3060
+start:129468 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3072
+start:129480 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(53 ms), totalDuration:3125
+start:130233 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(5 ms), totalDuration:3130
+103
+start:130994 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3142
+start:131700 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3153
+start:131711 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(51 ms), totalDuration:3204
+start:132461 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3210
+start:133157 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3221
+104
+start:133927 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:3237
+start:134633 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:3253
+start:134649 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(54 ms), totalDuration:3307
+start:135402 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3313
+105
+start:136164 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(13 ms), totalDuration:3326
+start:136867 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3337
+start:136878 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(52 ms), totalDuration:3389
+start:137628 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3395
+start:138324 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3406
+106
+start:139094 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3418
+start:139106 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(48 ms), totalDuration:3466
+start:139852 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3472
+start:140565 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3484
+107
+start:141354 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:3499
+start:142058 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:3515
+start:142074 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(52 ms), totalDuration:3567
+start:142826 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3573
+start:143523 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3584
+108
+start:144296 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3595
+start:144308 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(49 ms), totalDuration:3644
+start:145056 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3650
+start:145752 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3661
+start:146453 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3672
+109
+start:147229 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3684
+start:147241 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(52 ms), totalDuration:3736
+start:148002 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3742
+start:148739 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(13 ms), totalDuration:3755
+110
+start:149558 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:3771
+start:150265 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:3787
+start:150281 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(54 ms), totalDuration:3841
+start:151037 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:3847
+start:151733 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3858
+111
+start:152510 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3870
+start:152522 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(50 ms), totalDuration:3920
+start:153271 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:3927
+start:153969 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:3938
+start:154669 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3950
+112
+start:155448 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:3962
+start:156148 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:3981
+start:156167 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(60 ms), totalDuration:4041
+start:156926 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4047
+start:157623 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:4058
+start:157634 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(61 ms), totalDuration:4119
+113
+start:158465 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(53 ms), totalDuration:4172
+start:159218 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4178
+start:159913 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:4190
+114
+start:160695 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:4202
+start:160707 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(52 ms), totalDuration:4254
+start:161457 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4260
+start:162168 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:4271
+start:162887 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:4286
+115
+start:163676 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:4302
+start:163692 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(51 ms), totalDuration:4353
+start:164442 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4359
+start:165137 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:4370
+start:165837 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:4382
+start:165849 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(30 ms), totalDuration:4412
+116
+start:166654 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(51 ms), totalDuration:4463
+start:167404 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4469
+start:168099 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:4480
+start:168799 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:4492
+start:168811 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(24 ms), totalDuration:4516
+117
+start:169610 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(53 ms), totalDuration:4569
+start:170360 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4575
+start:171056 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:4587
+start:171758 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:4603
+start:171774 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(25 ms), totalDuration:4628
+118
+start:172579 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(53 ms), totalDuration:4681
+start:173334 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4687
+start:174029 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:4699
+start:174731 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:4710
+start:174742 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(25 ms), totalDuration:4735
+119
+start:175545 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(54 ms), totalDuration:4789
+start:176296 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:4795
+start:176992 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:4806
+start:177693 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:4821
+start:177709 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(24 ms), totalDuration:4845
+120
+start:178513 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(54 ms), totalDuration:4899
+start:179263 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:4906
+start:179959 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:4918
+start:180663 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:4929
+start:180674 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(25 ms), totalDuration:4954
+121
+start:181475 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(61 ms), totalDuration:5015
+start:182232 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:5021
+start:182928 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(13 ms), totalDuration:5034
+start:183640 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:5049
+start:183655 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(73 ms), totalDuration:5122
+122
+start:184513 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(65 ms), totalDuration:5187
+start:185278 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:5193
+start:185975 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:5205
+start:186681 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:5216
+start:186693 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(66 ms), totalDuration:5282
+123
+start:187548 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(57 ms), totalDuration:5339
+start:188306 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:5346
+start:189006 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:5357
+start:189710 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:5373
+start:189726 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(24 ms), totalDuration:5397
+124
+start:190541 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(59 ms), totalDuration:5456
+start:191299 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:5462
+start:191999 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:5474
+start:192704 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:5485
+start:192715 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(25 ms), totalDuration:5510
+start:193432 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(20 ms), totalDuration:5530
+125
+start:194084 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(61 ms), totalDuration:5591
+start:194844 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:5597
+start:195541 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:5609
+start:196246 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:5625
+start:196262 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(26 ms), totalDuration:5651
+126
+start:197082 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(60 ms), totalDuration:5711
+start:197841 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:5717
+start:198541 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:5728
+start:198552 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(20 ms), totalDuration:5748
+start:199266 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(20 ms), totalDuration:5768
+127
+start:200083 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(59 ms), totalDuration:5827
+start:200842 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:5833
+start:201539 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:5845
+start:202242 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:5856
+start:202253 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(26 ms), totalDuration:5882
+start:202973 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(24 ms), totalDuration:5906
+128
+start:203533 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(61 ms), totalDuration:5967
+start:204292 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:5973
+start:204992 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:5985
+start:205004 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(20 ms), totalDuration:6005
+start:205717 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(17 ms), totalDuration:6022
+129
+start:206482 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(62 ms), totalDuration:6084
+start:207243 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:6090
+start:207942 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6102
+start:208649 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:6113
+start:208661 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(25 ms), totalDuration:6138
+start:209379 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(21 ms), totalDuration:6159
+130
+start:209919 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(61 ms), totalDuration:6220
+start:210684 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:6227
+start:211402 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6239
+start:212126 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:6254
+start:212141 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(27 ms), totalDuration:6281
+131
+start:212974 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(59 ms), totalDuration:6340
+start:213735 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:6346
+start:214433 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6358
+start:215136 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6370
+start:215148 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(27 ms), totalDuration:6397
+start:215868 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(21 ms), totalDuration:6418
+132
+start:216403 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(62 ms), totalDuration:6480
+start:217165 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:6487
+start:217864 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6499
+start:218574 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:6510
+start:218585 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(26 ms), totalDuration:6536
+start:219302 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(23 ms), totalDuration:6559
+133
+start:219765 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(60 ms), totalDuration:6619
+start:220523 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:6625
+start:221221 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6637
+start:221233 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(19 ms), totalDuration:6656
+start:221959 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(20 ms), totalDuration:6676
+start:222632 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(16 ms), totalDuration:6692
+134
+start:223092 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(61 ms), totalDuration:6753
+start:223880 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:6760
+start:224603 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6772
+start:225306 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:6788
+start:225322 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(63 ms), totalDuration:6851
+start:226081 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(23 ms), totalDuration:6874
+135
+start:226499 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(60 ms), totalDuration:6934
+start:227257 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:6940
+start:227956 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(11 ms), totalDuration:6951
+start:228660 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:6963
+start:228672 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(65 ms), totalDuration:7028
+start:229428 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(21 ms), totalDuration:7049
+start:229747 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:7063
+136
+start:230030 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(58 ms), totalDuration:7121
+start:230789 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:7127
+start:231487 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:7139
+start:231499 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(58 ms), totalDuration:7197
+start:232251 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(20 ms), totalDuration:7217
+start:232865 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(15 ms), totalDuration:7232
+start:233178 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:7246
+137
+start:233465 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(58 ms), totalDuration:7304
+start:234226 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:7310
+start:234926 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:7322
+start:234938 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(57 ms), totalDuration:7379
+start:235698 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(20 ms), totalDuration:7399
+start:236326 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(16 ms), totalDuration:7415
+start:236647 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:7429
+start:236814 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:7443
+138
+start:237030 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(58 ms), totalDuration:7501
+start:237815 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(7 ms), totalDuration:7508
+start:238535 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:7520
+start:239239 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:7535
+start:239254 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(65 ms), totalDuration:7600
+start:240012 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(24 ms), totalDuration:7624
+start:240237 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(17 ms), totalDuration:7641
+start:240355 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:7654
+start:240418 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:7667
+139
+start:240583 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(58 ms), totalDuration:7725
+start:241337 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(6 ms), totalDuration:7731
+start:242037 Name:PS Scavenge, action:end of minor GC, gcCause:Allocation Failure(12 ms), totalDuration:7743
+start:242049 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(57 ms), totalDuration:7800
+start:242799 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(21 ms), totalDuration:7821
+start:243386 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(17 ms), totalDuration:7838
+start:243687 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:7852
+start:243843 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:7866
+start:243929 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(12 ms), totalDuration:7878
+start:243978 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(12 ms), totalDuration:7890
+start:244008 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:7903
+start:244030 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(12 ms), totalDuration:7915
+start:244047 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(12 ms), totalDuration:7927
+start:244062 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:7940
+start:244076 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:7953
+start:244090 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:7966
+start:244103 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:7979
+start:244117 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(12 ms), totalDuration:7991
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+Dumping heap to ./\java_pid6352.hprof ...
+Heap dump file created [422383788 bytes in 0.948 secs]
+Exception in thread "main" start:244130 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:8004
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+start:244143 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(15 ms), totalDuration:8019
+start:244158 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:8033
+start:244172 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(14 ms), totalDuration:8047
+	at java.base/java.lang.StringLatin1.newString(StringLatin1.java:715)
+	at java.base/java.lang.StringBuilder.toString(StringBuilder.java:448)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:433)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:297)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:277)
+	at org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(RandomStringUtils.java:154)
+	at ru.otus.javadeveloper.hw05.NightService.calc(NightService.java:16)
+	at ru.otus.javadeveloper.hw05.GcMain.main(GcMain.java:16)
+start:244186 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:8060
+start:244199 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:8073
+start:244212 Name:PS MarkSweep, action:end of major GC, gcCause:Ergonomics(13 ms), totalDuration:8086
+
+Process finished with exit code 1

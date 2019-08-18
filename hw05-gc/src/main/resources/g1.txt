@@ -1,0 +1,1379 @@
+"C:\Program Files\Java\jdk-11.0.2\bin\java.exe" -Xms512m -Xmx512m -XX:+UseG1GC -Xlog:gc=debug:file=./gc-%p-%t.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./ "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\lib\idea_rt.jar=59551:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\dmitry\IdeaProjects\otus-java-developer\hw05-gc\target\classes;C:\Users\dmitry\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar ru.otus.javadeveloper.hw05.GcMain
+GC name:G1 Young Generation
+GC name:G1 Old Generation
+1
+2
+3
+4
+start:450 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3
+5
+6
+7
+8
+9
+10
+11
+12
+start:2460 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:12
+13
+14
+start:2898 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:18
+15
+16
+start:3608 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:24
+17
+18
+19
+start:5024 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(14 ms), totalDuration:38
+20
+21
+22
+start:6763 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(14 ms), totalDuration:52
+23
+24
+25
+start:8739 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(14 ms), totalDuration:66
+26
+27
+28
+start:10494 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:85
+29
+30
+start:11837 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(15 ms), totalDuration:100
+31
+start:12936 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(14 ms), totalDuration:114
+32
+start:13789 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:122
+33
+start:13988 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:125
+start:14248 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:129
+start:14510 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:132
+34
+35
+start:16326 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(13 ms), totalDuration:145
+36
+37
+start:17731 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(11 ms), totalDuration:156
+38
+start:18863 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(12 ms), totalDuration:168
+39
+start:19728 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:177
+start:19910 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:180
+start:20173 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:183
+40
+start:20446 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:186
+start:20711 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:190
+41
+start:22272 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(13 ms), totalDuration:203
+42
+43
+start:23535 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(11 ms), totalDuration:214
+44
+start:24573 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(10 ms), totalDuration:224
+start:25401 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:233
+start:25594 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:237
+45
+start:25870 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:241
+start:26135 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:244
+start:26398 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:248
+start:26662 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:251
+46
+47
+start:28092 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(11 ms), totalDuration:262
+48
+start:29280 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(11 ms), totalDuration:273
+start:30243 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(10 ms), totalDuration:283
+49
+start:30997 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:292
+50
+start:31582 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:298
+start:31812 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:301
+start:32074 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:304
+start:32337 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:308
+start:32602 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:312
+51
+start:32882 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:316
+52
+start:34091 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:325
+start:35128 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(11 ms), totalDuration:336
+53
+start:36008 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(10 ms), totalDuration:346
+54
+start:36717 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:354
+start:37258 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:360
+start:37488 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:364
+start:37756 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:368
+start:38025 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:372
+55
+start:38305 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:376
+start:38572 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:380
+start:38838 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:383
+56
+start:40013 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(10 ms), totalDuration:393
+57
+start:41047 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(11 ms), totalDuration:404
+start:41889 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:413
+58
+start:42591 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:420
+start:43119 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:426
+start:43348 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:431
+start:43612 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:435
+59
+start:43898 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:439
+start:44162 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:443
+start:44426 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:448
+60
+start:45606 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(10 ms), totalDuration:458
+start:46605 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(10 ms), totalDuration:468
+61
+start:47468 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:477
+start:48158 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:484
+62
+start:48723 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:490
+start:48953 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:493
+start:49215 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:497
+start:49481 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:501
+start:49745 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:506
+63
+start:50035 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:509
+start:51015 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:518
+64
+start:51879 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:527
+start:52579 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:535
+65
+start:53159 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:542
+start:53388 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:546
+start:53652 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:550
+start:53916 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:554
+start:54181 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:559
+start:54446 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:563
+66
+start:55472 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:571
+67
+start:56365 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:580
+start:57080 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:587
+start:57647 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:593
+start:57877 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:597
+68
+start:58170 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:601
+start:58433 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:605
+start:58697 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:610
+start:58963 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:614
+69
+start:60025 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:623
+start:60916 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:632
+70
+start:61687 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:640
+start:62279 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:646
+start:62509 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:650
+start:62772 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:654
+start:63036 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:659
+71
+start:63334 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:663
+start:63599 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:667
+start:64659 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:676
+72
+start:65606 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:685
+start:66358 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:693
+73
+start:66997 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:700
+start:67212 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:704
+start:67478 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:709
+start:67742 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:714
+start:68007 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:719
+74
+start:69024 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:728
+start:69860 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:736
+75
+start:70575 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:744
+start:71103 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:750
+start:71333 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:754
+start:71596 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:758
+start:71859 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:763
+start:72124 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:769
+76
+start:72430 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:774
+start:73463 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:783
+77
+start:74402 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:792
+start:75154 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:800
+start:75759 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:807
+start:75975 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:811
+78
+start:76279 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:815
+start:76543 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:819
+start:76808 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:824
+start:77802 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:833
+79
+start:78690 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:842
+start:79392 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:850
+start:79947 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:856
+80
+start:80219 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:860
+start:80483 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:864
+start:80746 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:869
+start:81010 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:875
+start:81971 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:883
+81
+start:82839 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:892
+start:83517 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:899
+start:84048 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:905
+82
+start:84315 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:910
+start:84579 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:916
+start:84844 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:923
+start:85110 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:930
+start:85920 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:937
+83
+start:86655 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:944
+start:87206 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:950
+start:87622 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:955
+start:87875 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:960
+start:88139 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:965
+84
+start:88452 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:969
+start:88717 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:974
+start:88981 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:979
+start:89865 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:987
+85
+start:90678 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:995
+start:91318 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1002
+start:91835 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1007
+start:92064 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1011
+start:92327 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1016
+start:92591 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1023
+86
+start:92907 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1028
+start:93174 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1031
+start:94020 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1038
+start:94746 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1045
+87
+start:95401 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1051
+start:95868 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1056
+start:96109 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1061
+start:96373 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1067
+start:96638 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1073
+start:96903 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1080
+88
+start:97223 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1084
+start:98042 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1091
+start:98757 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1098
+89
+start:99386 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1104
+start:99839 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1109
+start:100081 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1114
+start:100345 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1119
+start:100609 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1125
+start:100875 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1132
+start:101142 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1139
+90
+start:102069 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:1147
+start:102820 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:1155
+start:103447 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1162
+91
+start:103993 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1168
+start:104235 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1172
+start:104499 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1178
+start:104764 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1184
+start:105029 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1188
+start:105802 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1195
+92
+start:106509 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1202
+start:107048 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1208
+start:107452 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1212
+start:107706 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1216
+start:107970 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1221
+start:108235 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1228
+93
+start:108559 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1234
+start:108825 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1237
+start:109597 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1243
+start:110261 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1250
+94
+start:110871 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1256
+start:111299 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1261
+start:111540 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1265
+start:111804 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1270
+start:112069 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1275
+start:112333 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1282
+start:112601 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1289
+95
+start:113484 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1296
+start:114196 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:1304
+start:114798 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1311
+start:115277 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1316
+start:115518 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1322
+96
+start:115844 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1328
+start:116109 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1334
+start:116374 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1338
+start:117133 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1345
+start:117783 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1352
+97
+start:118371 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1358
+start:118775 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1363
+start:119028 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1368
+start:119293 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1373
+start:119558 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1379
+start:119824 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:1387
+start:120091 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1393
+98
+start:120915 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1400
+start:121566 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1407
+start:122105 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1412
+start:122521 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1417
+start:122774 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1423
+99
+start:123104 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1428
+start:123368 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1434
+start:123634 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1439
+start:124356 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1446
+start:124969 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1453
+100
+start:125536 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1458
+start:125926 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1462
+start:126179 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1467
+start:126444 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1472
+start:126709 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1478
+start:126975 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1485
+start:127242 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1492
+101
+start:128085 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1499
+start:128748 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1506
+start:129312 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1512
+start:129764 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1517
+start:130005 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1524
+start:130270 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:1532
+102
+start:130606 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1538
+start:130872 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1543
+start:131582 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1549
+start:132182 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1555
+start:132657 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1560
+start:133022 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1564
+103
+start:133345 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1569
+start:133609 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1575
+start:133877 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1581
+start:134528 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1587
+start:135091 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1593
+start:135543 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1598
+104
+start:135968 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1602
+start:136220 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1607
+start:136485 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1612
+start:136751 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1616
+start:137323 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1621
+start:137811 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1626
+start:138199 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1630
+105
+start:138577 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1634
+start:138842 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1639
+start:139107 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1644
+start:139381 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1649
+start:139944 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1654
+start:140420 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1659
+start:140822 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1663
+106
+start:141199 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1667
+start:141463 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1672
+start:141730 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1677
+start:141995 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1682
+start:142545 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1687
+start:143006 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1692
+start:143382 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1697
+107
+start:143749 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1700
+start:144013 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1705
+start:144278 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1710
+start:144543 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1715
+start:145092 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1720
+start:145567 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1724
+start:145955 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1728
+start:146270 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1731
+108
+start:146613 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1735
+start:146876 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1741
+start:147141 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1746
+start:147704 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1751
+start:148179 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1756
+start:148567 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1761
+start:148883 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1764
+109
+start:149226 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1769
+start:149490 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1774
+start:149756 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1779
+start:150330 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1785
+start:150818 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1790
+start:151230 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1795
+start:151546 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1799
+start:151811 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1805
+110
+start:152157 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1811
+start:152423 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1816
+start:152985 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1821
+start:153473 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1826
+start:153862 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1830
+start:154164 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1834
+start:154429 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1840
+111
+start:154776 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1846
+start:155041 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1851
+start:155307 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1854
+start:155855 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1859
+start:156318 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1864
+start:156695 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1868
+start:156985 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1871
+start:157249 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1877
+112
+start:157601 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1882
+start:157865 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1888
+start:158131 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1891
+start:158642 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1896
+start:159080 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1901
+start:159443 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1906
+start:159721 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1910
+start:159985 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1916
+start:160251 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1923
+113
+start:160602 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1929
+start:160868 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1933
+start:161342 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1937
+start:161755 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1942
+start:162082 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1946
+start:162347 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1949
+start:162610 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:1955
+start:162877 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1962
+start:163144 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1969
+114
+start:163498 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1973
+start:163961 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1978
+start:164361 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:1983
+start:164687 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:1987
+start:164954 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:1990
+start:165216 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:1997
+start:165482 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2005
+start:165749 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2013
+start:166019 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2020
+115
+start:166586 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2025
+start:166988 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2029
+start:167314 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2032
+start:167579 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2035
+start:167841 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2041
+start:168107 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2048
+start:168375 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2056
+start:168643 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2064
+start:168911 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2068
+116
+start:169462 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2073
+start:169851 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2078
+start:170178 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2082
+start:170444 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2085
+start:170708 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2091
+start:170974 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2098
+start:171241 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2106
+start:171508 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:2115
+start:171778 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2119
+117
+start:172332 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2124
+start:172708 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2128
+start:173021 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2132
+start:173289 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2135
+start:173552 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2140
+start:173817 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2147
+start:174085 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2155
+start:174353 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2163
+start:174623 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2168
+118
+start:175190 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2173
+start:175591 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2177
+start:175917 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2180
+start:176183 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2183
+start:176445 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2190
+start:176712 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2197
+start:176979 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2205
+start:177246 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2213
+start:177513 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2218
+119
+start:178095 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2223
+start:178509 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2227
+start:178848 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2231
+start:179115 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2234
+start:179381 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2240
+start:179647 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2247
+start:179914 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2255
+start:180181 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:2264
+start:180449 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2270
+start:180938 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2275
+120
+start:181447 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2280
+start:181785 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2284
+start:182052 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2287
+start:182316 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2293
+start:182582 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2300
+start:182850 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2308
+start:183118 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2316
+start:183386 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2322
+start:183875 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2327
+121
+start:184391 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2332
+start:184730 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2336
+start:184997 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2339
+start:185259 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2345
+start:185526 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2352
+start:185793 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2359
+start:186060 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2367
+start:186328 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2373
+start:186829 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2378
+122
+start:187364 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2382
+start:187715 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2386
+start:187992 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2389
+start:188256 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2395
+start:188522 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2402
+start:188789 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2409
+start:189057 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2417
+start:189325 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2423
+start:189840 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2428
+123
+start:190390 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2432
+start:190755 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2436
+start:191033 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2440
+start:191301 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2446
+start:191566 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2453
+start:191834 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2461
+start:192103 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2469
+start:192372 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2475
+start:192899 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2480
+start:193351 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2485
+124
+start:193829 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2489
+start:194119 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2493
+start:194386 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2499
+start:194652 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2506
+start:194924 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2514
+start:195195 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2522
+start:195464 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2528
+start:195992 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2533
+start:196443 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2538
+125
+start:196914 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2543
+start:197205 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2546
+start:197469 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2552
+start:197735 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2559
+start:198001 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:2568
+start:198271 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2576
+start:198538 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2583
+start:199077 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2588
+start:199541 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2592
+126
+start:200024 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2597
+start:200328 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2600
+start:200593 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2606
+start:200859 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2613
+start:201125 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2621
+start:201394 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2629
+start:201662 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2635
+start:202199 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2640
+start:202662 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2644
+127
+start:203148 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2648
+start:203452 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2651
+start:203716 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2658
+start:203986 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2665
+start:204253 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2673
+start:204525 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2681
+start:204793 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2688
+start:205346 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2693
+start:205811 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2697
+start:206200 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2702
+128
+start:206616 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2705
+start:206880 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2710
+start:207145 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2713
+start:207409 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2716
+start:207672 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2722
+start:207938 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2729
+start:208205 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2737
+start:208472 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2745
+start:208742 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2749
+start:209166 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2754
+start:209517 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2758
+129
+start:209917 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2761
+start:210183 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2764
+start:210446 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2770
+start:210712 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2778
+start:210979 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2786
+start:211248 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:2795
+start:211515 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2802
+start:212003 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2807
+start:212417 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2811
+start:212755 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2815
+130
+start:213137 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2819
+start:213400 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2824
+start:213665 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2827
+start:213929 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2830
+start:214193 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2836
+start:214459 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2844
+start:214726 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:2853
+start:214995 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2861
+start:215263 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2867
+start:215678 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2871
+start:216016 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2875
+131
+start:216423 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2878
+start:216689 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2881
+start:216952 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2887
+start:217219 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2894
+start:217486 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:2903
+start:217753 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2911
+start:218020 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2919
+start:218510 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2924
+start:218923 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2929
+start:219262 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:2933
+start:219540 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2936
+132
+start:219924 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2941
+start:220189 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2944
+start:220454 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2947
+start:220717 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2953
+start:220983 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:2960
+start:221250 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:2969
+start:221518 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:2977
+start:221787 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:2983
+start:222214 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:2988
+start:222567 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2991
+start:222856 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2994
+133
+start:223243 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:2997
+start:223506 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3002
+start:223770 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3005
+start:224034 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3008
+start:224298 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3015
+start:224564 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3023
+start:224833 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3031
+start:225101 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3040
+start:225369 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3046
+start:225746 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3050
+start:226058 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3054
+start:226322 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3058
+134
+start:226712 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3061
+start:226975 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3065
+start:227238 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3068
+start:227503 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3071
+start:227764 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3078
+start:228032 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3086
+start:228299 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3094
+start:228567 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3102
+start:228836 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3108
+start:229188 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3112
+start:229488 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3116
+start:229753 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3119
+135
+start:230144 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3122
+start:230406 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3127
+start:230672 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3130
+start:230935 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3133
+start:231197 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3139
+start:231465 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3146
+start:231732 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3154
+start:232000 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3162
+start:232268 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3169
+start:232609 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3172
+start:232897 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3175
+start:233161 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3178
+136
+start:233555 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3181
+start:233817 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3186
+start:234081 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3189
+start:234347 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3192
+start:234609 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3199
+start:234876 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3206
+start:235143 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3214
+start:235411 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3222
+start:235678 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3229
+start:236006 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3232
+start:236282 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3235
+start:236549 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3238
+137
+start:236943 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3244
+start:237209 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3247
+start:237475 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3250
+start:237738 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3256
+start:238005 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3263
+start:238272 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3271
+start:238541 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3279
+start:238807 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3287
+start:239199 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3291
+start:239537 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3295
+start:239815 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3298
+start:240082 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3301
+138
+start:240479 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3306
+start:240750 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3309
+start:241020 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3313
+start:241283 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3319
+start:241548 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3327
+start:241817 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3335
+start:242085 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3344
+start:242353 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3351
+start:242756 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3355
+start:243095 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3358
+start:243371 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3361
+start:243640 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3364
+139
+start:244038 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3369
+start:244303 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3372
+start:244568 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3375
+start:244831 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3382
+start:245097 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3390
+start:245365 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3398
+start:245634 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3406
+start:245901 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3413
+start:246292 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3417
+start:246619 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3420
+start:246883 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3423
+start:247146 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3426
+140
+start:247548 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3431
+start:247814 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3434
+start:248079 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3437
+start:248342 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3444
+start:248608 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3452
+start:248877 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3461
+start:249145 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3469
+start:249413 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3477
+start:249804 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3481
+start:250130 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3484
+start:250395 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3487
+start:250661 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3490
+start:250923 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3495
+141
+start:251330 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3498
+start:251594 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3502
+start:251857 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3509
+start:252124 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3516
+start:252392 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3524
+start:252659 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3532
+start:252927 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3540
+start:253331 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3544
+start:253657 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3548
+start:253933 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3551
+start:254198 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3554
+start:254461 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3559
+142
+start:254872 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3562
+start:255138 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3565
+start:255401 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3571
+start:255667 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3578
+start:255933 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3587
+start:256202 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3596
+start:256470 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3604
+start:256863 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3608
+start:257188 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3612
+start:257453 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3615
+start:257716 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3619
+start:257979 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3624
+143
+start:258388 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3627
+start:258653 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3630
+start:258917 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3636
+start:259183 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3643
+start:259450 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3651
+start:259718 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3660
+start:259986 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3669
+start:260404 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3673
+start:260754 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3677
+start:261042 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3681
+start:261308 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3684
+start:261570 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3689
+start:261835 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3692
+144
+start:262248 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3695
+start:262511 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3698
+start:262775 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3701
+start:263039 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3704
+start:263303 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:3706
+start:263330 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:3707
+start:263331 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:3783
+start:264013 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3788
+start:264525 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3793
+start:264962 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3798
+start:265326 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3802
+start:265614 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3805
+145
+start:266031 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3808
+start:266293 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3811
+start:266558 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3814
+start:266821 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3822
+start:267088 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3830
+start:267355 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:3838
+start:267623 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:3847
+start:267893 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3853
+start:268196 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3856
+start:268459 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3859
+start:268725 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3862
+start:268987 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3867
+start:269251 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3871
+146
+start:269671 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3874
+start:269934 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3878
+start:270197 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3881
+start:270462 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3884
+start:270726 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:3886
+start:270728 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(75 ms), totalDuration:3961
+start:271409 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3965
+start:271923 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:3971
+start:272361 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:3976
+start:272715 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:3980
+start:273004 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3983
+147
+start:273426 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3986
+start:273688 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3989
+start:273952 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:3992
+start:274216 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:3999
+start:274483 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4007
+start:274751 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4015
+start:275019 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:4024
+start:275288 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:4031
+start:275617 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4034
+start:275881 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4037
+start:276146 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4040
+start:276409 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4045
+start:276674 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4048
+start:276939 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4052
+148
+start:277361 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4055
+start:277624 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4059
+start:277889 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4062
+start:278153 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4065
+start:278156 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(74 ms), totalDuration:4139
+start:278860 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4144
+start:279386 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4149
+start:279837 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4154
+start:280203 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4158
+start:280492 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4162
+start:280759 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4165
+149
+start:281182 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4168
+start:281446 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4171
+start:281712 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4179
+start:281979 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4187
+start:282246 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:4196
+start:282516 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(9 ms), totalDuration:4205
+start:282784 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:4212
+start:283126 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4215
+start:283401 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4218
+start:283664 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4221
+start:283929 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4224
+start:284192 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4229
+start:284458 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4232
+start:284723 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4235
+150
+start:285148 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4238
+start:285411 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4241
+start:285678 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4243
+start:285828 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4245
+start:285830 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(75 ms), totalDuration:4320
+start:286555 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4325
+start:287096 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:4331
+start:287559 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4336
+start:287945 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4341
+start:288262 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4345
+start:288543 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4348
+151
+start:288985 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4351
+start:289264 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4354
+start:289543 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4362
+start:289825 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4370
+start:290106 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4378
+start:290388 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:4386
+start:290671 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:4393
+start:291044 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4396
+start:291348 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4399
+start:291625 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4402
+start:291906 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4405
+start:292183 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4410
+start:292462 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4413
+start:292742 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4416
+152
+start:293186 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4419
+start:293463 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4422
+start:293744 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4424
+start:293850 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4426
+start:293852 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(74 ms), totalDuration:4500
+start:294556 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4505
+start:295081 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:4511
+start:295533 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4516
+start:295924 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4521
+start:296237 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4525
+start:296506 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4528
+start:296770 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4532
+153
+start:297213 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4536
+start:297477 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4539
+start:297743 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4542
+start:298006 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:4548
+start:298272 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4551
+start:298312 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4553
+start:298314 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(78 ms), totalDuration:4631
+start:298962 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4635
+start:299437 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4640
+start:299838 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4644
+start:300166 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4647
+start:300430 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4651
+start:300695 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4654
+start:300959 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4657
+154
+start:301409 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4660
+start:301672 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4664
+start:301937 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4667
+start:302199 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4672
+start:302327 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4674
+start:302329 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:4751
+start:302949 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4755
+start:303411 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4760
+start:303801 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4764
+start:304129 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4768
+start:304393 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4772
+start:304659 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4775
+start:304922 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4778
+155
+start:305365 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4781
+start:305628 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4785
+start:305893 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4789
+start:306157 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4793
+start:306297 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4795
+start:306299 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:4872
+start:306934 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4876
+start:307397 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4881
+start:307786 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:4886
+start:308113 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4890
+start:308380 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4893
+start:308643 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4896
+start:308908 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4899
+156
+start:309352 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4902
+start:309618 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:4905
+start:309882 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:4911
+start:310149 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4915
+start:310264 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:4917
+start:310266 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:4993
+start:310927 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:4997
+start:311414 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5002
+start:311828 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5007
+start:312168 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5011
+start:312445 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5014
+start:312709 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5017
+start:312973 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5020
+157
+start:313418 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5023
+start:313685 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5026
+start:313948 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:5032
+start:314214 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5036
+start:314255 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:5037
+start:314256 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:5113
+start:314911 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5118
+start:315398 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5123
+start:315812 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5127
+start:316150 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5131
+start:316428 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5134
+start:316692 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5137
+start:316957 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5140
+start:317220 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5143
+158
+start:317671 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5146
+start:317935 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5149
+start:318200 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5152
+start:318463 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5155
+start:318503 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:5157
+start:318505 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:5234
+start:319126 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5238
+start:319577 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5242
+start:319965 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5247
+start:320292 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5250
+start:320559 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5253
+start:320822 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5256
+start:321087 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5259
+start:321351 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5262
+159
+start:321804 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5266
+start:322067 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5269
+start:322333 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5272
+start:322597 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5275
+start:322624 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:5277
+start:322626 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:5354
+start:323244 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5358
+start:323710 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5363
+start:324099 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5367
+start:324425 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5370
+start:324692 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5373
+start:324954 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5377
+start:325220 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5380
+start:325482 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5383
+160
+start:325939 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5386
+start:326202 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5389
+start:326468 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5392
+start:326733 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:5394
+start:326735 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(78 ms), totalDuration:5472
+start:327355 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5476
+start:327816 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5481
+start:328204 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5485
+start:328530 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5489
+start:328795 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5492
+start:329059 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5495
+start:329322 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5498
+start:329587 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5502
+start:329850 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5505
+161
+start:330308 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5509
+start:330573 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5512
+start:330837 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:5514
+start:330889 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:5515
+start:330890 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:5592
+start:331522 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5596
+start:331984 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:5602
+start:332372 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5607
+start:332699 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5610
+start:332965 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5613
+start:333228 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5616
+start:333493 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5619
+start:333756 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5622
+start:334021 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5625
+162
+start:334481 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5628
+start:334747 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5632
+start:335010 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5635
+start:335025 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:5637
+start:335027 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:5714
+start:335658 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5719
+start:336121 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5724
+start:336522 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5729
+start:336848 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5733
+start:337126 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5736
+start:337390 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5739
+start:337655 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5742
+start:337918 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5745
+start:338184 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5748
+163
+start:338645 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5752
+start:338910 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5755
+start:339173 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5758
+start:339200 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:5760
+start:339202 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:5836
+start:339833 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5841
+start:340308 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5846
+start:340709 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5851
+start:341048 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5855
+start:341326 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5858
+start:341590 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5861
+start:341854 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5864
+start:342117 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5867
+start:342393 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5870
+164
+start:342858 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5873
+start:343122 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5876
+start:343386 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5879
+start:343389 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:5955
+start:344031 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5960
+start:344507 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5965
+start:344921 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:5970
+start:345259 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:5974
+start:345535 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5977
+start:345801 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5980
+start:346064 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5983
+start:346328 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5986
+start:346592 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5989
+start:346856 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5992
+165
+start:347325 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5995
+start:347590 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:5998
+start:347703 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:6000
+start:347705 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:6076
+start:348337 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6080
+start:348812 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6085
+start:349215 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6089
+start:349557 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6093
+start:349837 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6096
+start:350101 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6099
+start:350365 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6103
+start:350629 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6106
+start:350894 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6109
+start:351157 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6112
+166
+start:351630 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6115
+start:351893 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:6117
+start:351958 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6118
+start:351959 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(75 ms), totalDuration:6193
+start:352639 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6198
+start:353139 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6203
+start:353553 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6208
+start:353880 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6211
+start:354146 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6214
+start:354409 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6217
+start:354674 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6220
+start:354938 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6223
+start:355203 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6226
+start:355466 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6229
+167
+start:355942 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6232
+start:356206 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:6234
+start:356271 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6235
+start:356272 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:6311
+start:356953 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6316
+start:357453 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6321
+start:357867 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6325
+start:358205 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6329
+start:358473 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6332
+start:358736 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6335
+start:359000 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6338
+start:359263 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6341
+start:359529 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6344
+start:359792 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6347
+start:360056 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6350
+168
+start:360534 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:6352
+start:360625 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6353
+start:360626 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(75 ms), totalDuration:6428
+start:361356 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6433
+start:361882 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:6439
+start:362296 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6444
+start:362624 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6448
+start:362889 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6451
+start:363153 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6454
+start:363416 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6457
+start:363681 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6460
+start:363944 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6463
+start:364209 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6466
+start:364475 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6469
+169
+start:364963 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6470
+start:364976 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6471
+start:364977 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:6547
+start:365733 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:6553
+start:366270 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:6559
+start:366684 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6564
+start:367012 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6568
+start:367277 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6571
+start:367542 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6574
+start:367805 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6577
+start:368070 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6581
+start:368333 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6584
+start:368598 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6587
+start:368862 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6590
+170
+start:369336 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6591
+start:369337 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(75 ms), totalDuration:6666
+start:370016 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6671
+start:370531 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6676
+start:370957 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6681
+start:371296 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6685
+start:371573 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6688
+start:371837 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6691
+start:372101 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6694
+start:372363 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6697
+start:372629 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6700
+start:372892 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6703
+start:373156 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6706
+171
+start:373642 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:6708
+start:373794 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6709
+start:373795 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:6785
+start:374550 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6790
+start:375088 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:6796
+start:375502 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:6801
+start:375830 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6805
+start:376095 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6808
+start:376359 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6811
+start:376622 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6814
+start:376887 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6817
+start:377151 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6820
+start:377416 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6823
+start:377679 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6827
+172
+start:378172 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:6829
+start:378211 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6830
+start:378212 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:6906
+start:378966 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:6912
+start:379504 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:6918
+start:379931 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6922
+start:380269 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:6926
+start:380524 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6929
+start:380787 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6932
+start:381052 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6935
+start:381315 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6938
+start:381580 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6941
+start:381843 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6944
+start:382109 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:6947
+start:382373 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6948
+start:382387 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:6949
+start:382388 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(47 ms), totalDuration:6996
+173
+start:382848 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:6998
+start:382850 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:7074
+start:383591 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7080
+start:384116 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7086
+start:384531 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:7091
+start:384859 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7095
+start:385124 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7098
+start:385388 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7101
+start:385651 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7104
+start:385917 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7107
+start:386180 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7110
+start:386443 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7113
+start:386707 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7116
+start:386936 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7117
+start:386937 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(43 ms), totalDuration:7160
+174
+start:387405 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7161
+start:387406 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:7238
+start:388161 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7244
+start:388698 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7250
+start:389111 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:7255
+start:389439 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7259
+start:389704 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7262
+start:389968 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7266
+start:390231 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7269
+start:390497 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7272
+start:390759 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7276
+start:391024 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7279
+start:391287 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7282
+start:391528 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7283
+start:391529 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(46 ms), totalDuration:7329
+175
+start:391981 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7330
+start:391982 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:7406
+start:392750 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:7411
+start:393287 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7417
+start:393701 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(5 ms), totalDuration:7422
+start:394029 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7426
+start:394294 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7430
+start:394559 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7433
+start:394822 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7436
+start:395088 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7439
+start:395350 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7442
+start:395615 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7445
+start:395877 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7449
+start:396118 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7450
+start:396119 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(43 ms), totalDuration:7493
+start:396342 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7494
+start:396343 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(25 ms), totalDuration:7519
+176
+start:396696 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7520
+start:396697 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(76 ms), totalDuration:7596
+start:397512 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7602
+start:398038 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7608
+start:398426 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7612
+start:398729 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7616
+start:398994 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7619
+start:399259 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7622
+start:399522 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7626
+start:399790 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7629
+start:400053 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7632
+start:400317 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7635
+start:400580 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:7637
+start:400670 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7638
+start:400671 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(46 ms), totalDuration:7684
+start:400920 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7685
+start:400921 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(20 ms), totalDuration:7705
+start:401040 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7706
+start:401041 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(17 ms), totalDuration:7723
+start:401108 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7724
+start:401109 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:7742
+start:401164 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7743
+start:401165 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:7761
+177
+start:401439 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7762
+start:401440 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:7839
+start:402507 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:7847
+start:403062 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(6 ms), totalDuration:7853
+start:403415 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7857
+start:403671 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7860
+start:403933 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:7864
+start:404198 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7867
+start:404462 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7870
+start:404727 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7873
+start:404989 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7876
+start:405252 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:7879
+start:405442 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7880
+start:405443 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(45 ms), totalDuration:7925
+start:405680 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7926
+start:405681 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(21 ms), totalDuration:7947
+start:405775 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7948
+start:405776 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:7967
+start:405844 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7968
+start:405845 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(17 ms), totalDuration:7985
+start:405912 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:7986
+start:405913 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:8004
+start:405956 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8005
+start:405957 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:8024
+start:406001 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8025
+start:406002 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:8043
+178
+start:406279 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8044
+start:406280 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(77 ms), totalDuration:8121
+start:407458 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(8 ms), totalDuration:8129
+start:407999 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:8136
+start:408328 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(4 ms), totalDuration:8140
+start:408583 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:8143
+start:408845 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:8146
+start:409109 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:8149
+start:409373 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:8152
+start:409638 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:8155
+start:409901 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(3 ms), totalDuration:8158
+start:410165 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(2 ms), totalDuration:8160
+start:410216 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8161
+start:410217 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(44 ms), totalDuration:8205
+start:410454 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(0 ms), totalDuration:8205
+start:410454 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:8224
+start:410572 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8225
+start:410574 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:8243
+start:410616 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8244
+start:410617 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:8262
+start:410672 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8263
+start:410673 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(21 ms), totalDuration:8284
+start:410707 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8285
+start:410708 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(17 ms), totalDuration:8302
+start:410751 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8303
+start:410752 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:8321
+start:410783 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8322
+start:410784 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:8340
+start:410827 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8341
+start:410828 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:8360
+start:410860 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(0 ms), totalDuration:8360
+start:410860 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:8379
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to ./\java_pid3180.hprof ...
+Heap dump file created [539380222 bytes in 1.555 secs]
+Exception in thread "main" start:410914 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(20 ms), totalDuration:8399
+java.lang.OutOfMemoryError: Java heap space
+start:410936 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(0 ms), totalDuration:8399
+start:410936 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:8418
+start:410955 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(20 ms), totalDuration:8438
+start:410975 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8439
+start:410976 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(20 ms), totalDuration:8459
+	at java.base/java.util.Arrays.copyOfRange(Arrays.java:4030)
+	at java.base/java.lang.StringLatin1.newString(StringLatin1.java:715)
+	at java.base/java.lang.StringBuilder.toString(StringBuilder.java:448)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:433)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:297)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:277)
+	at org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(RandomStringUtils.java:154)
+	at ru.otus.javadeveloper.hw05.NightService.calc(NightService.java:16)
+	at ru.otus.javadeveloper.hw05.GcMain.main(GcMain.java:16)
+start:410996 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:8478
+start:412490 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8479
+start:412491 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(18 ms), totalDuration:8497
+start:412509 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(21 ms), totalDuration:8518
+start:412531 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(0 ms), totalDuration:8518
+start:412531 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(21 ms), totalDuration:8539
+start:412552 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(19 ms), totalDuration:8558
+start:412571 Name:G1 Young Generation, action:end of minor GC, gcCause:G1 Evacuation Pause(1 ms), totalDuration:8559
+start:412572 Name:G1 Old Generation, action:end of major GC, gcCause:G1 Evacuation Pause(7 ms), totalDuration:8566
+
+Process finished with exit code 1
