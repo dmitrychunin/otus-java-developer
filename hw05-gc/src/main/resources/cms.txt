@@ -1,0 +1,839 @@
+"C:\Program Files\Java\jdk-11.0.2\bin\java.exe" -Xms512m -Xmx512m -XX:+UseConcMarkSweepGC -Xlog:gc=debug:file=./gc-%p-%t.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./ "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\lib\idea_rt.jar=59624:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.9\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\dmitry\IdeaProjects\otus-java-developer\hw05-gc\target\classes;C:\Users\dmitry\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar ru.otus.javadeveloper.hw05.GcMain
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+GC name:ParNew
+GC name:ConcurrentMarkSweep
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+start:1936 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:16
+12
+13
+14
+15
+start:3545 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:40
+16
+17
+18
+19
+start:5206 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:60
+20
+21
+22
+start:6837 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(30 ms), totalDuration:90
+23
+24
+25
+start:8495 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(35 ms), totalDuration:125
+26
+27
+28
+start:10166 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(42 ms), totalDuration:167
+29
+start:10208 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(948 ms), totalDuration:1115
+30
+start:11853 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(15 ms), totalDuration:1130
+31
+32
+start:13508 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:1152
+33
+34
+start:15168 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(26 ms), totalDuration:1178
+35
+36
+start:16833 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(47 ms), totalDuration:1225
+37
+start:16881 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(952 ms), totalDuration:2177
+38
+start:18523 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:2196
+39
+40
+start:20183 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:2217
+41
+start:20204 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(951 ms), totalDuration:3168
+42
+start:21866 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:3188
+43
+start:23570 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(25 ms), totalDuration:3213
+44
+start:23595 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(947 ms), totalDuration:4160
+45
+start:25247 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:4184
+46
+start:26905 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:4205
+47
+start:26926 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(948 ms), totalDuration:5153
+48
+start:28581 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:5174
+49
+start:30240 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:5194
+50
+start:30260 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(947 ms), totalDuration:6141
+51
+start:31916 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(25 ms), totalDuration:6166
+52
+start:33580 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:6185
+53
+start:33599 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(947 ms), totalDuration:7132
+start:35239 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:7154
+54
+start:35261 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(950 ms), totalDuration:8104
+55
+start:36918 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:8124
+start:36938 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(951 ms), totalDuration:9075
+56
+start:38585 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(18 ms), totalDuration:9093
+57
+start:40248 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(26 ms), totalDuration:9119
+58
+start:40275 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(950 ms), totalDuration:10069
+start:41919 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:10093
+59
+start:41944 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(954 ms), totalDuration:11047
+60
+start:43610 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(17 ms), totalDuration:11064
+start:43627 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(949 ms), totalDuration:12013
+61
+start:45274 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:12035
+62
+start:46948 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:12059
+start:46973 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(947 ms), totalDuration:13006
+63
+start:48621 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:13027
+64
+start:48642 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(947 ms), totalDuration:13974
+start:50295 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:13997
+65
+start:50319 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(956 ms), totalDuration:14953
+start:51971 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:14973
+66
+start:51991 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(954 ms), totalDuration:15927
+start:53644 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:15949
+67
+start:53666 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(965 ms), totalDuration:16914
+start:55322 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:16936
+68
+start:55344 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:17889
+start:56994 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:17912
+69
+start:57017 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(962 ms), totalDuration:18874
+start:58672 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:18894
+70
+start:58692 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:19847
+start:60346 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:19869
+71
+start:60368 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(954 ms), totalDuration:20823
+start:62029 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:20845
+72
+start:62051 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(973 ms), totalDuration:21818
+start:63707 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:21841
+73
+start:63730 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(956 ms), totalDuration:22797
+start:65392 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:22820
+74
+start:65415 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:23773
+start:67075 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:23793
+75
+start:67095 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(987 ms), totalDuration:24780
+start:68757 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:24801
+76
+start:68779 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(847 ms), totalDuration:25648
+start:70440 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:25671
+77
+start:70463 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(950 ms), totalDuration:26621
+start:72127 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:26645
+start:72151 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(952 ms), totalDuration:27597
+78
+start:73813 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:27618
+start:73834 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(950 ms), totalDuration:28568
+79
+start:75496 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:28588
+start:75516 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(950 ms), totalDuration:29538
+80
+start:77182 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:29560
+start:77204 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(952 ms), totalDuration:30512
+start:78829 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:30535
+81
+start:78852 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(957 ms), totalDuration:31492
+start:80517 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(48 ms), totalDuration:31540
+82
+start:80565 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(640 ms), totalDuration:32180
+start:82227 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:32200
+83
+start:82247 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(744 ms), totalDuration:32944
+start:83918 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(18 ms), totalDuration:32962
+84
+start:83937 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(955 ms), totalDuration:33917
+start:85600 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:33937
+start:85620 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(954 ms), totalDuration:34891
+85
+start:87290 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:34911
+start:87310 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(954 ms), totalDuration:35865
+86
+start:88980 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:35886
+start:89001 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:36839
+start:90624 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(25 ms), totalDuration:36864
+87
+start:90650 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(992 ms), totalDuration:37856
+start:92324 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(26 ms), totalDuration:37882
+start:92350 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(536 ms), totalDuration:38418
+88
+start:94023 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:38440
+start:94045 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(955 ms), totalDuration:39395
+89
+start:95721 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:39415
+start:95741 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(952 ms), totalDuration:40367
+90
+start:97415 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:40387
+start:97435 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(952 ms), totalDuration:41339
+start:99060 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:41362
+91
+start:99084 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(979 ms), totalDuration:42341
+start:100760 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(28 ms), totalDuration:42369
+start:100789 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(434 ms), totalDuration:42803
+92
+start:102465 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:42823
+start:102486 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(643 ms), totalDuration:43466
+93
+start:104173 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:43485
+start:104193 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:44438
+start:105819 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(24 ms), totalDuration:44462
+94
+start:105843 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(983 ms), totalDuration:45445
+start:107522 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(31 ms), totalDuration:45476
+start:107553 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(225 ms), totalDuration:45701
+95
+start:109230 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:45721
+start:109250 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(538 ms), totalDuration:46259
+96
+start:110934 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:46281
+start:110956 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:47234
+start:112581 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(25 ms), totalDuration:47259
+97
+start:112606 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(992 ms), totalDuration:48251
+start:114292 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(27 ms), totalDuration:48278
+start:114319 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(227 ms), totalDuration:48505
+98
+start:116003 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:48525
+start:116023 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(536 ms), totalDuration:49061
+start:117652 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:49084
+99
+start:117675 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(960 ms), totalDuration:50044
+start:119365 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(36 ms), totalDuration:50080
+start:119402 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(18 ms), totalDuration:50098
+100
+start:121089 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:50120
+start:121111 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(330 ms), totalDuration:50450
+101
+start:122803 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:50469
+start:122822 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(640 ms), totalDuration:51109
+start:124446 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:51131
+102
+start:124468 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(982 ms), totalDuration:52113
+start:126159 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:52135
+start:126182 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(19 ms), totalDuration:52154
+103
+start:127874 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:52174
+start:127895 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(433 ms), totalDuration:52607
+start:129519 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(26 ms), totalDuration:52633
+104
+start:129545 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(958 ms), totalDuration:53591
+start:131236 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(27 ms), totalDuration:53618
+start:131263 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(18 ms), totalDuration:53636
+105
+start:132955 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:53658
+start:132977 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(333 ms), totalDuration:53991
+start:134599 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(25 ms), totalDuration:54016
+106
+start:134624 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(749 ms), totalDuration:54765
+start:136324 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:54765
+start:136324 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(81 ms), totalDuration:54846
+start:136405 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(952 ms), totalDuration:55798
+107
+start:138107 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(18 ms), totalDuration:55816
+start:138125 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(224 ms), totalDuration:56040
+start:139752 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:56061
+108
+start:139773 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(673 ms), totalDuration:56734
+start:141465 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:56734
+start:141465 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(80 ms), totalDuration:56814
+109
+start:143250 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:56834
+start:141545 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(1949 ms), totalDuration:58783
+start:144895 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:58783
+start:144895 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(87 ms), totalDuration:58870
+110
+start:144982 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(745 ms), totalDuration:59615
+start:146685 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:59615
+start:146685 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(79 ms), totalDuration:59694
+111
+start:148463 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:59715
+start:148485 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(228 ms), totalDuration:59943
+start:150112 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(27 ms), totalDuration:59970
+start:150139 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(641 ms), totalDuration:60611
+112
+start:151842 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:60611
+start:151842 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(77 ms), totalDuration:60688
+start:151919 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(951 ms), totalDuration:61639
+start:153544 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:61660
+113
+start:153565 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(409 ms), totalDuration:62069
+start:155267 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:62069
+start:155267 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(85 ms), totalDuration:62154
+start:155352 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(747 ms), totalDuration:62901
+114
+start:157057 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:62901
+start:157057 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(75 ms), totalDuration:62976
+start:158757 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(20 ms), totalDuration:62996
+start:158778 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(433 ms), totalDuration:63429
+115
+start:160484 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:63429
+start:160484 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(82 ms), totalDuration:63511
+start:160566 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(951 ms), totalDuration:64462
+116
+start:162278 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(19 ms), totalDuration:64481
+start:162297 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(125 ms), totalDuration:64606
+start:163924 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:64627
+start:163945 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(641 ms), totalDuration:65268
+117
+start:165655 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:65268
+start:165655 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(80 ms), totalDuration:65348
+start:165736 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(954 ms), totalDuration:66302
+start:167365 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:66318
+start:167381 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(332 ms), totalDuration:66650
+118
+start:169092 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:66650
+start:169092 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(84 ms), totalDuration:66734
+start:169177 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:67687
+119
+start:170890 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:67708
+start:170911 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(19 ms), totalDuration:67727
+start:172533 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(23 ms), totalDuration:67750
+start:172556 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(537 ms), totalDuration:68287
+120
+start:174269 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:68287
+start:174269 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(80 ms), totalDuration:68367
+start:174349 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:69320
+start:175974 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(16 ms), totalDuration:69336
+start:175990 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(227 ms), totalDuration:69563
+121
+start:177701 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:69563
+start:177701 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(83 ms), totalDuration:69646
+start:177785 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:70599
+start:179413 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:70620
+start:179434 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(20 ms), totalDuration:70640
+122
+start:181152 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:70640
+start:181152 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(88 ms), totalDuration:70728
+start:181241 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(537 ms), totalDuration:71265
+123
+start:182961 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:71265
+start:182961 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(77 ms), totalDuration:71342
+start:184661 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(22 ms), totalDuration:71364
+start:184683 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(330 ms), totalDuration:71694
+124
+start:186406 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:71694
+start:186406 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(83 ms), totalDuration:71777
+start:186489 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:72730
+start:188118 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(18 ms), totalDuration:72748
+start:188136 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(121 ms), totalDuration:72869
+125
+start:189854 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:72869
+start:189854 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(87 ms), totalDuration:72956
+start:189941 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(744 ms), totalDuration:73700
+start:191572 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:73700
+start:191572 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(49 ms), totalDuration:73749
+start:191621 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(30 ms), totalDuration:73779
+126
+start:193410 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:73779
+start:193410 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:73870
+start:193502 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(436 ms), totalDuration:74306
+127
+start:195234 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:74306
+start:195234 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(78 ms), totalDuration:74384
+start:196939 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(21 ms), totalDuration:74405
+start:196960 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(333 ms), totalDuration:74738
+128
+start:198690 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:74738
+start:198690 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(82 ms), totalDuration:74820
+start:198772 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(953 ms), totalDuration:75773
+start:200401 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:75773
+start:200401 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:75818
+start:200446 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(123 ms), totalDuration:75941
+129
+start:202178 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:75941
+start:202178 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(85 ms), totalDuration:76026
+start:202264 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(745 ms), totalDuration:76771
+start:203891 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:76771
+start:203891 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:76814
+start:203935 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(32 ms), totalDuration:76846
+130
+start:205768 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:76846
+start:205768 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:76937
+start:205859 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(538 ms), totalDuration:77475
+start:207491 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:77475
+start:207491 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:77519
+start:207535 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:77552
+131
+start:209165 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:77552
+start:209165 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:77644
+start:209257 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(431 ms), totalDuration:78075
+start:210897 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:78075
+start:210897 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:78121
+start:210943 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:78156
+132
+start:212479 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:78156
+start:212479 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:78248
+start:212571 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(433 ms), totalDuration:78681
+start:214199 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:78681
+start:214199 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:78727
+start:214245 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:78760
+133
+start:215751 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:78760
+start:215751 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:78853
+start:215844 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(436 ms), totalDuration:79289
+start:217473 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:79289
+start:217473 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:79336
+start:217520 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:79370
+134
+start:219019 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:79370
+start:219019 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:79464
+start:219114 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(434 ms), totalDuration:79898
+start:220742 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:79898
+start:220742 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:79944
+start:220789 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(32 ms), totalDuration:79976
+135
+start:222306 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:79976
+start:222306 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:80070
+start:222401 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(434 ms), totalDuration:80504
+start:224028 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:80504
+start:224028 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:80550
+start:224075 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:80584
+136
+start:225609 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:80584
+start:225609 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:80678
+start:225704 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(435 ms), totalDuration:81113
+start:227335 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:81113
+start:227335 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:81159
+start:227381 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:81194
+137
+start:228941 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:81194
+start:228941 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:81288
+start:229035 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(435 ms), totalDuration:81723
+start:230662 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:81723
+start:230662 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:81770
+start:230709 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:81804
+138
+start:232287 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:81804
+start:232287 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:81898
+start:232381 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(437 ms), totalDuration:82335
+start:234004 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:82335
+start:234004 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:82381
+start:234050 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:82415
+139
+start:235656 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:82415
+start:235656 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:82508
+start:235749 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(541 ms), totalDuration:83049
+start:237379 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:83049
+start:237379 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:83095
+start:237425 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:83128
+140
+start:239052 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:83128
+start:239052 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:83221
+start:239146 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(538 ms), totalDuration:83759
+start:240778 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:83759
+start:240778 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:83806
+start:240825 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:83842
+141
+start:242473 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:83842
+start:242473 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:83935
+start:242566 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(538 ms), totalDuration:84473
+start:244197 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:84473
+start:244197 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:84518
+start:244242 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:84552
+142
+start:245917 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:84552
+start:245917 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:84645
+start:246011 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(640 ms), totalDuration:85285
+start:247641 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:85285
+start:247641 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:85330
+start:247686 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:85363
+143
+start:249385 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:85363
+start:249385 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:85456
+start:249478 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(641 ms), totalDuration:86097
+start:251107 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:86097
+start:251107 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:86142
+start:251153 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:86175
+144
+start:252878 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:86175
+start:252878 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:86268
+start:252972 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(663 ms), totalDuration:86931
+start:254594 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:86931
+start:254594 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:86976
+start:254640 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:87009
+145
+start:256390 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:87009
+start:256390 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:87102
+start:256483 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(644 ms), totalDuration:87746
+start:258120 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:87746
+start:258120 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:87791
+start:258165 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:87824
+146
+start:259959 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:87824
+start:259959 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:87916
+start:260052 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(642 ms), totalDuration:88558
+start:261689 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:88558
+start:261689 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:88603
+start:261735 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(32 ms), totalDuration:88635
+147
+start:263539 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:88635
+start:263539 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:88726
+start:263630 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(814 ms), totalDuration:89540
+start:265257 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:89540
+start:265257 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:89588
+start:265305 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:89624
+148
+start:267137 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:89624
+start:267137 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:89716
+start:267230 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(748 ms), totalDuration:90464
+start:268864 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:90464
+start:268864 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:90507
+start:268907 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(32 ms), totalDuration:90539
+start:270605 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:90539
+start:270605 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(50 ms), totalDuration:90589
+start:270655 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:90625
+149
+start:271663 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:90625
+start:271663 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:90719
+start:271757 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(331 ms), totalDuration:91050
+start:273385 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:91050
+start:273385 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:91096
+start:273431 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:91130
+150
+start:274883 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:91130
+start:274883 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:91221
+start:274975 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(540 ms), totalDuration:91761
+start:276602 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:91761
+start:276602 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:91806
+start:276647 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(32 ms), totalDuration:91838
+start:278186 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:91838
+start:278186 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:91886
+start:278235 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:91923
+151
+start:279165 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:91923
+start:279165 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:92017
+start:279259 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(331 ms), totalDuration:92348
+start:280888 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:92348
+start:280888 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:92394
+start:280935 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:92428
+152
+start:282377 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:92428
+start:282377 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(90 ms), totalDuration:92518
+start:282468 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(540 ms), totalDuration:93058
+start:284089 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:93058
+start:284089 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:93104
+start:284135 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:93137
+start:285687 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:93137
+start:285687 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:93184
+start:285734 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:93221
+153
+start:286677 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:93221
+start:286677 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:93316
+start:286772 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(331 ms), totalDuration:93647
+start:288402 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:93647
+start:288402 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:93693
+start:288448 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:93728
+start:289759 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:93728
+start:289759 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:93774
+154
+start:289806 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:93810
+start:290628 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:93810
+start:290628 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(97 ms), totalDuration:93907
+start:290725 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:93928
+start:292355 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:93928
+start:292355 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:93975
+start:292403 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:94008
+start:293664 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94008
+start:293664 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:94054
+155
+start:293711 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:94091
+start:294512 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94091
+start:294512 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:94186
+start:294608 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(22 ms), totalDuration:94208
+start:296231 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94208
+start:296231 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:94256
+start:296279 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:94291
+start:297543 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94291
+start:297543 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:94338
+start:297590 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:94374
+156
+start:298396 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94374
+start:298396 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(96 ms), totalDuration:94470
+start:298493 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:94491
+start:300121 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94491
+start:300121 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:94538
+start:300168 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:94573
+start:301440 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94573
+start:301440 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:94619
+start:301486 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:94656
+157
+start:302298 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94656
+start:302298 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:94751
+start:302393 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:94772
+start:304019 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94772
+start:304019 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:94819
+start:304066 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:94853
+start:305353 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94853
+start:305353 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:94899
+start:305399 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:94936
+158
+start:306221 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:94936
+start:306221 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:95031
+start:306317 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:95052
+start:307939 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95052
+start:307939 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:95099
+start:307986 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:95133
+start:309289 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95133
+start:309289 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:95178
+start:309334 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:95215
+159
+start:310168 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95215
+start:310168 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:95309
+start:310263 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(25 ms), totalDuration:95334
+start:311901 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95334
+start:311901 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:95381
+start:311949 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:95415
+start:313274 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(1 ms), totalDuration:95416
+start:313275 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:95463
+start:313322 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:95501
+160
+start:314166 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95501
+start:314166 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:95593
+start:314259 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:95614
+start:315884 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95614
+start:315884 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:95660
+start:315930 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:95695
+start:317259 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95695
+start:317259 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:95742
+start:317306 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:95779
+161
+start:318163 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95779
+start:318163 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:95871
+start:318256 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:95892
+start:319882 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95892
+start:319882 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:95938
+start:319928 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:95974
+start:321275 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:95974
+start:321275 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:96020
+start:321322 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:96058
+162
+start:322187 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96058
+start:322187 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(92 ms), totalDuration:96150
+start:322280 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:96171
+start:323907 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96171
+start:323907 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:96219
+start:323955 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:96252
+start:325318 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96252
+start:325318 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:96298
+start:325364 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:96336
+start:326054 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96336
+163
+start:326054 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:96376
+start:326094 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:96415
+start:326630 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96415
+start:326631 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:96509
+start:326726 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(22 ms), totalDuration:96531
+start:328355 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96531
+start:328355 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:96578
+start:328403 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:96612
+start:329611 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96612
+start:329611 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:96658
+start:329657 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:96695
+164
+start:330458 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96695
+start:330458 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:96790
+start:330553 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:96811
+start:332177 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(1 ms), totalDuration:96812
+start:332178 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:96857
+start:332223 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:96891
+start:333574 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96891
+start:333574 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:96936
+start:333620 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:96973
+start:334303 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:96973
+start:334303 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(41 ms), totalDuration:97014
+start:334345 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:97051
+165
+start:334884 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97051
+start:334884 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(98 ms), totalDuration:97149
+start:334983 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:97170
+start:336610 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97170
+start:336610 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:97216
+start:336657 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:97250
+start:337887 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97250
+start:337887 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:97297
+start:337935 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:97335
+start:338557 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97335
+start:338557 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:97375
+start:338598 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:97413
+166
+start:339110 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97413
+start:339110 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(95 ms), totalDuration:97508
+start:339205 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(21 ms), totalDuration:97529
+start:340829 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97529
+start:340829 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:97576
+start:340877 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:97610
+start:342099 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97610
+start:342099 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(46 ms), totalDuration:97656
+start:342145 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:97693
+start:342767 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97693
+start:342767 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:97733
+start:342807 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:97772
+167
+start:343320 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97772
+start:343320 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:97866
+start:343414 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(23 ms), totalDuration:97889
+start:345043 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97889
+start:345043 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:97936
+start:345090 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:97971
+start:346330 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:97971
+start:346330 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:98016
+start:346375 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:98054
+start:347004 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98054
+start:347004 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(41 ms), totalDuration:98095
+start:347045 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:98133
+168
+start:347565 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98133
+start:347565 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:98227
+start:347659 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(22 ms), totalDuration:98249
+start:349286 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98249
+start:349286 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:98294
+start:349332 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(33 ms), totalDuration:98327
+start:350583 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98327
+start:350583 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:98372
+start:350629 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:98409
+start:351261 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98409
+start:351261 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:98449
+start:351301 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:98488
+start:351624 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98488
+start:351624 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:98526
+start:351662 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:98563
+169
+start:352034 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98563
+start:352034 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:98657
+start:352129 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(22 ms), totalDuration:98679
+start:353753 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98679
+start:353753 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:98724
+start:353799 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:98758
+start:354986 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98758
+start:354986 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(44 ms), totalDuration:98802
+start:355031 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:98838
+start:355631 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98838
+start:355631 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(39 ms), totalDuration:98877
+start:355670 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:98915
+start:355978 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98915
+start:355978 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:98953
+start:356016 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(40 ms), totalDuration:98993
+170
+start:356383 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:98993
+start:356383 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(94 ms), totalDuration:99087
+start:356478 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(22 ms), totalDuration:99109
+start:358104 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99109
+start:358104 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:99156
+start:358151 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(34 ms), totalDuration:99190
+start:359341 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99190
+start:359341 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:99235
+start:359386 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:99272
+start:359990 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99272
+start:359990 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:99312
+start:360031 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:99351
+start:360339 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99351
+start:360339 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:99389
+start:360377 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:99428
+start:360537 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99428
+start:360537 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:99466
+171
+start:360575 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(40 ms), totalDuration:99506
+start:360870 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99506
+start:360870 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(96 ms), totalDuration:99602
+start:360966 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(22 ms), totalDuration:99624
+start:362589 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99624
+start:362589 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(48 ms), totalDuration:99672
+start:362637 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(35 ms), totalDuration:99707
+start:363802 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99707
+start:363802 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:99752
+start:363847 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(37 ms), totalDuration:99789
+start:364436 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99789
+start:364436 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:99829
+start:364476 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:99867
+start:364778 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99867
+start:364778 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(38 ms), totalDuration:99905
+start:364816 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:99944
+start:364973 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:99944
+start:364973 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(36 ms), totalDuration:99980
+start:365010 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:100019
+start:365093 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100019
+start:365093 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:100056
+172
+start:365130 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(40 ms), totalDuration:100096
+start:365390 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100096
+start:365390 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(93 ms), totalDuration:100189
+start:365484 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(22 ms), totalDuration:100211
+start:367108 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100211
+start:367108 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:100258
+start:367155 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(36 ms), totalDuration:100294
+start:368316 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100294
+start:368316 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(45 ms), totalDuration:100339
+start:368361 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:100377
+start:368947 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100377
+start:368947 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(40 ms), totalDuration:100417
+start:368988 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:100456
+start:369288 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100456
+start:369288 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:100493
+start:369326 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(38 ms), totalDuration:100531
+start:369481 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100531
+start:369481 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(36 ms), totalDuration:100567
+start:369517 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:100606
+start:369600 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100606
+start:369600 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:100643
+start:369637 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(39 ms), totalDuration:100682
+start:369685 Name:ParNew, action:end of minor GC, gcCause:Allocation Failure(0 ms), totalDuration:100682
+start:369685 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(37 ms), totalDuration:100719
+start:369756 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:No GC(7 ms), totalDuration:100726
+start:0 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(0 ms), totalDuration:100726
+start:369815 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(39 ms), totalDuration:100765
+start:369865 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(47 ms), totalDuration:100812
+start:369916 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(41 ms), totalDuration:100853
+start:369964 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(54 ms), totalDuration:100907
+start:370019 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(41 ms), totalDuration:100948
+start:370065 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(56 ms), totalDuration:101004
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to ./\java_pid16052.hprof ...
+start:370122 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:101047
+Heap dump file created [523458640 bytes in 1.993 secs]
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+start:370170 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(54 ms), totalDuration:101101
+start:370224 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(43 ms), totalDuration:101144
+start:370272 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(56 ms), totalDuration:101200
+start:370328 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:101291
+start:370420 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(91 ms), totalDuration:101382
+	at java.base/java.util.Arrays.copyOfRange(Arrays.java:4030)
+	at java.base/java.lang.StringLatin1.newString(StringLatin1.java:715)
+	at java.base/java.lang.StringBuilder.toString(StringBuilder.java:448)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:433)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:297)
+	at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:277)
+	at org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(RandomStringUtils.java:154)
+	at ru.otus.javadeveloper.hw05.NightService.calc(NightService.java:16)
+	at ru.otus.javadeveloper.hw05.GcMain.main(GcMain.java:16)
+start:372415 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(57 ms), totalDuration:101439
+start:372472 Name:ConcurrentMarkSweep, action:end of major GC, gcCause:Allocation Failure(19 ms), totalDuration:101458
+
+Process finished with exit code 1
