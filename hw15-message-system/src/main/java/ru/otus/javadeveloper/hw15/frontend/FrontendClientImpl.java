@@ -1,17 +1,15 @@
 package ru.otus.javadeveloper.hw15.frontend;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
-import ru.otus.javadeveloper.hw15.ms.DBClient;
+import org.springframework.stereotype.Service;
 import ru.otus.javadeveloper.hw15.backend.model.User;
 import ru.otus.javadeveloper.hw15.ms.*;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 
-@Controller
+@Service
 @RequiredArgsConstructor
 public class FrontendClientImpl implements FrontendClient {
     private final MessageSystemContext messageSystemContext;
@@ -24,7 +22,7 @@ public class FrontendClientImpl implements FrontendClient {
         messageSystemContext.setFrontAddress(address);
     }
 
-    @MessageMapping({"/message"})
+    @Override
     public void createUser(User user) {
         MessageSystem messageSystem = messageSystemContext.getMessageSystem();
         Message message = new Message<DBClient>(address, messageSystemContext.getDbAddress()) {
@@ -36,9 +34,22 @@ public class FrontendClientImpl implements FrontendClient {
         messageSystem.sendMessage(message);
     }
 
+    @Override
+    public void showAllUserList() {
+        MessageSystem messageSystem = messageSystemContext.getMessageSystem();
+        Message message = new Message<DBClient>(address, messageSystemContext.getDbAddress()) {
+            @Override
+            public void exec(DBClient dbClient) {
+                dbClient.getAllUserList();
+            }
+        };
+        messageSystem.sendMessage(message);
+    }
+
 
     @Override
     public void returnUserList(List<User> userList) {
+//        todo how to move to api controller?
         messagingTemplate.convertAndSend("/topic/response", userList);
     }
 

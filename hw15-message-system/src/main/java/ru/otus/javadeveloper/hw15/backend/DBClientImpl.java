@@ -32,6 +32,10 @@ public class DBClientImpl implements DBClient {
     public void createUser(User entity) {
         dbService.save(entity);
         List<User> all = dbService.getAll(User.class);
+        returnResult(all);
+    }
+
+    private void returnResult(List<User> all) {
         MessageSystem messageSystem = messageSystemContext.getMessageSystem();
         Message message = new Message<FrontendClient>(address, messageSystemContext.getFrontAddress()) {
             @Override
@@ -40,5 +44,11 @@ public class DBClientImpl implements DBClient {
             }
         };
         messageSystem.sendMessage(message);
+    }
+
+    @Override
+    public void getAllUserList() {
+        List<User> all = dbService.getAll(User.class);
+        returnResult(all);
     }
 }

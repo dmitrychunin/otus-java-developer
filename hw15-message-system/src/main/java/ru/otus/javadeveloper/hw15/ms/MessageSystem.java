@@ -1,14 +1,13 @@
 package ru.otus.javadeveloper.hw15.ms;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author tully
@@ -18,12 +17,11 @@ import java.util.logging.Logger;
 public final class MessageSystem {
     private final static Logger logger = Logger.getLogger(MessageSystem.class.getName());
 
-    private final List<Thread> workers;
     private final Map<Address, LinkedBlockingQueue<Message>> messagesMap;
     private final Map<Address, Addressee> addresseeMap;
+    private final ExecutorService executorService = Executors.newFixedThreadPool(5);
 
     public MessageSystem() {
-        workers = new ArrayList<>();
         messagesMap = new HashMap<>();
         addresseeMap = new HashMap<>();
     }
@@ -31,7 +29,7 @@ public final class MessageSystem {
     public void addAddressee(Addressee addressee) {
         addresseeMap.put(addressee.getAddress(), addressee);
         messagesMap.put(addressee.getAddress(), new LinkedBlockingQueue<>());
-        startWatch(addressee.getAddress(), addressee);
+        executorService.submit(() -> this.startWatch(addressee.getAddress(), addressee));
     }
 
     public void sendMessage(Message message) {
@@ -40,27 +38,17 @@ public final class MessageSystem {
 
 
     private void startWatch(Address address, Addressee addressee) {
-        String name = "MS-worker-" + address.getId();
-        Thread thread = new Thread(() -> {
-            while (true) {
-                LinkedBlockingQueue<Message> queue = messagesMap.get(address);
-                while (true) {
-                    try {
-                        Message message = queue.take(); //Blocks
-                        message.exec(addressee);
-                    } catch (InterruptedException e) {
-                        logger.log(Level.INFO, "Thread interrupted. Finishing: " + name);
-                        return;
-                    }
-                }
+        LinkedBlockingQueue<Message> queue = messagesMap.get(address);
+        while (!Thread.currentThread().isInterrupted()) {
+            try {
+                Message message = queue.take(); //Blocks
+                message.exec(addressee);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            } catch (Exception e) {
+                logger.error(e.getMessage(), e);
+                throw new RuntimeException("failed message execution", e);
             }
-        });
-        thread.setName(name);
-        thread.start();
-        workers.add(thread);
-    }
-
-    public void dispose() {
-        workers.forEach(Thread::interrupt);
+        }
     }
 }

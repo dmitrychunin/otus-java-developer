@@ -7,4 +7,6 @@ import ru.otus.javadeveloper.hw15.backend.model.User;
  */
 public interface DBClient extends Addressee {
     void createUser(User user);
+
+    void getAllUserList();
 }

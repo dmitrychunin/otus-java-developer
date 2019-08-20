@@ -15,6 +15,7 @@ import ru.otus.javadeveloper.hw15.backend.model.PhoneDataSet;
 import ru.otus.javadeveloper.hw15.backend.model.User;
 
 import java.util.List;
+import java.util.function.BiConsumer;
 
 @Component
 @RequiredArgsConstructor
@@ -40,40 +41,30 @@ public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<
 
     @Override
     public T create(T objectData) {
-        try (Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            session.save(objectData);
-            session.getTransaction().commit();
-        }
-        return objectData;
+        return makeActionWithinHibernateSessionTransaction(objectData, Session::save);
     }
 
     @Override
     public T update(T objectData) {
-        try (Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            session.merge(objectData);
-            session.getTransaction().commit();
-        }
-        return objectData;
+        return makeActionWithinHibernateSessionTransaction(objectData, Session::merge);
     }
 
     @Override
     public T createOrUpdate(T objectData) {
-        try (Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            session.saveOrUpdate(objectData);
-            session.getTransaction().commit();
-        }
-        return objectData;
+        return makeActionWithinHibernateSessionTransaction(objectData, Session::saveOrUpdate);
     }
 
     @Override
     public T load(long id, Class<T> clazz) {
         T result;
         try (Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-            result = session.get(clazz, id);
+            try {
+                session.beginTransaction();
+                result = session.get(clazz, id);
+            } catch (Exception e) {
+                session.getTransaction().rollback();
+                return null;
+            }
         }
         return result;
     }
@@ -84,5 +75,18 @@ public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<
             session.beginTransaction();
             return session.createQuery("SELECT entity FROM " + clazz.getSimpleName() + " entity", clazz).getResultList();
         }
+    }
+
+    private T makeActionWithinHibernateSessionTransaction(T objectData, BiConsumer<Session, T> action) {
+        try (Session session = sessionFactory.openSession()) {
+            try {
+                session.beginTransaction();
+                action.accept(session, objectData);
+                session.getTransaction().commit();
+            } catch (Exception e) {
+                session.getTransaction().rollback();
+            }
+        }
+        return objectData;
     }
 }

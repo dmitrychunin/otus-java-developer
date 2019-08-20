@@ -5,6 +5,7 @@ const setConnected = (connected) => {
     $("#disconnect").prop("disabled", !connected);
     if (connected) {
         $("#chatLine").show();
+        stompClient.send("/app/list", {}, {})
     }
     else {
         $("#chatLine").hide();
@@ -50,7 +51,7 @@ const sendName = () => {
             }
         })
     console.log(stompClient)
-    stompClient.send("/app/message", {}, json)
+    stompClient.send("/app/create", {}, json)
 }
 
 $(function () {
