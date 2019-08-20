@@ -13,15 +13,15 @@
         <module>hw02-diy-array-list</module>
         <module>hw03-junit</module>
         <module>hw04-aop</module>
+        <module>hw05-gc</module>
         <module>hw06-atm</module>
         <module>hw08-serialization</module>
         <module>hw09-jdbc</module>
         <module>hw10-hibernate</module>
         <module>hw11-cache</module>
+        <module>hw12-web-server</module>
         <module>hw13-di</module>
         <module>hw14-multithreading</module>
-        <module>hw12-web-server</module>
-        <module>hw05-gc</module>
     </modules>
 
     <properties>
