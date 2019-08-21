@@ -9,7 +9,6 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.springframework.stereotype.Component;
 import ru.otus.javadeveloper.hw15.backend.model.AddressDataSet;
 import ru.otus.javadeveloper.hw15.backend.model.PhoneDataSet;
 import ru.otus.javadeveloper.hw15.backend.model.User;
@@ -17,7 +16,6 @@ import ru.otus.javadeveloper.hw15.backend.model.User;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-@Component
 @RequiredArgsConstructor
 public class DbHibernateExecutorHibernateImpl<T> implements DbExecutorHibernate<T> {
     private final SessionFactory sessionFactory;

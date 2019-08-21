@@ -47,7 +47,6 @@ public final class MessageSystem {
                 Thread.currentThread().interrupt();
             } catch (Exception e) {
                 logger.error(e.getMessage(), e);
-                throw new RuntimeException("failed message execution", e);
             }
         }
     }
