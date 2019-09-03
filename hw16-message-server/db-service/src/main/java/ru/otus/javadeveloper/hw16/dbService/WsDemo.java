@@ -1,6 +1,5 @@
 package ru.otus.javadeveloper.hw16.dbService;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -8,7 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import ru.otus.javadeveloper.hw16.common.api.Address;
 import ru.otus.javadeveloper.hw16.common.api.event.Event;
-import ru.otus.javadeveloper.hw16.common.api.event.front.ShowAllUsersEvent;
 import ru.otus.javadeveloper.hw16.common.api.socket.MessageWorker;
 import ru.otus.javadeveloper.hw16.common.model.User;
 import ru.otus.javadeveloper.hw16.dbService.service.DBService;
@@ -37,9 +35,12 @@ public class WsDemo implements CommandLineRunner {
         executorService.submit(() -> {
             while (true) {
                 try {
-                    String json = messageWorker.take();
-                    Event event = new ObjectMapper().readValue(json, Event.class);
+                    Event event = messageWorker.take();
                     switch (event.getEventId()) {
+                        case "getToRequest":
+                            Event getToEvent = new Event(address, frontAddress, "getToResponse", null);
+                            messageWorker.push(getToEvent);
+                            break;
                         case "create":
                             User user = new ObjectMapper().convertValue(event.getPayload(), User.class);
                             dbService.save(user);
@@ -47,7 +48,7 @@ public class WsDemo implements CommandLineRunner {
                             getAllUserList();
                             break;
                         default:
-                            System.out.println("not my message");
+                            throw new RuntimeException("undefined event");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -59,13 +60,12 @@ public class WsDemo implements CommandLineRunner {
         executorService.shutdown();
     }
 
-    private void returnResult(List<User> all) throws JsonProcessingException {
-        ShowAllUsersEvent showAllUsersEvent = new ShowAllUsersEvent(address, frontAddress, all);
-        String json = new ObjectMapper().writeValueAsString(showAllUsersEvent);
-        messageWorker.push(json);
+    private void returnResult(List<User> all) {
+        Event<List<User>> showAllUsersEvent = new Event<>(address, frontAddress, "show", all);
+        messageWorker.push(showAllUsersEvent);
     }
 
-    private void getAllUserList() throws JsonProcessingException {
+    private void getAllUserList() {
         List<User> all = dbService.getAll(User.class);
         returnResult(all);
     }

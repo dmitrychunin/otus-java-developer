@@ -14,9 +14,7 @@
         <module>frontend</module>
         <module>db-service</module>
         <module>message-system</module>
-        <module>db-service-api</module>
         <module>common</module>
-        <module>message-system-core</module>
     </modules>
 
 </project>

@@ -1,12 +1,12 @@
 package ru.otus.javadeveloper.hw16.dbService;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import ru.otus.javadeveloper.hw16.common.api.event.front.ShowAllUsersEvent;
+import ru.otus.javadeveloper.hw16.common.api.Address;
+import ru.otus.javadeveloper.hw16.common.api.event.Event;
 import ru.otus.javadeveloper.hw16.common.api.socket.MessageWorker;
 
 import java.util.concurrent.ExecutorService;
@@ -17,6 +17,8 @@ import java.util.concurrent.Executors;
 public class WsDemo implements CommandLineRunner {
     private final MessageWorker messageWorker;
     private final SimpMessagingTemplate messagingTemplate;
+    private final Address address = new Address("Front");
+    private final Address messageSystemAddress = new Address("MS");
 
     public static void main(String[] args) {
         SpringApplication.run(WsDemo.class, args);
@@ -30,9 +32,18 @@ public class WsDemo implements CommandLineRunner {
         executorService.submit(() -> {
             while (true) {
                 try {
-                    String json = messageWorker.take();
-                    ShowAllUsersEvent event = new ObjectMapper().readValue(json, ShowAllUsersEvent.class);
-                    messagingTemplate.convertAndSend("/topic/response", event.getPayload());
+                    Event event = messageWorker.take();
+                    switch (event.getEventId()) {
+                        case "getToRequest":
+                            Event getToEvent = new Event(address, messageSystemAddress, "getToResponse", null);
+                            messageWorker.push(getToEvent);
+                            break;
+                        case "show":
+                            messagingTemplate.convertAndSend("/topic/response", event.getPayload());
+                            break;
+                        default:
+                            throw new RuntimeException("undefined event");
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

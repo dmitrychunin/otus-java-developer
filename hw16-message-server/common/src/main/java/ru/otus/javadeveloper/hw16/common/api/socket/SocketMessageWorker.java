@@ -1,5 +1,9 @@
 package ru.otus.javadeveloper.hw16.common.api.socket;
 
+import com.google.gson.Gson;
+import ru.otus.javadeveloper.hw16.common.api.Address;
+import ru.otus.javadeveloper.hw16.common.api.event.Event;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,9 +22,10 @@ public class SocketMessageWorker implements MessageWorker {
     private final ExecutorService executorService;
     private final Socket socket;
     private final String name;
+    private Address to;
 
-    private final BlockingQueue<String> output = new LinkedBlockingQueue<>();
-    private final BlockingQueue<String> input = new LinkedBlockingQueue<>();
+    private final BlockingQueue<Event> output = new LinkedBlockingQueue<>();
+    private final BlockingQueue<Event> input = new LinkedBlockingQueue<>();
 
     public SocketMessageWorker(Socket socket, String name) {
         this.socket = socket;
@@ -38,34 +43,34 @@ public class SocketMessageWorker implements MessageWorker {
     }
 
     @Override
-    public String pool() {
+    public Event pool() {
         return input.poll();
     }
 
     @Override
-    public List<String> pollAll() {
-        List<String> inputMessages = new ArrayList<>();
+    public List<Event> pollAll() {
+        List<Event> inputMessages = new ArrayList<>();
         while (!input.isEmpty()) {
-            String poll = input.poll();
+            Event poll = input.poll();
             inputMessages.add(poll);
         }
         return inputMessages;
     }
 
     @Override
-    public void push(String event) {
+    public void push(Event event) {
         output.add(event);
     }
 
     @Override
-    public void pushAll(List<String> eventList) {
-        for (String event : eventList) {
+    public void pushAll(List<Event> eventList) {
+        for (Event event : eventList) {
             output.add(event);
         }
     }
 
     @Override
-    public String take() throws InterruptedException {
+    public Event take() throws InterruptedException {
         return input.take();
     }
 
@@ -75,10 +80,21 @@ public class SocketMessageWorker implements MessageWorker {
         executorService.shutdown();
     }
 
+    @Override
+    public void addDestination(Address address) {
+        this.to = address;
+    }
+
+    @Override
+    public Address getDestination() {
+        return to;
+    }
+
     private void sendAbstractEvent() {
         try (PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
             while (socket.isConnected()) {
-                String json = output.take();
+                Event event = output.take();
+                String json = new Gson().toJson(event);
                 System.out.println(name + " take from out " + json);
                 out.println(json);
                 out.println();
@@ -96,8 +112,9 @@ public class SocketMessageWorker implements MessageWorker {
                 stringBuilder.append(inputLine);
                 if (inputLine.isEmpty()) {
                     String json = stringBuilder.toString();
-                    System.out.println(name + " add in " + json);
-                    input.add(json);
+                    Event event = new Gson().fromJson(json, Event.class);
+                    System.out.println(name + " add in " + event);
+                    input.add(event);
                     stringBuilder = new StringBuilder();
                 }
             }

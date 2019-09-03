@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import ru.otus.javadeveloper.hw16.ms.runner.ProcessRunnerImpl;
 import ru.otus.javadeveloper.hw16.ms.server.EchoSocketMessageServer;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -15,10 +16,10 @@ import java.util.concurrent.TimeUnit;
 public class WsDemo implements CommandLineRunner {
 
     //    todo remove absolute path
-    private static final String CLIENT_START_COMMAND1 = "java -jar C:\\Users\\dmitry\\IdeaProjects\\otus-java-developer\\hw16-message-server\\frontend\\target\\frontend.jar --server.port=5051";
-    private static final String CLIENT_START_COMMAND2 = "java -jar C:\\Users\\dmitry\\IdeaProjects\\otus-java-developer\\hw16-message-server\\frontend\\target\\frontend.jar --server.port=5052";
-    private static final String CLIENT_START_COMMAND3 = "java -jar C:\\Users\\dmitry\\IdeaProjects\\otus-java-developer\\hw16-message-server\\db-service\\target\\db-service.jar --server.port=5053";
-    private static final String CLIENT_START_COMMAND4 = "java -jar C:\\Users\\dmitry\\IdeaProjects\\otus-java-developer\\hw16-message-server\\db-service\\target\\db-service.jar --server.port=5054";
+    private static final String CLIENT_START_COMMAND1 = "java -jar " + "hw16-message-server" + File.separator + "frontend" + File.separator + "target" + File.separator + "frontend.jar --server.port=5051";
+    private static final String CLIENT_START_COMMAND2 = "java -jar " + "hw16-message-server" + File.separator + "frontend" + File.separator + "target" + File.separator + "frontend.jar --server.port=5052";
+    private static final String CLIENT_START_COMMAND3 = "java -jar " + "hw16-message-server" + File.separator + "db-service" + File.separator + "target" + File.separator + "db-service.jar --server.port=5053";
+    private static final String CLIENT_START_COMMAND4 = "java -jar " + "hw16-message-server" + File.separator + "db-service" + File.separator + "target" + File.separator + "db-service.jar --server.port=5054";
     private static final int CLIENT_START_DELAY_SEC = 5;
 
     public static void main(String[] args) {
