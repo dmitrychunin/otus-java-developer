@@ -24,6 +24,7 @@
         <module>hw14-multithreading</module>
         <module>hw15-message-system</module>
         <module>hw16-message-server</module>
+        <module>nio-framework</module>
     </modules>
 
     <properties>
