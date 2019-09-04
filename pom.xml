@@ -23,6 +23,7 @@
         <module>hw13-di</module>
         <module>hw14-multithreading</module>
         <module>hw15-message-system</module>
+        <module>hw16-message-server</module>
     </modules>
 
     <properties>
