@@ -29,23 +29,27 @@ public class BossEventLoop implements EventLoop {
             serverSocket.bind(new InetSocketAddress(port));
             serverSocketChannel.register(acceptSelector, SelectionKey.OP_ACCEPT);
             acceptSelector.select();
+            int workerCounter = 0;
             while (!Thread.currentThread().isInterrupted()) {
-                log.info("listen new client connection");
+                log.info("boss: listen new client connection");
                 Iterator<SelectionKey> keys = acceptSelector.selectedKeys().iterator();
                 while (keys.hasNext()) {
                     try {
                         SelectionKey key = keys.next();
                         if (key.isAcceptable()) {
-                            log.info("accept client connection");
+                            log.info("boss: accept client connection");
 
                             SocketChannel socketChannel = serverSocketChannel.accept(); //The socket channel for the new connection
                             socketChannel.configureBlocking(false);
 
-                            EventLoop workerEventLoop = new WorkerEventLoop(socketChannel);
+                            workerCounter++;
+                            String workerName = "worker-" + workerCounter;
+                            EventLoop workerEventLoop = new WorkerEventLoop(socketChannel, workerName);
 //                            todo stop disconnected clients???
+                            log.info("boss: submit new " + workerName + " event loop");
                             workerExecutor.submit(workerEventLoop::go);
                         } else {
-                            throw new RuntimeException("key is not acceptable");
+                            throw new RuntimeException("boss: key is not acceptable");
                         }
 
                     } catch (IOException e) {
@@ -53,7 +57,11 @@ public class BossEventLoop implements EventLoop {
                     }
                     keys.remove();
                 }
-
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             }
         } catch (IOException e) {

@@ -19,23 +19,30 @@ public class WorkerEventLoop implements EventLoop {
     //    TODO ADD socket LIST???
 //    todo make final and @value
     private SocketChannel socketChannel;
+    private final String name;
 
     @Override
     public void go() {
         try (Selector readSelector = Selector.open()) {
             socketChannel.register(readSelector, SelectionKey.OP_READ);
 
+            readSelector.select();
             while (!Thread.currentThread().isInterrupted()) {
-                log.info("listen new read ready clients");
+                log.info(name + ": listen new read ready clients");
                 Iterator<SelectionKey> readKeys = readSelector.selectedKeys().iterator();
                 while (readKeys.hasNext()) {
                     SelectionKey key = readKeys.next();
                     if (key.isReadable()) {
                        handleReadAndWriteEvent();
                     } else {
-                        throw new RuntimeException("key is not readable");
+                        throw new RuntimeException(name + ": key is not readable");
                     }
                     readKeys.remove();
+                }
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         } catch (IOException e) {
@@ -44,7 +51,7 @@ public class WorkerEventLoop implements EventLoop {
     }
 
     private void handleReadAndWriteEvent() throws IOException {
-        log.info("read from client");
+        log.info(name + ": read from client");
 
         ByteBuffer buffer = ByteBuffer.allocate(5);
         StringBuilder inputBuffer = new StringBuilder(100);
@@ -52,7 +59,7 @@ public class WorkerEventLoop implements EventLoop {
         while (socketChannel.read(buffer) > 0) {
             buffer.flip();
             String input = Charset.forName("UTF-8").decode(buffer).toString();
-            log.info("from client: {} ", input);
+            log.info(name + ": from client: {} ", input);
 
             buffer.flip();
             buffer.clear();
@@ -60,9 +67,9 @@ public class WorkerEventLoop implements EventLoop {
         }
 
         String requestFromClient = inputBuffer.toString();
-        log.info("requestFromClient: {} ", requestFromClient);
+        log.info(name + ": requestFromClient: {} ", requestFromClient);
 
-        byte[] response = ("echo: " + requestFromClient).getBytes();
+        byte[] response = (name + ": echo: " + requestFromClient).getBytes();
         for (byte b : response) {
             buffer.put(b);
             if (buffer.position() == buffer.limit()) {
