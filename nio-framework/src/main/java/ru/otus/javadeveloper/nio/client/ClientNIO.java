@@ -29,19 +29,20 @@ public class ClientNIO {
             try(SocketChannel socketChannel = SocketChannel.open()) {
                 socketChannel.configureBlocking(false);
 
+                logger.info(Thread.currentThread().getName() + " millis1 " + System.currentTimeMillis());
                 socketChannel.connect(new InetSocketAddress(HOST, PORT));
+                logger.info(Thread.currentThread().getName() + " millis2 " + System.currentTimeMillis());
 
-                logger.info("connecting to server");
+                logger.info(Thread.currentThread().getName() + ": connecting to server");
                 while (!socketChannel.finishConnect()) {
-                    logger.info("connection established");
+                    logger.info(Thread.currentThread().getName() + ": connection established");
                 }
                 send(socketChannel, request);
-                sleep();
-                logger.info("stop communication");
+                logger.info(Thread.currentThread().getName() + ": stop communication");
                 send(socketChannel, "stop\n");
             }
         } catch (Exception ex) {
-            logger.error("error", ex);
+            logger.error(Thread.currentThread().getName() + ": error", ex);
         }
     }
 
@@ -49,13 +50,13 @@ public class ClientNIO {
         ByteBuffer buffer = ByteBuffer.allocate(1000);
         buffer.put(request.getBytes());
         buffer.flip();
-        logger.info("sending to server");
+        logger.info(Thread.currentThread().getName() + ": sending to server request: " + request);
         socketChannel.write(buffer);
 
         Selector selector = Selector.open();
         socketChannel.register(selector, SelectionKey.OP_READ);
         while (true) {
-            logger.info("waiting for response");
+            logger.info(Thread.currentThread().getName() + ": waiting for response");
             if (selector.select() > 0) { //This method performs a blocking
                 if (processServerResponse(selector)) {
                     return;
@@ -65,7 +66,7 @@ public class ClientNIO {
     }
 
     private boolean processServerResponse(Selector selector) throws IOException {
-        logger.info("something happened");
+        logger.info(Thread.currentThread().getName() + ": processServerResponse");
         ByteBuffer buffer = ByteBuffer.allocate(1000);
         Iterator<SelectionKey> selectedKeys = selector.selectedKeys().iterator();
         while (selectedKeys.hasNext()) {
@@ -76,7 +77,7 @@ public class ClientNIO {
                 if (count > 0) {
                     buffer.flip();
                     String response = Charset.forName("UTF-8").decode(buffer).toString();
-                    logger.info("response: {}", response);
+                    logger.info(Thread.currentThread().getName() + ": response: {}", response);
                     buffer.clear();
                     buffer.flip();
                     return true;
@@ -86,8 +87,6 @@ public class ClientNIO {
         }
         return false;
     }
-
-
     private static void sleep() {
         try {
             Thread.sleep(TimeUnit.SECONDS.toMillis(10));
