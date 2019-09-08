@@ -11,7 +11,9 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Value
@@ -32,6 +34,8 @@ public class BossEventLoop implements EventLoop {
             int workerCounter = 0;
             while (!Thread.currentThread().isInterrupted()) {
                 log.info("boss: listen new client connection");
+                List<Integer> collect = acceptSelector.selectedKeys().stream().map(SelectionKey::interestOps).collect(Collectors.toList());
+                log.info("boss: selector has keys: " + collect);
                 Iterator<SelectionKey> keys = acceptSelector.selectedKeys().iterator();
                 while (keys.hasNext()) {
                     try {
@@ -58,7 +62,7 @@ public class BossEventLoop implements EventLoop {
                     keys.remove();
                 }
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
