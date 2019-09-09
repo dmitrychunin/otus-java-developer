@@ -11,11 +11,11 @@ public class NettyMain {
 
     public static void main(String[] args) {
         ExecutorService bossExecutor = Executors.newSingleThreadExecutor();
-        ExecutorService workerExecutor = Executors.newFixedThreadPool(2);
+//        ExecutorService workerExecutor = Executors.newFixedThreadPool(2);
 //        ExecutorService workerExecutor = Executors.newFixedThreadPool(2 * Runtime.getRuntime().availableProcessors());
 
 
-        EventLoop bossEventLoop = new BossEventLoop(PORT, workerExecutor);
+        EventLoop bossEventLoop = new BossEventLoop(PORT, 2);
         bossExecutor.submit(bossEventLoop::go);
     }
 }

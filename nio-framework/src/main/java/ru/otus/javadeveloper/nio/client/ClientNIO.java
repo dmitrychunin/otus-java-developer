@@ -20,18 +20,34 @@ public class ClientNIO {
     private static final String HOST = "localhost";
 
     public static void main(String[] args) {
+        new Thread(() -> new ClientNIO().go("testData_0")).start();
         new Thread(() -> new ClientNIO().go("testData_1")).start();
         new Thread(() -> new ClientNIO().go("testData_2")).start();
+        new Thread(() -> new ClientNIO().go("testData_3")).start();
+        new Thread(() -> new ClientNIO().go("testData_4")).start();
+        new Thread(() -> new ClientNIO().go("testData_5")).start();
+        new Thread(() -> new ClientNIO().go("testData_6")).start();
+        new Thread(() -> new ClientNIO().go("testData_7")).start();
+        new Thread(() -> new ClientNIO().go("testData_8")).start();
+        new Thread(() -> new ClientNIO().go("testData_9")).start();
+        new Thread(() -> new ClientNIO().go("testData_10")).start();
+        new Thread(() -> new ClientNIO().go("testData_11")).start();
+        new Thread(() -> new ClientNIO().go("testData_12")).start();
+        new Thread(() -> new ClientNIO().go("testData_13")).start();
+        new Thread(() -> new ClientNIO().go("testData_14")).start();
+        new Thread(() -> new ClientNIO().go("testData_15")).start();
+        new Thread(() -> new ClientNIO().go("testData_16")).start();
+        new Thread(() -> new ClientNIO().go("testData_17")).start();
+        new Thread(() -> new ClientNIO().go("testData_18")).start();
+        new Thread(() -> new ClientNIO().go("testData_19")).start();
     }
 
     private void go(String request) {
         try {
-            try(SocketChannel socketChannel = SocketChannel.open()) {
+            try (SocketChannel socketChannel = SocketChannel.open()) {
                 socketChannel.configureBlocking(false);
 
-                logger.info(Thread.currentThread().getName() + " millis1 " + System.currentTimeMillis());
                 socketChannel.connect(new InetSocketAddress(HOST, PORT));
-                logger.info(Thread.currentThread().getName() + " millis2 " + System.currentTimeMillis());
 
                 logger.info(Thread.currentThread().getName() + ": connecting to server");
                 while (!socketChannel.finishConnect()) {
@@ -87,6 +103,7 @@ public class ClientNIO {
         }
         return false;
     }
+
     private static void sleep() {
         try {
             Thread.sleep(TimeUnit.SECONDS.toMillis(10));

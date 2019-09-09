@@ -1,6 +1,7 @@
 package ru.otus.javadeveloper.nio.server.el;
 
-import lombok.Value;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -10,20 +11,29 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
-import java.util.stream.Collectors;
+import java.util.concurrent.Executors;
 
 @Slf4j
-@Value
+@Setter
+@Getter
 public class BossEventLoop implements EventLoop {
     private final int port;
-    private final ExecutorService workerExecutor;
+    private final int workerThreadCount;
+    private final List<WorkerEventLoop> workerList;
+    private ExecutorService workerExecutor;
+
+    public BossEventLoop(int port, int workerThreadCount) {
+        this.port = port;
+        this.workerThreadCount = workerThreadCount;
+        this.workerList = new ArrayList<>(workerThreadCount);
+    }
 
     @Override
     public void go() {
-
+        initWorkers();
         try (ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
              Selector acceptSelector = Selector.open()) {
             serverSocketChannel.configureBlocking(false);
@@ -31,38 +41,19 @@ public class BossEventLoop implements EventLoop {
             serverSocket.bind(new InetSocketAddress(port));
             serverSocketChannel.register(acceptSelector, SelectionKey.OP_ACCEPT);
             acceptSelector.select();
-            int workerCounter = 0;
             while (!Thread.currentThread().isInterrupted()) {
-                log.info("boss: listen new client connection");
-                List<Integer> collect = acceptSelector.selectedKeys().stream().map(SelectionKey::interestOps).collect(Collectors.toList());
-                log.info("boss: selector has keys: " + collect);
-                Iterator<SelectionKey> keys = acceptSelector.selectedKeys().iterator();
-                while (keys.hasNext()) {
-                    try {
-                        SelectionKey key = keys.next();
-                        if (key.isAcceptable()) {
-                            log.info("boss: accept client connection");
 
-                            SocketChannel socketChannel = serverSocketChannel.accept(); //The socket channel for the new connection
-                            socketChannel.configureBlocking(false);
-
-                            workerCounter++;
-                            String workerName = "worker-" + workerCounter;
-                            EventLoop workerEventLoop = new WorkerEventLoop(socketChannel, workerName);
-//                            todo stop disconnected clients???
-                            log.info("boss: submit new " + workerName + " event loop");
-                            workerExecutor.submit(workerEventLoop::go);
-                        } else {
-                            throw new RuntimeException("boss: key is not acceptable");
-                        }
-
+                try {
+                    log.info("boss: listen new client connection");
+                    SocketChannel socketChannel = serverSocketChannel.accept(); //The socket channel for the new connection
+                    socketChannel.configureBlocking(false);
+                    log.info("boss: new connection finded");
+                    manageSmoothSocketAllocationOnWorkers(socketChannel);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    keys.remove();
-                }
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -71,7 +62,37 @@ public class BossEventLoop implements EventLoop {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    private void initWorkers() {
+        workerExecutor = Executors.newFixedThreadPool(workerThreadCount);
+        for (int i = 0; i < workerThreadCount; i++) {
+            String workerName = "worker-" + i;
+            WorkerEventLoop workerEventLoop = new WorkerEventLoop(workerName);
+//          todo stop disconnected clients and remove corresponding worker socket???
+            workerList.add(workerEventLoop);
+            log.info("boss: submit new " + workerName + " event loop");
+            workerExecutor.submit(workerEventLoop::go);
+        }
+    }
 
+    private void manageSmoothSocketAllocationOnWorkers(SocketChannel socketChannel) {
+        log.info("boss: submit new socket");
+        int index = 0;
+        int minSize = Integer.MAX_VALUE;
+
+        for (int i = 0; i < workerList.size(); i++) {
+            WorkerEventLoop workerEventLoop = workerList.get(i);
+            int size = workerEventLoop.getSocketChannelList().size();
+            log.info("boss: {} already has {} sockets", workerEventLoop.getName(), size);
+            if (size < minSize) {
+                minSize = size;
+                index = i;
+            }
+        }
+
+        WorkerEventLoop workerEventLoop = workerList.get(index);
+        workerEventLoop.addSocket(socketChannel);
+        log.info("accept new socket into " + workerEventLoop.getName());
     }
 }

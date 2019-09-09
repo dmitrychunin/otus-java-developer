@@ -6,26 +6,38 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.ClosedChannelException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 @Slf4j
 @Data
-@AllArgsConstructor
 public class WorkerEventLoop implements EventLoop {
-    //    TODO ADD socket LIST???
 //    todo make final and @value
-    private SocketChannel socketChannel;
+    private List<SocketChannel> socketChannelList = new ArrayList<>();
     private final String name;
+    private Selector readSelector;
+
+    public void addSocket(SocketChannel socketChannel) {
+        socketChannelList.add(socketChannel);
+        try {
+            socketChannel.register(readSelector, SelectionKey.OP_READ);
+        } catch (ClosedChannelException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void go() {
         try (Selector readSelector = Selector.open()) {
-            socketChannel.register(readSelector, SelectionKey.OP_READ);
-
+//            todo refactor
+//            todo воркеры создаются, сокеты в них создаются но воркеры не начинают работать начать искать проблему здесь
+            this.readSelector = readSelector;
             readSelector.select();
             while (!Thread.currentThread().isInterrupted()) {
                 log.info(name + ": listen new read ready clients");
@@ -33,7 +45,8 @@ public class WorkerEventLoop implements EventLoop {
                 while (readKeys.hasNext()) {
                     SelectionKey key = readKeys.next();
                     if (key.isReadable()) {
-                       handleReadAndWriteEvent();
+                        SocketChannel channel = (SocketChannel) key.channel();
+                        handleReadAndWriteEvent(channel);
                     } else {
                         throw new RuntimeException(name + ": key is not readable");
                     }
@@ -50,12 +63,12 @@ public class WorkerEventLoop implements EventLoop {
         }
     }
 
-    private void handleReadAndWriteEvent() throws IOException {
+    private void handleReadAndWriteEvent(SocketChannel socketChannel) throws IOException {
+//todo add context instead socket to define which socket is used
         log.info(name + ": read from client");
 
         ByteBuffer buffer = ByteBuffer.allocate(5);
         StringBuilder inputBuffer = new StringBuilder(100);
-
         while (socketChannel.read(buffer) > 0) {
             buffer.flip();
             String input = Charset.forName("UTF-8").decode(buffer).toString();
