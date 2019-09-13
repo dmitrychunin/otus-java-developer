@@ -1,7 +1,7 @@
 package ru.otus.javadeveloper.nio.server;
 
-import ru.otus.javadeveloper.nio.server.el.BossEventLoop;
-import ru.otus.javadeveloper.nio.server.el.EventLoop;
+import ru.otus.javadeveloper.nio.framework.el.BossEventLoop;
+import ru.otus.javadeveloper.nio.framework.el.EventLoop;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

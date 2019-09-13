@@ -1,4 +1,4 @@
-package ru.otus.javadeveloper.nio.server.el;
+package ru.otus.javadeveloper.nio.framework.el;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -71,7 +71,7 @@ public class BossEventLoop implements EventLoop {
             WorkerEventLoop workerEventLoop = new WorkerEventLoop(workerName);
 //          todo stop disconnected clients and remove corresponding worker socket???
             workerList.add(workerEventLoop);
-            log.info("boss: submit new " + workerName + " event loop");
+            log.info("boss: submit new {} event loop", workerName);
             workerExecutor.submit(workerEventLoop::go);
         }
     }
@@ -83,7 +83,7 @@ public class BossEventLoop implements EventLoop {
 
         for (int i = 0; i < workerList.size(); i++) {
             WorkerEventLoop workerEventLoop = workerList.get(i);
-            int size = workerEventLoop.getSocketChannelList().size();
+            int size = workerEventLoop.getActiveSocketsCount();
             log.info("boss: {} already has {} sockets", workerEventLoop.getName(), size);
             if (size < minSize) {
                 minSize = size;
@@ -92,7 +92,7 @@ public class BossEventLoop implements EventLoop {
         }
 
         WorkerEventLoop workerEventLoop = workerList.get(index);
-        workerEventLoop.addSocket(socketChannel);
-        log.info("accept new socket into " + workerEventLoop.getName());
+        workerEventLoop.registerSocket(socketChannel);
+        log.info("accept new socket into {}", workerEventLoop.getName());
     }
 }

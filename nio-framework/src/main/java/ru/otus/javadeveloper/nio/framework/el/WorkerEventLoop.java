@@ -1,0 +1,197 @@
+package ru.otus.javadeveloper.nio.framework.el;
+
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+import ru.otus.javadeveloper.nio.framework.Context;
+import ru.otus.javadeveloper.nio.framework.pipeline.ChannelPipeline;
+import ru.otus.javadeveloper.nio.server.handler.InverseLetterCaseHandler;
+import ru.otus.javadeveloper.nio.server.handler.PackagePayloadWithWorkerNameHandler;
+import ru.otus.javadeveloper.nio.server.handler.ReplaceAWithHeyHandler;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.*;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+@Slf4j
+@Data
+public class WorkerEventLoop implements EventLoop {
+    //    todo make final and @value
+    private final String name;
+    private final ExecutorService asyncPipelineExecutor = Executors.newSingleThreadExecutor();
+    private Selector readSelector;
+    private int activeSocketsCount;
+    private List<Future<Context>> resultList = new ArrayList<>();
+
+    public void registerSocket(SocketChannel socketChannel) {
+        activeSocketsCount++;
+        try {
+            socketChannel.register(readSelector, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
+        } catch (ClosedChannelException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void go() {
+        try (Selector readSelector = Selector.open()) {
+//            todo refactor
+            this.readSelector = readSelector;
+            while (!Thread.currentThread().isInterrupted()) {
+                syncActiveSocketsCount();
+                log.info("{}: listen new ready clients", name);
+//                todo почему без selectedNow не работает???
+                readSelector.selectNow();
+                Iterator<SelectionKey> readKeys = readSelector.selectedKeys().iterator();
+                while (readKeys.hasNext()) {
+                    SelectionKey key = readKeys.next();
+                    log.info("{} handle key {}", name, key.interestOps());
+                    if (key.isReadable()) {
+                        SocketChannel channel = (SocketChannel) key.channel();
+                        String requestPayload = readRequestPayload(channel);
+                        //            todo refactor
+                        if (isClientSendStopRequest(requestPayload)) {
+                            closeSocketAndSendResponse(channel, requestPayload);
+                            continue;
+                        }
+                        pipelineHandling(channel, requestPayload);
+                    } else if (key.isWritable()) {
+                        handleWriteSocketEvent(key);
+                    } else {
+                        throw new RuntimeException(name + ": key is not readable");
+                    }
+                    readKeys.remove();
+                }
+                sleepOneSecond();
+            }
+        } catch (IOException | InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            RuntimeException runtimeException = new RuntimeException("Ошибка в worker event loop " + name);
+            runtimeException.initCause(e);
+            throw runtimeException;
+        }
+    }
+
+    public void writeResponsePayload(SocketChannel socket, String message) {
+        try {
+            ByteBuffer buffer = ByteBuffer.allocate(5);
+            byte[] response = message.getBytes();
+            for (byte b : response) {
+                buffer.put(b);
+                if (buffer.position() == buffer.limit()) {
+                    buffer.flip();
+                    socket.write(buffer);
+                    buffer.flip();
+                    buffer.clear();
+                }
+            }
+            if (buffer.hasRemaining()) {
+                buffer.flip();
+                socket.write(buffer);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
+    }
+
+    public String readRequestPayload(SocketChannel socket) {
+        try {
+            log.info("{}: readRequestPayload from client", name);
+            ByteBuffer buffer = ByteBuffer.allocate(5);
+            StringBuilder inputBuffer = new StringBuilder(100);
+            while (socket.read(buffer) > 0) {
+                buffer.flip();
+                String input = Charset.forName("UTF-8").decode(buffer).toString();
+                log.info("{}: from client: {} ", name, input);
+
+                buffer.flip();
+                buffer.clear();
+                inputBuffer.append(input);
+            }
+            return inputBuffer.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        throw new RuntimeException();
+    }
+
+    private void handleWriteSocketEvent(SelectionKey key) throws ExecutionException, InterruptedException {
+        SelectableChannel channel = key.channel();
+
+        for (int i = 0; i < resultList.size(); i++) {
+            if (!resultList.get(i).isDone()) {
+                continue;
+            }
+            Context context = resultList.get(i).get();
+            SocketChannel socket = context.getSocket();
+
+            if (socket == channel) {
+                writeResponsePayload((SocketChannel) channel, ((String) resultList.get(i).get().getPayload()));
+                resultList.remove(i);
+            }
+
+        }
+    }
+
+    private void sleepOneSecond() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean isClientSendStopRequest(String requestPayload) {
+        return "stop\n".equals(requestPayload);
+    }
+
+    private void closeSocketAndSendResponse(SocketChannel channel, String requestPayload) {
+        log.info("channel closed by client request");
+        writeResponsePayload(channel, requestPayload);
+        try {
+            channel.close();
+//            todo what if close fails?
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void pipelineHandling(SocketChannel channel, String requestPayload) {
+        //                        todo move hardcode pipeline creation from framework
+        ChannelPipeline pipeline = new ChannelPipeline(new Context(channel, name));
+        pipeline.addLast(new InverseLetterCaseHandler());
+        pipeline.addLast(new ReplaceAWithHeyHandler());
+        pipeline.addLast(new PackagePayloadWithWorkerNameHandler());
+        Future<Context> submit = asyncPipelineExecutor.submit(() -> pipeline.start(requestPayload));
+        resultList.add(submit);
+    }
+
+    private void syncActiveSocketsCount() {
+        for (int i = 0; i < resultList.size(); i++) {
+            Future<Context> booleanFuture = resultList.get(i);
+            if (!booleanFuture.isDone()) {
+                continue;
+            }
+            if (isSocketClosed(booleanFuture)) {
+                activeSocketsCount--;
+            }
+        }
+    }
+
+    private boolean isSocketClosed(Future<Context> contextFuture) {
+        try {
+            return contextFuture.get().isSocketClosed();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Ошибка при проверке закрыт ли сокет");
+        }
+    }
+}

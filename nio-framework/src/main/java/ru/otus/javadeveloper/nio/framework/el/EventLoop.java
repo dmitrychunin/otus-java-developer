@@ -1,4 +1,4 @@
-package ru.otus.javadeveloper.nio.server.el;
+package ru.otus.javadeveloper.nio.framework.el;
 
 public interface EventLoop {
     void go();
