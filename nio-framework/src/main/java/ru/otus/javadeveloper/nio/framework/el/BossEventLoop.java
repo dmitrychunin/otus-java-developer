@@ -84,7 +84,7 @@ public class BossEventLoop implements EventLoop {
         for (int i = 0; i < workerList.size(); i++) {
             WorkerEventLoop workerEventLoop = workerList.get(i);
             int size = workerEventLoop.getActiveSocketsCount();
-            log.info("boss: {} already has {} sockets", workerEventLoop.getName(), size);
+            log.info("boss: {} already has {} sockets", workerEventLoop.getWorkerName(), size);
             if (size < minSize) {
                 minSize = size;
                 index = i;
@@ -93,6 +93,6 @@ public class BossEventLoop implements EventLoop {
 
         WorkerEventLoop workerEventLoop = workerList.get(index);
         workerEventLoop.registerSocket(socketChannel);
-        log.info("accept new socket into {}", workerEventLoop.getName());
+        log.info("accept new socket into {}", workerEventLoop.getWorkerName());
     }
 }

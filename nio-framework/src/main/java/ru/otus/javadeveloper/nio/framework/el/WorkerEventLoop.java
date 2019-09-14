@@ -2,7 +2,6 @@ package ru.otus.javadeveloper.nio.framework.el;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import ru.otus.javadeveloper.nio.framework.Context;
 import ru.otus.javadeveloper.nio.framework.RequestContext;
 import ru.otus.javadeveloper.nio.framework.pipeline.ChannelPipeline;
 import ru.otus.javadeveloper.nio.server.handler.InverseLetterCaseHandler;
@@ -25,11 +24,11 @@ import java.util.concurrent.Future;
 @Data
 public class WorkerEventLoop implements EventLoop {
     //    todo make final and @value
-    private final String name;
+    private final String workerName;
     private final ExecutorService asyncPipelineExecutor = Executors.newSingleThreadExecutor();
     private Selector readSelector;
     private int activeSocketsCount;
-    private List<Future<Context>> resultList = new ArrayList<>();
+    private List<Future<RequestContext>> resultList = new ArrayList<>();
 
     public void registerSocket(SocketChannel socketChannel) {
         activeSocketsCount++;
@@ -47,27 +46,27 @@ public class WorkerEventLoop implements EventLoop {
             this.readSelector = readSelector;
             while (!Thread.currentThread().isInterrupted()) {
                 syncActiveSocketsCount();
-                log.info("{}: listen new ready clients", name);
+                log.info("{}: listen new ready clients", workerName);
 //                todo почему без selectedNow не работает???
                 readSelector.selectNow();
                 Iterator<SelectionKey> readKeys = readSelector.selectedKeys().iterator();
                 while (readKeys.hasNext()) {
                     SelectionKey key = readKeys.next();
-                    log.info("{} handle key {}", name, key.interestOps());
+                    log.info("{} handle key {}", workerName, key.interestOps());
                     if (key.isReadable()) {
                         SocketChannel channel = (SocketChannel) key.channel();
                         String socketPayload = readRequestPayload(channel);
-                        RequestContext requestContext = new RequestContext(socketPayload);
+                        RequestContext requestContext = new RequestContext(socketPayload, channel, workerName);
                         //            todo refactor
                         if (isClientSendStopRequest(socketPayload)) {
                             closeSocketAndSendResponse(channel, socketPayload);
                             continue;
                         }
-                        pipelineHandling(channel, socketPayload);
+                        pipelineHandling(requestContext);
                     } else if (key.isWritable()) {
                         handleWriteSocketEvent(key);
                     } else {
-                        throw new RuntimeException(name + ": key is not readable");
+                        throw new RuntimeException(workerName + ": key is not readable");
                     }
                     readKeys.remove();
                 }
@@ -75,7 +74,7 @@ public class WorkerEventLoop implements EventLoop {
             }
         } catch (IOException | InterruptedException | ExecutionException e) {
             e.printStackTrace();
-            RuntimeException runtimeException = new RuntimeException("Ошибка в worker event loop " + name);
+            RuntimeException runtimeException = new RuntimeException("Ошибка в worker event loop " + workerName);
             runtimeException.initCause(e);
             throw runtimeException;
         }
@@ -106,13 +105,13 @@ public class WorkerEventLoop implements EventLoop {
 
     public String readRequestPayload(SocketChannel socket) {
         try {
-            log.info("{}: readRequestPayload from client", name);
+            log.info("{}: readRequestPayload from client", workerName);
             ByteBuffer buffer = ByteBuffer.allocate(5);
             StringBuilder inputBuffer = new StringBuilder(100);
             while (socket.read(buffer) > 0) {
                 buffer.flip();
                 String input = Charset.forName("UTF-8").decode(buffer).toString();
-                log.info("{}: from client: {} ", name, input);
+                log.info("{}: from client: {} ", workerName, input);
 
                 buffer.flip();
                 buffer.clear();
@@ -132,7 +131,7 @@ public class WorkerEventLoop implements EventLoop {
             if (!resultList.get(i).isDone()) {
                 continue;
             }
-            Context context = resultList.get(i).get();
+            RequestContext context = resultList.get(i).get();
             SocketChannel socket = context.getSocket();
 
             if (socket == channel) {
@@ -166,19 +165,19 @@ public class WorkerEventLoop implements EventLoop {
         }
     }
 
-    private void pipelineHandling(SocketChannel channel, String requestPayload) {
+    private void pipelineHandling(RequestContext requestContext) {
         //                        todo move hardcode pipeline creation from framework
-        ChannelPipeline pipeline = new ChannelPipeline(new Context(channel, name));
+        ChannelPipeline pipeline = new ChannelPipeline(requestContext);
         pipeline.addLast(new InverseLetterCaseHandler());
         pipeline.addLast(new ReplaceAWithHeyHandler());
         pipeline.addLast(new PackagePayloadWithWorkerNameHandler());
-        Future<Context> submit = asyncPipelineExecutor.submit(() -> pipeline.start(requestPayload));
+        Future<RequestContext> submit = asyncPipelineExecutor.submit(() -> pipeline.start(requestContext.getHttpRequestPayload()));
         resultList.add(submit);
     }
 
     private void syncActiveSocketsCount() {
         for (int i = 0; i < resultList.size(); i++) {
-            Future<Context> booleanFuture = resultList.get(i);
+            Future<RequestContext> booleanFuture = resultList.get(i);
             if (!booleanFuture.isDone()) {
                 continue;
             }
@@ -188,7 +187,7 @@ public class WorkerEventLoop implements EventLoop {
         }
     }
 
-    private boolean isSocketClosed(Future<Context> contextFuture) {
+    private boolean isSocketClosed(Future<RequestContext> contextFuture) {
         try {
             return contextFuture.get().isSocketClosed();
         } catch (InterruptedException | ExecutionException e) {
