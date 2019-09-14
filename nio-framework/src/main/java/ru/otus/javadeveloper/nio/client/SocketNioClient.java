@@ -13,33 +13,33 @@ import java.nio.charset.Charset;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
-public class ClientNIO {
-    private static Logger logger = LoggerFactory.getLogger(ClientNIO.class);
+public class SocketNioClient {
+    private static Logger logger = LoggerFactory.getLogger(SocketNioClient.class);
 
     private static final int PORT = 8080;
     private static final String HOST = "localhost";
 
     public static void main(String[] args) {
-        new Thread(() -> new ClientNIO().go("testData_0")).start();
-        new Thread(() -> new ClientNIO().go("testData_1")).start();
-        new Thread(() -> new ClientNIO().go("testData_2")).start();
-        new Thread(() -> new ClientNIO().go("testData_3")).start();
-        new Thread(() -> new ClientNIO().go("testData_4")).start();
-        new Thread(() -> new ClientNIO().go("testData_5")).start();
-        new Thread(() -> new ClientNIO().go("testData_6")).start();
-        new Thread(() -> new ClientNIO().go("testData_7")).start();
-        new Thread(() -> new ClientNIO().go("testData_8")).start();
-        new Thread(() -> new ClientNIO().go("testData_9")).start();
-        new Thread(() -> new ClientNIO().go("testData_10")).start();
-        new Thread(() -> new ClientNIO().go("testData_11")).start();
-        new Thread(() -> new ClientNIO().go("testData_12")).start();
-        new Thread(() -> new ClientNIO().go("testData_13")).start();
-        new Thread(() -> new ClientNIO().go("testData_14")).start();
-        new Thread(() -> new ClientNIO().go("testData_15")).start();
-        new Thread(() -> new ClientNIO().go("testData_16")).start();
-        new Thread(() -> new ClientNIO().go("testData_17")).start();
-        new Thread(() -> new ClientNIO().go("testData_18")).start();
-        new Thread(() -> new ClientNIO().go("testData_19")).start();
+        new Thread(() -> new SocketNioClient().go("testData_0")).start();
+        new Thread(() -> new SocketNioClient().go("testData_1")).start();
+        new Thread(() -> new SocketNioClient().go("testData_2")).start();
+        new Thread(() -> new SocketNioClient().go("testData_3")).start();
+        new Thread(() -> new SocketNioClient().go("testData_4")).start();
+        new Thread(() -> new SocketNioClient().go("testData_5")).start();
+        new Thread(() -> new SocketNioClient().go("testData_6")).start();
+        new Thread(() -> new SocketNioClient().go("testData_7")).start();
+        new Thread(() -> new SocketNioClient().go("testData_8")).start();
+        new Thread(() -> new SocketNioClient().go("testData_9")).start();
+        new Thread(() -> new SocketNioClient().go("testData_10")).start();
+        new Thread(() -> new SocketNioClient().go("testData_11")).start();
+        new Thread(() -> new SocketNioClient().go("testData_12")).start();
+        new Thread(() -> new SocketNioClient().go("testData_13")).start();
+        new Thread(() -> new SocketNioClient().go("testData_14")).start();
+        new Thread(() -> new SocketNioClient().go("testData_15")).start();
+        new Thread(() -> new SocketNioClient().go("testData_16")).start();
+        new Thread(() -> new SocketNioClient().go("testData_17")).start();
+        new Thread(() -> new SocketNioClient().go("testData_18")).start();
+        new Thread(() -> new SocketNioClient().go("testData_19")).start();
     }
 
     private void go(String request) {

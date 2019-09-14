@@ -3,6 +3,7 @@ package ru.otus.javadeveloper.nio.framework.el;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import ru.otus.javadeveloper.nio.framework.Context;
+import ru.otus.javadeveloper.nio.framework.RequestContext;
 import ru.otus.javadeveloper.nio.framework.pipeline.ChannelPipeline;
 import ru.otus.javadeveloper.nio.server.handler.InverseLetterCaseHandler;
 import ru.otus.javadeveloper.nio.server.handler.PackagePayloadWithWorkerNameHandler;
@@ -55,13 +56,14 @@ public class WorkerEventLoop implements EventLoop {
                     log.info("{} handle key {}", name, key.interestOps());
                     if (key.isReadable()) {
                         SocketChannel channel = (SocketChannel) key.channel();
-                        String requestPayload = readRequestPayload(channel);
+                        String socketPayload = readRequestPayload(channel);
+                        RequestContext requestContext = new RequestContext(socketPayload);
                         //            todo refactor
-                        if (isClientSendStopRequest(requestPayload)) {
-                            closeSocketAndSendResponse(channel, requestPayload);
+                        if (isClientSendStopRequest(socketPayload)) {
+                            closeSocketAndSendResponse(channel, socketPayload);
                             continue;
                         }
-                        pipelineHandling(channel, requestPayload);
+                        pipelineHandling(channel, socketPayload);
                     } else if (key.isWritable()) {
                         handleWriteSocketEvent(key);
                     } else {
