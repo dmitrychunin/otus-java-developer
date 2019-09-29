@@ -20,6 +20,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import static java.lang.String.format;
+
 @Slf4j
 @Data
 public class WorkerEventLoop implements EventLoop {
@@ -135,11 +137,21 @@ public class WorkerEventLoop implements EventLoop {
             SocketChannel socket = context.getSocket();
 
             if (socket == channel) {
-                writeResponsePayload((SocketChannel) channel, ((String) resultList.get(i).get().getPayload()));
+                String httpResponse = generateHttpResponse(context);
+                writeResponsePayload((SocketChannel) channel, httpResponse);
                 resultList.remove(i);
             }
-
         }
+    }
+
+    private String generateHttpResponse(RequestContext requestContext) {
+        String payload = (String) requestContext.getPayload();
+        return format(
+                "HTTP/1.1 200 OK\r\n" +
+                "Content-Type: plain/text\r\n" +
+                "Connection: Closed\r\n" +
+                "Content-Length: %s\r\n" +
+                "\r\n%s", payload.length(), payload);
     }
 
     private void sleepOneSecond() {
@@ -154,6 +166,7 @@ public class WorkerEventLoop implements EventLoop {
         return "stop\n".equals(requestPayload);
     }
 
+//    todo refactor use another pipeline?
     private void closeSocketAndSendResponse(SocketChannel channel, String requestPayload) {
         log.info("channel closed by client request");
         writeResponsePayload(channel, requestPayload);
