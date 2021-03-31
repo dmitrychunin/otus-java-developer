@@ -29,7 +29,7 @@
     <properties>
         <jdk.version>11</jdk.version>
         <slf4j.version>1.7.26</slf4j.version>
-        <guava.version>27.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <junit5.version>5.4.2</junit5.version>
         <lombok.version>1.18.6</lombok.version>
         <compiler-plugin.version>3.7.0</compiler-plugin.version>
