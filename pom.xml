@@ -46,7 +46,7 @@
         <javax.json.version>1.1.4</javax.json.version>
         <hibernate.core.version>5.4.1.Final</hibernate.core.version>
         <jetty.version>9.4.19.v20190610</jetty.version>
-        <spring.version>5.1.5.RELEASE</spring.version>
+        <spring.version>5.3.19</spring.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
